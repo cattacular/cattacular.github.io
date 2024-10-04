@@ -1,23 +1,38 @@
-const adventureText = document.getElementById('adventureText');
-const startButton = document.getElementById('startButton');
+console.log('game.js loaded');
 
-function updateAdventureText(text) {
-  adventureText.innerHTML = text;
-}
+document.addEventListener('DOMContentLoaded', (event) => {
+  console.log('DOM fully loaded and parsed in game.js');
+  
+  const adventureText = document.getElementById('adventureText');
+  const startButton = document.getElementById('startButton');
 
-function startAdventure() {
-  startButton.style.display = 'none';
-  adventureText.style.display = 'block';
-  updateAdventureText("You find yourself in a dark forest. There's a path to the north and a river to the east. What do you do?<br><br>" +
-                      "<button onclick='goNorth()'>Go North</button> " +
-                      "<button onclick='goEast()'>Go East</button>");
-}
+  console.log('adventureText element:', adventureText);
+  console.log('startButton element:', startButton);
 
-// ... rest of the game functions ...
+  function updateAdventureText(text) {
+    console.log('Updating adventure text:', text);
+    adventureText.innerHTML = text;
+  }
 
-function restartGame() {
-  startButton.style.display = 'block';
-  adventureText.style.display = 'none';
-}
+  function startAdventure() {
+    console.log('Starting adventure');
+    startButton.style.display = 'none';
+    adventureText.style.display = 'block';
+    updateAdventureText("You find yourself in a dark forest. There's a path to the north and a river to the east. What do you do?<br><br>" +
+                        "<button onclick='goNorth()'>Go North</button> " +
+                        "<button onclick='goEast()'>Go East</button>");
+  }
 
-startButton.addEventListener('click', startAdventure);
+  // ... rest of the game functions ...
+
+  function restartGame() {
+    console.log('Restarting game');
+    startButton.style.display = 'block';
+    adventureText.style.display = 'none';
+  }
+
+  console.log('Adding click event listener to start button');
+  startButton.addEventListener('click', startAdventure);
+});
+
+console.log('End of game.js file');
