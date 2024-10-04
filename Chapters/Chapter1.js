@@ -22,7 +22,7 @@ export function goBackToSleep() {
 
 export function getUp() {
   // Implement the logic for getting up
-},
+}
 
 export function Remember01() {
   updateAdventureText({
