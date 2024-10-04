@@ -1,16 +1,14 @@
-import { updateAdventureText } from './script.js';
+import { updateAdventureText } from '../script.js';
 
 export function StartChapter1() {
   updateAdventureText({
     text: "You stir, cozy in bed. The cool fall air blows in from your open window. You could go back to sleep, or you could get up and start your day. What do you do?",
     choices: [
-  { text: "Go back to sleep", action: "Chapter1.goBackToSleep" },
-  { text: "Get up", action: "Chapter1.getUp" }
-],
-
-
-
-
+      { text: "Go back to sleep", action: "Chapter1.goBackToSleep" },
+      { text: "Get up", action: "Chapter1.getUp" }
+    ]
+  });
+}
 
 export function goBackToSleep() {
   updateAdventureText({
@@ -24,8 +22,7 @@ export function goBackToSleep() {
 
 export function getUp() {
   // Implement the logic for getting up
-}
-
+},
 
 export function Remember01() {
   updateAdventureText({

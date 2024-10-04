@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   console.log('adventureText element:', adventureText);
   console.log('startButton element:', startButton);
 
-  function updateAdventureText(sceneData) {
+  export function updateAdventureText(sceneData) {
     let content = '';
     if (sceneData.image) {
       content += `<img src="${sceneData.image}" alt="Scene" class="scene-image"><br>`;
