@@ -43,30 +43,57 @@
   </style>
 
   <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Hello! I'm John Doe, a passionate web developer with a keen interest in creating user-friendly and innovative web solutions.</p>
-    </section>
-
-    <section id="projects">
-      <h2>My Projects</h2>
-      <ul>
-        <li>Project 1: Brief description</li>
-        <li>Project 2: Brief description</li>
-        <li>Project 3: Brief description</li>
-      </ul>
-    </section>
-
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <p>Email: john.doe@example.com</p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/johndoe">linkedin.com/in/johndoe</a></p>
-      <p>GitHub: <a href="https://github.com/johndoe">github.com/johndoe</a></p>
-    </section>
+    <button id="startButton" style="width: 100px; height: 100px; font-size: 18px; cursor: pointer;">Start</button>
+    <div id="adventureText" style="display: none; margin-top: 20px; text-align: left;"></div>
   </main>
 
-  <footer>
-    <p>&copy; 2023 John Doe. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+  <script>
+    const adventureText = document.getElementById('adventureText');
+    const startButton = document.getElementById('startButton');
+
+    function updateAdventureText(text) {
+      adventureText.innerHTML = text;
+    }
+
+    function startAdventure() {
+      startButton.style.display = 'none';
+      adventureText.style.display = 'block';
+      updateAdventureText("You find yourself in a dark forest. There's a path to the north and a river to the east. What do you do?<br><br>" +
+                          "<button onclick='goNorth()'>Go North</button> " +
+                          "<button onclick='goEast()'>Go East</button>");
+    }
+
+    function goNorth() {
+      updateAdventureText("You follow the path north and come across an old cabin. Do you enter?<br><br>" +
+                          "<button onclick='enterCabin()'>Enter Cabin</button> " +
+                          "<button onclick='returnToStart()'>Go Back</button>");
+    }
+
+    function goEast() {
+      updateAdventureText("You approach the river. It's too wide to cross. You see a boat tied to a tree. Do you take it?<br><br>" +
+                          "<button onclick='takeBoat()'>Take Boat</button> " +
+                          "<button onclick='returnToStart()'>Go Back</button>");
+    }
+
+    function enterCabin() {
+      updateAdventureText("Inside the cabin, you find a treasure chest! You've won the game!<br><br>" +
+                          "<button onclick='restartGame()'>Play Again</button>");
+    }
+
+    function takeBoat() {
+      updateAdventureText("As you untie the boat, you hear angry shouts. It wasn't yours to take! Game over.<br><br>" +
+                          "<button onclick='restartGame()'>Play Again</button>");
+    }
+
+    function returnToStart() {
+      startAdventure();
+    }
+
+    function restartGame() {
+      startButton.style.display = 'block';
+      adventureText.style.display = 'none';
+    }
+
+    startButton.addEventListener('click', startAdventure);
+  </script>
+
