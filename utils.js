@@ -13,6 +13,9 @@ export function updateAdventureText(sceneData) {
     content += `<button onclick="handleChoice('${choice.action}')">${choice.text}</button> `;
   });
   document.getElementById('adventureText').innerHTML = content;
+
+  // Scroll to the top of the content after updating
+  document.getElementById('tv-screen').scrollTop = 0;
 }
 
 // Add this new function to handle button clicks
