@@ -1,6 +1,7 @@
-import { updateAdventureText } from '../script.js';
+import { updateAdventureText } from '../utils.js';
 
 export function StartChapter1() {
+  console.log('StartChapter1 function called');
   updateAdventureText({
     text: "You stir, cozy in bed. The cool fall air blows in from your open window. You could go back to sleep, or you could get up and start your day. What do you do?",
     choices: [
@@ -8,6 +9,7 @@ export function StartChapter1() {
       { text: "Get up", action: "Chapter1.getUp" }
     ]
   });
+  console.log('updateAdventureText called in StartChapter1');
 }
 
 export function goBackToSleep() {
