@@ -16,14 +16,16 @@ body {
 }
 
 main {
-    background-color: #0a5532; /* Slightly lighter blue for content area */
-    border: 2px solid #1a1403; /* Purple border for magical feel */
-    box-shadow: 0 0 15px rgba(29, 22, 0, 0.5); /* Soft purple glow */
+    /* Remove or comment out the background-color and border */
+    /* background-color: #0a5532; */
+    /* border: 2px solid #1a1403; */
+    /* box-shadow: 0 0 15px rgba(29, 22, 0, 0.5); */
     max-width: 800px;
     width: 90%;
     padding: 20px;
     border-radius: 15px;
-    text-align: center;
+    text-align: left; /* Change this from center to left */
+    position: relative; /* Add this to allow absolute positioning of children */
 }
 
 #startButton {
@@ -36,13 +38,15 @@ main {
     transition: all 0.3s ease;
     border-radius: 50px;
     box-shadow: 0 5px 15px rgba(211, 84, 0, 0.4);
-    margin: 20px auto;
-    display: block;
+    position: absolute; /* Change this from relative to absolute */
+    left: 20%; /* Adjust this value to move the button more or less to the left */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Ensure perfect vertical centering */
 }
 
 #startButton:hover {
     background-color: #e67e22; /* Lighter orange on hover */
-    transform: scale(1.1);
+    transform: translateY(-50%) scale(1.1); /* Maintain vertical centering while scaling */
 }
 
 #adventureText {
