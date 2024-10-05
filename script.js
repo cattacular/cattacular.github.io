@@ -1,5 +1,5 @@
 import * as Chapter1 from './Chapters/Chapter1.js';
-import * as Chapter2 from './chapter2.js';
+//import * as Chapter2 from './chapter2.js';
 import { updateAdventureText } from './utils.js';
 
 console.log('script.js loaded');
