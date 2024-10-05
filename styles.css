@@ -1,8 +1,12 @@
 /* Forest and Goblin Core Theme */
 
 body {
-    background-color: #094b3c; /* Dark forest blue */
-    color: #ecf0f1; /* Light text for contrast */
+    background-image: url('Images\TVglowing.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #f0f0f0; /* Light text for contrast */
     font-family: 'Courier New', Courier, monospace;
     display: flex;
     justify-content: center;
@@ -12,7 +16,7 @@ body {
 }
 
 main {
-    background-color: #b1eed2; /* Slightly lighter blue for content area */
+    background-color: #0a5532; /* Slightly lighter blue for content area */
     border: 2px solid #1a1403; /* Purple border for magical feel */
     box-shadow: 0 0 15px rgba(29, 22, 0, 0.5); /* Soft purple glow */
     max-width: 800px;
@@ -23,7 +27,7 @@ main {
 }
 
 #startButton {
-    background-color: #d35400; /* Pumpkin orange */
+    background-color: #a80c0c; 
     color: #ecf0f1;
     border: none;
     padding: 30px 60px;

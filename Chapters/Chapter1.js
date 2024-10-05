@@ -28,7 +28,7 @@ export function getUp() {
 
 export function Remember01() {
   updateAdventureText({
-    text: "You scrape your mind trying to remember how you got here. You realize you cant remember who you are, or anything else at all!... Except for the meteor.",
+    text: "You scrape your mind trying to remember how you got here. You realize you cant remember who you are, or anything else at all... Except for the meteor.",
     choices: [
       { text: "Exit Pod", action: "Chapter1.ExitPod" }
     ],
@@ -38,7 +38,7 @@ export function Remember01() {
 
 export function ExitPod() {
   updateAdventureText({
-    text: " You swing your legs out of the pod and onto the metal floor. You expected it to be cold but your body still feels numb. 'What is this place? Why is no one else awake?' you think to yourself.",
+    text: " You swing your legs out of the pod and onto the metal floor. You expected it to be cold but your feet are still numb. 'What is this place? Why is no one else awake?.",
     choices: [
       { text: "investigate room", action: "Chapter1.InvestigatePodRoom" },
       { text: "Go through exit", action: "Chapter1.ExitPodRoom" }
@@ -52,5 +52,4 @@ export function InvestigatePodRoom() {
 }
 
 export function ExitPodRoom() {
-  // Implement the logic for finding a coin
 }
