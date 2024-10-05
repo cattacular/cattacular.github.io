@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   // Expose chapter functions to global scope for button onclick
   window.Chapter1 = Chapter1;
-  window.Chapter2 = Chapter2;
+ // window.Chapter2 = Chapter2;
   window.updateAdventureText = updateAdventureText;
 
   console.log('Adding click event listener to start button');
