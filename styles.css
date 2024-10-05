@@ -39,7 +39,7 @@ main {
     border-radius: 50px;
     box-shadow: 0 5px 15px rgba(211, 84, 0, 0.4);
     position: absolute; /* Change this from relative to absolute */
-    left: 20%; /* Adjust this value to move the button more or less to the left */
+    left: 0%; /* Adjust this value to move the button more or less to the left */
     top: 50%; /* Center vertically */
     transform: translateY(-50%); /* Ensure perfect vertical centering */
 }
@@ -75,13 +75,6 @@ button:hover {
     background-color: #1abc9c; /* Lighter teal on hover */
 }
 
-/* Goblin-inspired decorative elements */
-main::before, main::after {
-    content: "🍄"; /* Mushroom emoji */
-    font-size: 24px;
-    position: absolute;
-    opacity: 0.7;
-}
 
 main::before {
     top: 10px;
