@@ -24,9 +24,9 @@ main {
 #tv-screen {
     position: absolute;
     /* Adjust these values to match your TV screen's position in the image */
-    top: 20%;
-    left: 25%;
-    width: 50%;
+    top: 350%;
+    left: 30%;
+    width: 30%;
     height: 40%;
     overflow: auto;
     /* Add a subtle inner shadow to simulate a CRT screen */
@@ -43,9 +43,9 @@ main {
 
 #startButton {
     position: absolute;
-    left: 10%;
-    bottom: 20%;
-    background-color: #a80c0c;
+    left: 30%;
+    bottom: 30%;
+    background-color: #077059;
     color: #ecf0f1;
     border: none;
     padding: 15px 30px;
