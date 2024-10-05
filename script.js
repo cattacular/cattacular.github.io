@@ -3,6 +3,19 @@ import * as Chapter2 from './chapter2.js';
 
 console.log('game.js loaded');
 
+// Move this function to the top level
+export function updateAdventureText(sceneData) {
+  let content = '';
+  if (sceneData.image) {
+    content += `<img src="${sceneData.image}" alt="Scene" class="scene-image"><br>`;
+  }
+  content += sceneData.text + '<br><br>';
+  sceneData.choices.forEach(choice => {
+    content += `<button onclick="${choice.action}()">${choice.text}</button> `;
+  });
+  document.getElementById('adventureText').innerHTML = content;
+}
+
 document.addEventListener('DOMContentLoaded', (event) => {
   console.log('DOM fully loaded and parsed in game.js');
   
@@ -11,18 +24,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   console.log('adventureText element:', adventureText);
   console.log('startButton element:', startButton);
-
-  function updateAdventureText(sceneData) {
-    let content = '';
-    if (sceneData.image) {
-      content += `<img src="${sceneData.image}" alt="Scene" class="scene-image"><br>`;
-    }
-    content += sceneData.text + '<br><br>';
-    sceneData.choices.forEach(choice => {
-      content += `<button onclick="${choice.action}()">${choice.text}</button> `;
-    });
-    adventureText.innerHTML = content;
-  }
 
   function startAdventure() {
     startButton.style.display = 'none';
