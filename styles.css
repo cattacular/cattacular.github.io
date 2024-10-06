@@ -31,7 +31,7 @@ main {
     overflow: auto;
     /* Add a subtle inner shadow to simulate a CRT screen */
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
-}
+} 
 
 #adventureText {
     padding: 20px;
