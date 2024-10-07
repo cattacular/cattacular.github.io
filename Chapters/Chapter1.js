@@ -3,7 +3,7 @@ import { updateAdventureText } from '../utils.js';
 export function StartChapter1() {
   console.log('StartChapter1 function called');
   updateAdventureText({
-    text: "You stir, cozy in bed. The cool fall air blows in from your open window. You could go back to sleep, or you could get up and start your day. What do you do?",
+    text: "You stir, cozy in bed. The cool fall air blows in from your open window. You could go back to sleep, or you could get up and start your day.",
     choices: [
       { text: "Go back to sleep", action: "Chapter1.goBackToSleep" },
       { text: "Get up", action: "Chapter1.getUp" }
@@ -23,7 +23,14 @@ export function goBackToSleep() {
 }
 
 export function getUp() {
-  // Implement the logic for getting up
+  updateAdventureText({
+    text: "You decide to get up and start your day."
+    choices: [
+      { text: "Try to remember", action: "Chapter1.Remember01" },
+      { text: "Exit the pod", action: "Chapter1.ExitPod" }
+    ]
+  });
+
 }
 
 export function Remember01() {

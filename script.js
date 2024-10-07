@@ -1,6 +1,5 @@
 import * as Chapter1 from './Chapters/Chapter1.js';
-// import * as Chapter2 from './chapter2.js';  // Commented out as Chapter2 is not defined yet
-import { updateAdventureText } from './utils.js';
+import { updateAdventureText, handleChoice } from './utils.js';
 
 console.log('script.js loaded');
 
@@ -25,7 +24,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   // Expose chapter functions to global scope for button onclick
   window.Chapter1 = Chapter1;
   // window.Chapter2 = Chapter2;  // Commented out as Chapter2 is not defined yet
-  window.updateAdventureText = updateAdventureText;
+  window.handleChoice = handleChoice;  // Add this line
 
   console.log('Adding click event listener to start button');
   startButton.addEventListener('click', startAdventure);

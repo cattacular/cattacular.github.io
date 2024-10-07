@@ -1,6 +1,5 @@
 function logError(message) {
   console.error(`[Adventure Game Error]: ${message}`);
-  // You could also add code here to display the error to the user if desired
 }
 
 export function updateAdventureText(sceneData) {
