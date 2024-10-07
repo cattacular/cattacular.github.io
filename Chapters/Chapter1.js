@@ -24,13 +24,12 @@ export function goBackToSleep() {
 
 export function getUp() {
   updateAdventureText({
-    text: "You decide to get up and start your day."
+    text: "You decide to get up and start your day.",
     choices: [
       { text: "Try to remember", action: "Chapter1.Remember01" },
       { text: "Exit the pod", action: "Chapter1.ExitPod" }
     ]
   });
-
 }
 
 export function Remember01() {

@@ -24,8 +24,8 @@ main {
 #tv-screen {
     position: absolute;
     /* Adjust these values to match your TV screen's position in the image */
-    top: 35%;
-    left: 30%;
+    top: 38%;
+    left: 35%;
     width: 30%;
     height: 40%;
     overflow: auto;
@@ -37,8 +37,8 @@ main {
     padding: 20px;
     font-size: 16px;
     line-height: 1.6;
-    color: #33ff33; /* Classic green CRT text color */
-    text-shadow: 0 0 5px #33ff33; /* Glow effect */
+    color: #000000; /* Classic green CRT text color */
+    text-shadow: 0 0 5px #042004; /* Glow effect */
 }
 
 #startButton {
