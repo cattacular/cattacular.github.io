@@ -6,12 +6,18 @@ export function updateAdventureText(sceneData) {
   const adventureTextElement = document.getElementById('adventureText');
   adventureTextElement.innerHTML = ''; // Clear existing content
 
-  let content = '';
+  // Check if there's an image to display
   if (sceneData.image) {
-    content += `<img src="${sceneData.image}" alt="Scene" class="scene-image"><br>`;
+    const imgElement = document.createElement('img');
+    imgElement.src = sceneData.image;
+    imgElement.alt = "Scene";
+    imgElement.className = "scene-image";
+    adventureTextElement.appendChild(imgElement);
   }
 
-  const textElement = document.createElement('p');
+  // Create a new paragraph element and set its innerHTML
+  const textElement = document.createElement('div'); // Use a div to contain multiple paragraphs
+  textElement.innerHTML = sceneData.text; // Use innerHTML to render HTML content
   adventureTextElement.appendChild(textElement);
 
   let index = 0;

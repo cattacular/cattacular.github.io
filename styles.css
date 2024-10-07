@@ -38,7 +38,7 @@ main {
 /* Start button styles */
 .start-button {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 30%;
     transform: translate(-50%, -50%) scale(2.5); /* Customizable scale */
     padding: 15px 30px;
@@ -70,6 +70,9 @@ main {
 /* Paragraph styles within adventure text */
 #adventureText p {
     margin-bottom: 20px;
+    font-size: 18px; /* Set font size for paragraphs */
+    line-height: 1.5; /* Improve readability with line height */
+    color: #333; /* Set text color */
 }
 
 /* Container for choice buttons */
@@ -77,6 +80,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    margin: 20px 0; /* Add margin around the div */
 }
 
 /* Additional styles for choice buttons (if needed) */
