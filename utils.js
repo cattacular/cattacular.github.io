@@ -3,15 +3,37 @@ function logError(message) {
 }
 
 export function updateAdventureText(sceneData) {
+  const adventureTextElement = document.getElementById('adventureText');
+  adventureTextElement.innerHTML = ''; // Clear existing content
+
   let content = '';
   if (sceneData.image) {
     content += `<img src="${sceneData.image}" alt="Scene" class="scene-image"><br>`;
   }
-  content += sceneData.text + '<br><br>';
-  sceneData.choices.forEach(choice => {
-    content += `<button onclick="handleChoice('${choice.action}')">${choice.text}</button> `;
-  });
-  document.getElementById('adventureText').innerHTML = content;
+
+  const textElement = document.createElement('p');
+  adventureTextElement.appendChild(textElement);
+
+  let index = 0;
+  function typeWriter() {
+    if (index < sceneData.text.length) {
+      textElement.innerHTML += sceneData.text.charAt(index);
+      index++;
+      setTimeout(typeWriter, 50); // Adjust the speed here (lower number = faster)
+    } else {
+      // Text finished typing, now add choice buttons
+      const choicesElement = document.createElement('div');
+      sceneData.choices.forEach(choice => {
+        const button = document.createElement('button');
+        button.textContent = choice.text;
+        button.onclick = () => handleChoice(choice.action);
+        choicesElement.appendChild(button);
+      });
+      adventureTextElement.appendChild(choicesElement);
+    }
+  }
+
+  typeWriter();
 
   // Scroll to the top of the content after updating
   document.getElementById('tv-screen').scrollTop = 0;

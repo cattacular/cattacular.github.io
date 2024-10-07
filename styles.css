@@ -1,12 +1,13 @@
 /* Forest and Goblin Core Theme */
 
+/* Global styles for the body */
 body {
     background-image: url('Images/TVglowing.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    color: #f0f0f0; /* Light text for contrast */
+    color: #f0f0f0; /* Light text color for contrast */
     font-family: 'Courier New', Courier, monospace;
     display: flex;
     justify-content: center;
@@ -15,80 +16,69 @@ body {
     margin: 0;
 }
 
+/* Main container styles */
 main {
     position: relative;
     width: 100%;
     height: 100vh;
 }
 
+/* TV screen container styles */
 #tv-screen {
     position: absolute;
     /* Adjust these values to match your TV screen's position in the image */
-    top: 38%;
-    left: 35%;
-    width: 30%;
+    top: 20%;
+    left: 25%;
+    width: 50%;
     height: 40%;
     overflow: auto;
     /* Add a subtle inner shadow to simulate a CRT screen */
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
-} 
+}
 
+/* Adventure text styles */
 #adventureText {
     padding: 20px;
     font-size: 16px;
     line-height: 1.6;
-    color: #000000; /* Classic green CRT text color */
-    text-shadow: 0 0 5px #042004; /* Glow effect */
+    color: #33ff33; /* Classic green CRT text color */
+    text-shadow: 0 0 5px #33ff33; /* Glow effect */
 }
 
-#startButton {
-    position: absolute;
-    left: 30%;
-    bottom: 30%;
-    background-color: #077059;
-    color: #ecf0f1;
-    border: none;
-    padding: 15px 30px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border-radius: 25px;
-    box-shadow: 0 5px 15px rgba(211, 84, 0, 0.4);
+/* Paragraph styles within adventure text */
+#adventureText p {
+    margin-bottom: 20px;
 }
 
-#startButton:hover {
-    background-color: #e67e22;
-    transform: scale(1.1);
+/* Container for choice buttons */
+#adventureText div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-/* Style for choice buttons */
+/* Additional styles for choice buttons (if needed) */
 #adventureText button {
-    background-color: transparent;
-    border: 1px solid #33ff33;
-    color: #33ff33;
-    padding: 5px 10px;
-    margin: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-#adventureText button:hover {
-    background-color: rgba(51, 255, 51, 0.2);
-}
-
-button {
-    background-color: #16a085; /* Teal for forest feel */
+    background-color: #16a085;
     color: #ecf0f1;
     border: none;
     padding: 10px 20px;
-    margin: 5px;
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #1abc9c; /* Lighter teal on hover */
+/* Additional hover effect for choice buttons */
+#adventureText button:hover {
+    background-color: #1abc9c;
+}
+
+/* Styles for scene images (if used) */
+.scene-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
 }
 
 main::before {
@@ -100,12 +90,3 @@ main::after {
     bottom: 10px;
     right: 10px;
 }
-
-.scene-image {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-    border-radius: 10px;
-}
-
-
