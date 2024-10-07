@@ -90,3 +90,27 @@ main::after {
     bottom: 10px;
     right: 10px;
 }
+
+/* Start button styles */
+.start-button {
+    position: absolute;
+    /* Customizable position, adjust these values as needed */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1); /* Customizable scale */
+    padding: 15px 30px;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #16a085;
+    color: #ecf0f1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for start button */
+.start-button:hover {
+    background-color: #1abc9c;
+    box-shadow: 0 0 20px #33ff33; /* Glow effect */
+}

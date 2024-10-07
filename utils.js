@@ -19,7 +19,9 @@ export function updateAdventureText(sceneData) {
     if (index < sceneData.text.length) {
       textElement.innerHTML += sceneData.text.charAt(index);
       index++;
-      setTimeout(typeWriter, 50); // Adjust the speed here (lower number = faster)
+      const randomDelay = Math.floor(Math.random() * (50 - 25 + 1)) + 25;
+      setTimeout(typeWriter, randomDelay);
+      
     } else {
       // Text finished typing, now add choice buttons
       const choicesElement = document.createElement('div');
