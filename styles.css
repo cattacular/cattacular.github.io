@@ -27,7 +27,7 @@ main {
 #tv-screen {
     position: absolute;
     /* Adjust these values to match your TV screen's position in the image */
-    top: 40%;
+    top: 38%;
     left: 22%;
     width: 27%;
     height: 43%;
