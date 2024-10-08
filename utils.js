@@ -15,33 +15,39 @@ export function updateAdventureText(sceneData) {
     adventureTextElement.appendChild(imgElement);
   }
 
-  // Create a new paragraph element and set its innerHTML
+  // Create a new div element for the text
   const textElement = document.createElement('div'); // Use a div to contain multiple paragraphs
-  textElement.innerHTML = sceneData.text; // Use innerHTML to render HTML content
-  adventureTextElement.appendChild(textElement);
+  textElement.innerHTML = sceneData.text; // Set innerHTML to the formatted text
+  adventureTextElement.appendChild(textElement); // Append the text element to the adventure text
 
   let index = 0;
   function typeWriter() {
-    if (index < sceneData.text.length) {
-      textElement.innerHTML += sceneData.text.charAt(index);
-      index++;
-      const randomDelay = Math.floor(Math.random() * (50 - 25 + 1)) + 25;
-      setTimeout(typeWriter, randomDelay);
-      
-    } else {
-      // Text finished typing, now add choice buttons
-      const choicesElement = document.createElement('div');
-      sceneData.choices.forEach(choice => {
-        const button = document.createElement('button');
-        button.textContent = choice.text;
-        button.onclick = () => handleChoice(choice.action);
-        choicesElement.appendChild(button);
-      });
-      adventureTextElement.appendChild(choicesElement);
+    // Clear the text element before starting the typewriter effect
+    textElement.innerHTML = ''; // Clear the text element
+
+    function typeNextCharacter() {
+      if (index < sceneData.text.length) {
+        textElement.innerHTML += sceneData.text.charAt(index);
+        index++;
+        const randomDelay = Math.floor(Math.random() * (50 - 25 + 1)) + 25;
+        setTimeout(typeNextCharacter, randomDelay);
+      } else {
+        // Text finished typing, now add choice buttons
+        const choicesElement = document.createElement('div');
+        sceneData.choices.forEach(choice => {
+          const button = document.createElement('button');
+          button.textContent = choice.text;
+          button.onclick = () => handleChoice(choice.action);
+          choicesElement.appendChild(button);
+        });
+        adventureTextElement.appendChild(choicesElement);
+      }
     }
+
+    typeNextCharacter(); // Start typing the text
   }
 
-  typeWriter();
+  typeWriter(); // Call the typeWriter function
 
   // Scroll to the top of the content after updating
   document.getElementById('tv-screen').scrollTop = 0;
