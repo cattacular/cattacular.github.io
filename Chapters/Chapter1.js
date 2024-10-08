@@ -4,11 +4,9 @@ export function StartChapter1() {
   console.log('StartChapter1 function called');
   updateAdventureText({
     text: `
-      <div>
-        <p>You stir, cozy in bed.</p>
-        <p>The cool fall air blows in from your open window.</p>
-        <p>You could go back to sleep, or you could get up and start your day.</p>
-      </div>
+      <p>You stir, cozy in bed.</p>
+      <p>The cool fall air blows in from your open window.</p>
+      <p>You could go back to sleep, or you could get up and start your day.</p>
     `,
     choices: [
       { text: "Go back to sleep", action: "Chapter1.goBackToSleep" },

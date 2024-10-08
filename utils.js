@@ -17,7 +17,8 @@ export function updateAdventureText(sceneData) {
 
   // Create a new div element for the text
   const textElement = document.createElement('div'); // Use a div to contain multiple paragraphs
-  textElement.innerHTML = sceneData.text; // Set innerHTML to the formatted text
+  const originalText = sceneData.text; // Keep the original text for typing effect
+  textElement.innerHTML = originalText; // Set innerHTML to the formatted text
   adventureTextElement.appendChild(textElement); // Append the text element to the adventure text
 
   let index = 0;
@@ -26,8 +27,8 @@ export function updateAdventureText(sceneData) {
     textElement.innerHTML = ''; // Clear the text element
 
     function typeNextCharacter() {
-      if (index < sceneData.text.length) {
-        textElement.innerHTML += sceneData.text.charAt(index);
+      if (index < originalText.length) {
+        textElement.innerHTML += originalText.charAt(index); // Append one character at a time
         index++;
         const randomDelay = Math.floor(Math.random() * (50 - 25 + 1)) + 25;
         setTimeout(typeNextCharacter, randomDelay);
