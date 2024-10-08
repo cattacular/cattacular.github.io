@@ -58,7 +58,8 @@ export function ExitPod() {
 
 // Keep 'export' for these functions
 export function InvestigatePodRoom() {
- 
+ updateAdventureText
+ text: "you take a look around the room. you notice that many of the pods seem damaged. A lot of them have broken glass or smashed computers. Only a few other have their doors opened. You notice that your pod has a smashed computer screen but the computer still seems to be working. You can hear a faint hum from under the floor."
 }
 
 export function ExitPodRoom() {
