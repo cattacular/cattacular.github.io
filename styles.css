@@ -2,7 +2,7 @@
 
 /* Global styles for the body */
 body {
-    background-image: url('Images/TVglowing.png');
+    background-image: url('Images/TvOff.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -117,5 +117,28 @@ main::before {
 main::after {
     bottom: 10px;
     right: 10px;
+}
+
+/* Power button styles */
+.power-button {
+    position: absolute;
+    top: 20%; /* Adjust position as needed */
+    left: 80%; /* Adjust position as needed */
+    transform: translate(-50%, -50%);
+    padding: 15px 30px;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #e74c3c; /* Red color for power button */
+    color: #ffffff;
+    border: none;
+    border-radius: 50%; /* Make it circular */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for power button */
+.power-button:hover {
+    background-color: #c0392b; /* Darker red on hover */
+    box-shadow: 0 0 20px rgba(231, 76, 60, 0.7); /* Glow effect */
 }
 

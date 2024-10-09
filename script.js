@@ -8,9 +8,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
   
   const adventureText = document.getElementById('adventureText');
   const startButton = document.getElementById('startButton');
+  const powerButton = document.getElementById('powerButton');
 
   console.log('adventureText element:', adventureText);
   console.log('startButton element:', startButton);
+  console.log('powerButton element:', powerButton);
 
   function startAdventure() {
     console.log('startAdventure function called');
@@ -21,9 +23,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
     console.log('Chapter1.StartChapter1() called');
   }
 
+  // Power button functionality
+  powerButton.addEventListener('click', () => {
+    document.body.style.backgroundImage = "url('Images/TVglowing.png')"; // Change background
+    startButton.style.display = 'block'; // Reveal the start button
+    powerButton.style.display = 'none'; // Hide the power button after clicking
+  });
+
   // Expose chapter functions to global scope for button onclick
   window.Chapter1 = Chapter1;
-  // window.Chapter2 = Chapter2;  // Commented out as Chapter2 is not defined yet
   window.handleChoice = handleChoice;  // Add this line
 
   console.log('Adding click event listener to start button');
