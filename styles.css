@@ -64,8 +64,8 @@ main {
     padding: 20px;
     font-size: 16px;
     line-height: 1.6;
-    color: #000000; /* Classic green CRT text color */
-    text-shadow: 0 0 5px #02160283; /* Glow effect */
+    color: #daffe5; /* Classic green CRT text color */
+    text-shadow: 0 0 5px #005c009d; /* Glow effect */
 }
 
 /* Paragraph styles within adventure text */
