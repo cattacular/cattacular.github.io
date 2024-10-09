@@ -122,8 +122,8 @@ main::after {
 /* Power button styles */
 .power-button {
     position: absolute;
-    top: 20%; /* Adjust position as needed */
-    left: 80%; /* Adjust position as needed */
+    top: 60%; /* Adjust position as needed */
+    left: 55%; /* Adjust position as needed */
     transform: translate(-50%, -50%);
     padding: 15px 30px;
     font-size: 24px;
