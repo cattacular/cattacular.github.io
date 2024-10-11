@@ -10,7 +10,7 @@ export function StartChapter1() {
     `,
     choices: [
       { text: "Go back to sleep", action: "Chapter1.goBackToSleep" },
-      { text: "Get up", action: "Chapter1.getUp" }
+      { text: "Get up", action: "Chapter2.StartChapter2" }
     ]
   });
   console.log('updateAdventureText called in StartChapter1');
@@ -26,15 +26,15 @@ export function goBackToSleep() {
   });
 }
 
-export function getUp() {
-  updateAdventureText({
-    text: "You decide to get up and start your day.",
-    choices: [
-      { text: "Try to remember", action: "Chapter1.Remember01" },
-      { text: "Exit the pod", action: "Chapter1.ExitPod" }
-    ]
-  });
-}
+// export function getUp() {
+//   updateAdventureText({
+//     text: "You decide to get up and start your day.",
+//     choices: [
+//       // { text: "Try to remember", action: "Chapter1.Remember01" },
+//       // { text: "Exit the pod", action: "Chapter1.ExitPod" }
+//     ]
+//   });
+// }
 
 export function Remember01() {
   updateAdventureText({

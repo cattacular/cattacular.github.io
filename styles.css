@@ -41,9 +41,9 @@ main {
     position: absolute;
     top: 60%;
     left: 35%;
-    transform: translate(-50%, -50%) scale(2); /* Customizable scale */
+    transform: translate(-50%, -50%) scale(1); /* Customizable scale */
     padding: 15px 30px;
-    font-size: 40px;
+    font-size: 20px;
     font-weight: bold;
     background-color: #16a085;
     color: #ecf0f1;
@@ -122,7 +122,7 @@ main::after {
 /* Power button styles */
 .power-button {
     position: absolute;
-    top: 60%; /* Adjust position as needed */
+    top: 85%; /* Adjust position as needed */
     left: 55%; /* Adjust position as needed */
     transform: translate(-50%, -50%);
     padding: 15px 30px;
