@@ -14,6 +14,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
   console.log('startButton element:', startButton);
   console.log('powerButton element:', powerButton);
 
+  // Preload the glowing background image
+  const glowingBackground = new Image();
+  glowingBackground.src = 'Images/TVglowing.png';
+
   function startAdventure() {
     console.log('startAdventure function called');
     startButton.style.display = 'none';
@@ -25,7 +29,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   // Power button functionality
   powerButton.addEventListener('click', () => {
-    document.body.style.backgroundImage = "url('Images/TVglowing.png')"; // Change background
+    document.body.style.backgroundImage = `url('${glowingBackground.src}')`; // Change background
     startButton.style.display = 'block'; // Reveal the start button
     powerButton.style.display = 'none'; // Hide the power button after clicking
   });
