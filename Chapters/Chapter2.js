@@ -3,7 +3,7 @@ import { updateAdventureText } from '../utils.js';
 export function StartChapter2() {
   updateAdventureText({
     text: "You take a moment to stretch in bed before opening your eyes. You're in your bedroom. For a moment you consider not leaving bed at all, but you have no money. You swing your legs out of bed and spend a couple of minutes looking for your glasses. You're practically blind without them after all. Looking at your phone you see that it's already 8:20 am. You've got to be out the door in 10 minutes!",
-    choices: [ // Correctly wrap choices in an array
+    choices: [
       { text: "Get Dressed", action: "Chapter2.GetDressed" },
       { text: "Look out the window", action: "Chapter2.LookOutWindow" }
     ]

@@ -9,7 +9,7 @@ export function StartChapter1() {
     `,
     choices: [
       { text: "Go back to sleep", action: "Chapter1.goBackToSleep" },
-      { text: "Get up", action: "Chapter2.StartChapter2" }
+      { text: "Get up", action: "Chapter2.StartChapter2" } // Ensure this is correct
     ]
   });
 }
