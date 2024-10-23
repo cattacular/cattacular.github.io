@@ -60,12 +60,20 @@ main {
     box-shadow: 0 0 20px #33ff33; /* Glow effect */
 }
 
+/* Flex container styles */
+.flex-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between text and buttons */
+    width: 100%; /* Ensure it takes full width */
+}
+
 /* Adventure text container styles */
 #adventureTextContainer {
     border: 2px solid #16a085; /* Border color */
     padding: 15px; /* Padding inside the box */
-    margin-bottom: 20px; /* Space below the text box */
+    margin-right: 20px; /* Space between text and choices */
     background-color: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background */
+    flex: 1; /* Allow it to take available space */
 }
 
 /* Choices container styles */
@@ -73,6 +81,7 @@ main {
     border: 2px solid #16a085; /* Border color */
     padding: 15px; /* Padding inside the box */
     background-color: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background */
+    width: 200px; /* Set a fixed width for the choices container */
 }
 
 /* Adventure text styles */
