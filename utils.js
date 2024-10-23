@@ -34,14 +34,14 @@ export function updateAdventureText(sceneData) {
         setTimeout(typeNextCharacter, randomDelay);
       } else {
         // Text finished typing, now add choice buttons
-        const choicesElement = document.createElement('div');
+        const choicesElement = document.createElement('div'); // Create a container for choices
         sceneData.choices.forEach(choice => {
           const button = document.createElement('button');
           button.textContent = choice.text;
           button.onclick = () => handleChoice(choice.action);
           choicesElement.appendChild(button);
         });
-        adventureTextElement.appendChild(choicesElement);
+        adventureTextElement.appendChild(choicesElement); // Append choices below the text
       }
     }
 

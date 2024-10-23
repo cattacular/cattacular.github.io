@@ -80,10 +80,10 @@ main {
 /* Container for choice buttons */
 #adventureText div {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: flex-end; /* Align buttons to the right */
+    gap: 10px; /* Space between buttons */
     margin: 20px 0; /* Add margin around the div */
-    justify-content: center; /* Center the buttons */
 }
 
 /* Additional styles for choice buttons (if needed) */
@@ -95,6 +95,8 @@ main {
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    width: 100%; /* Make buttons full width */
+    max-width: 200px; /* Set a max width for buttons */
 }
 
 /* Additional hover effect for choice buttons */
