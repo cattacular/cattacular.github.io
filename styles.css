@@ -60,12 +60,26 @@ main {
     box-shadow: 0 0 20px #33ff33; /* Glow effect */
 }
 
+/* Adventure text container styles */
+#adventureTextContainer {
+    border: 2px solid #16a085; /* Border color */
+    padding: 15px; /* Padding inside the box */
+    margin-bottom: 20px; /* Space below the text box */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background */
+}
+
+/* Choices container styles */
+#choicesContainer {
+    border: 2px solid #16a085; /* Border color */
+    padding: 15px; /* Padding inside the box */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background */
+}
+
 /* Adventure text styles */
 #adventureText {
     display: flex; /* Use flexbox for layout */
-    flex-direction: row; /* Align items in a row */
-    justify-content: space-between; /* Space between text and buttons */
-    padding: 20px;
+    flex-direction: column; /* Align items in a column */
+    justify-content: flex-start; /* Align text to the top */
     font-size: 16px;
     line-height: 1.6;
     color: #daffe5; /* Classic green CRT text color */
@@ -73,14 +87,8 @@ main {
     width: 100%; /* Ensure it takes full width */
 }
 
-/* Text container styles */
-#adventureText .text-container {
-    flex: 1; /* Allow text to take up available space */
-    margin-right: 20px; /* Space between text and buttons */
-}
-
 /* Container for choice buttons */
-#adventureText .button-container {
+.button-container {
     display: flex;
     flex-direction: column; /* Stack buttons vertically */
     align-items: flex-end; /* Align buttons to the right */

@@ -43,7 +43,11 @@ export function updateAdventureText(sceneData) {
           button.onclick = () => handleChoice(choice.action);
           choicesElement.appendChild(button);
         });
-        adventureTextElement.appendChild(choicesElement); // Append choices to the adventure text
+        
+        // Append choices to the new choices container
+        const choicesContainer = document.getElementById('choicesContainer');
+        choicesContainer.innerHTML = ''; // Clear previous choices
+        choicesContainer.appendChild(choicesElement); // Append choices to the choices container
       }
     }
 
