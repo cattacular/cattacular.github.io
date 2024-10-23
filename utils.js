@@ -39,7 +39,12 @@ export function updateAdventureText(sceneData) {
         choicesElement.className = 'button-container'; // Add class for styling
         sceneData.choices.forEach(choice => {
           const button = document.createElement('button');
-          button.textContent = choice.text;
+          button.innerHTML = ''; // Clear innerHTML to append spans
+          choice.text.split('').forEach(letter => {
+            const span = document.createElement('span');
+            span.textContent = letter;
+            button.appendChild(span);
+          });
           button.onclick = () => handleChoice(choice.action);
           choicesElement.appendChild(button);
         });
