@@ -94,23 +94,13 @@ main {
     color: #daffe5; /* Classic green CRT text color */
     text-shadow: 0 0 5px #005c009d; /* Glow effect */
     width: 100%; /* Ensure it takes full width */
-    overflow: hidden; /* Hide overflow to create sliding effect */
-    position: relative; /* Position relative for animation */
+    overflow: hidden; /* Hide overflow */
+    position: relative; /* Position relative */
 }
 
-/* Sliding text effect */
-@keyframes slideIn {
-    from {
-        transform: translateX(-100%); /* Start off-screen to the left */
-    }
-    to {
-        transform: translateX(0); /* End at the original position */
-    }
-}
-
-/* Apply animation to the text container */
+/* Remove the sliding animation for adventure text */
 .text-container {
-    animation: slideIn 0.5s ease-out; /* Apply the sliding animation */
+    /* No animation applied here */
 }
 
 /* Container for choice buttons */
@@ -121,8 +111,22 @@ main {
     gap: 100px; /* Increase space between buttons */
 }
 
-/* Additional styles for choice buttons (if needed) */
-#adventureText button {
+/* Sliding text effect for buttons */
+@keyframes slideText {
+    0% {
+        transform: translateX(100%); /* Start off-screen to the right */
+    }
+    50% {
+        transform: translateX(0); /* Center position */
+    }
+    100% {
+        transform: translateX(-100%); /* End off-screen to the left */
+    }
+}
+
+/* Apply animation to choice buttons */
+.button-container button {
+    animation: slideText 3s linear infinite; /* Apply the sliding animation */
     background-color: #16a085;
     color: #ecf0f1;
     border: none;
@@ -135,7 +139,7 @@ main {
 }
 
 /* Additional hover effect for choice buttons */
-#adventureText button:hover {
+.button-container button:hover {
     background-color: #1abc9c;
 }
 
