@@ -24,31 +24,39 @@ export function goBackToSleep() {
   });
 }
 
-// export function getUp() {
-//   updateAdventureText({
-//     text: "You decide to get up and start your day.",
-//     choices: [
-//       // { text: "Try to remember", action: "Chapter1.Remember01" },
-//       // { text: "Exit the pod", action: "Chapter1.ExitPod" }
-//     ]
-//   });
-// }
-
-export function Remember01() {
+export function DeepSleep() {
   updateAdventureText({
-    text: "You scrape your mind trying to remember how you got here. You realize you cant remember who you are, or anything else at all... Except for the meteor.",
+    text: "The vision fades and you wake up in a cold sweat... you can't move, you realize what you thought was cold sweat is an unfamiliar chill surrounding your whole body.",
     choices: [
-      { text: "Exit Pod", action: "Chapter1.ExitPod" }
-    ],
-   // image: "images/autumn-park.jpg"
+      { text: "Try to remember", action: "Chapter1.Remember01" },
+      { text: "Panic", action: "Chapter1.Panic" }
+    ]
   });
 }
 
-export function ExitPod() {
+export function Remember01() {
   updateAdventureText({
-    text: " You swing your legs out of the pod and onto the metal floor. You expected it to be cold but your feet are still numb. 'What is this place? Why is no one else awake?.",
+    text: "You scrape your mind trying to remember how you got here. You can't remember much... Except for the meteor, you have a feeling it's why you're here.",
     choices: [
-      { text: "investigate room", action: "Chapter1.InvestigatePodRoom" },
+      { text: "Panic", action: "Chapter1.Panic" }
+    ]
+  });
+}
+
+export function Panic() {
+  updateAdventureText({
+    text: "Your body fights its immobility, straining against the cold. Then you hear a sound: a series of clicks and the hiss of a pressure release. Your body suddenly falls forward onto a hard floor.",
+    choices: [
+      { text: "Force your eyes open", action: "Chapter1.Openeyes" }
+    ]
+  });
+}
+
+export function Openeyes() {
+  updateAdventureText({
+    text: "Your eyes open slowly and at first the light is blinding. After a few moments you try again. This time the room reveals itself to you. You're in a long hall full of pods, just like the one you came out of.",
+    choices: [
+      { text: "Investigate room", action: "Chapter1.InvestigatePodRoom" },
       { text: "Go through exit", action: "Chapter1.ExitPodRoom" }
     ]
   });
@@ -56,9 +64,14 @@ export function ExitPod() {
 
 // Keep 'export' for these functions
 export function InvestigatePodRoom() {
- updateAdventureText
- text: "you take a look around the room. you notice that many of the pods seem damaged. A lot of them have broken glass or smashed computers. Only a few other have their doors opened. You notice that your pod has a smashed computer screen but the computer still seems to be working. You can hear a faint hum from under the floor."
+  updateAdventureText({
+    text: "You take a look around the room. You notice that many of the pods seem damaged. A lot of them have broken glass or smashed computers. Only a few others have their doors opened. You notice that your pod has a smashed computer screen but the computer still seems to be working. You can hear a faint hum from under the floor.",
+    choices: [
+      { text: "Exit the room", action: "Chapter1.ExitPodRoom" } // Example choice
+    ]
+  });
 }
 
 export function ExitPodRoom() {
+  // Implement the exit logic here
 }
