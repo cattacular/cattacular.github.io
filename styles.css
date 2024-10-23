@@ -69,7 +69,7 @@ main {
 
 /* Adventure text container styles */
 #adventureTextContainer {
-    border: 2px solid #16a085; /* Border color */
+    border: 2px solid #16a085; Border color */
     padding: 15px; /* Padding inside the box */
     margin-right: 20px; /* Space between text and choices */
     background-color: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background */
@@ -81,7 +81,7 @@ main {
     border: 2px solid #16a085; /* Border color */
     padding: 15px; /* Padding inside the box */
     background-color: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background */
-    width: 200px; /* Set a fixed width for the choices container */
+    width: 150px; /* Set a fixed width for the choices container */
 }
 
 /* Adventure text styles */
@@ -94,6 +94,23 @@ main {
     color: #daffe5; /* Classic green CRT text color */
     text-shadow: 0 0 5px #005c009d; /* Glow effect */
     width: 100%; /* Ensure it takes full width */
+    overflow: hidden; /* Hide overflow to create sliding effect */
+    position: relative; /* Position relative for animation */
+}
+
+/* Sliding text effect */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%); /* Start off-screen to the left */
+    }
+    to {
+        transform: translateX(0); /* End at the original position */
+    }
+}
+
+/* Apply animation to the text container */
+.text-container {
+    animation: slideIn 0.5s ease-out; /* Apply the sliding animation */
 }
 
 /* Container for choice buttons */
@@ -101,7 +118,7 @@ main {
     display: flex;
     flex-direction: column; /* Stack buttons vertically */
     align-items: flex-end; /* Align buttons to the right */
-    gap: 10px; /* Space between buttons */
+    gap: 100px; /* Increase space between buttons */
 }
 
 /* Additional styles for choice buttons (if needed) */
