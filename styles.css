@@ -62,28 +62,29 @@ main {
 
 /* Adventure text styles */
 #adventureText {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row; /* Align items in a row */
+    justify-content: space-between; /* Space between text and buttons */
     padding: 20px;
     font-size: 16px;
     line-height: 1.6;
     color: #daffe5; /* Classic green CRT text color */
     text-shadow: 0 0 5px #005c009d; /* Glow effect */
+    width: 100%; /* Ensure it takes full width */
 }
 
-/* Paragraph styles within adventure text */
-#adventureText p {
-    margin-bottom: 20px;
-    font-size: 18px; /* Set font size for paragraphs */
-    line-height: 1.5; /* Improve readability with line height */
-    color: #333; /* Set text color */
+/* Text container styles */
+#adventureText .text-container {
+    flex: 1; /* Allow text to take up available space */
+    margin-right: 20px; /* Space between text and buttons */
 }
 
 /* Container for choice buttons */
-#adventureText div {
+#adventureText .button-container {
     display: flex;
     flex-direction: column; /* Stack buttons vertically */
     align-items: flex-end; /* Align buttons to the right */
     gap: 10px; /* Space between buttons */
-    margin: 20px 0; /* Add margin around the div */
 }
 
 /* Additional styles for choice buttons (if needed) */

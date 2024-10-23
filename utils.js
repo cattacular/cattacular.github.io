@@ -16,32 +16,34 @@ export function updateAdventureText(sceneData) {
   }
 
   // Create a new div element for the text
-  const textElement = document.createElement('div'); // Use a div to contain multiple paragraphs
+  const textContainer = document.createElement('div'); // Create a container for the text
+  textContainer.className = 'text-container'; // Add class for styling
   const originalText = sceneData.text; // Keep the original text for typing effect
-  textElement.innerHTML = originalText; // Set innerHTML to the formatted text
-  adventureTextElement.appendChild(textElement); // Append the text element to the adventure text
+  textContainer.innerHTML = originalText; // Set innerHTML to the formatted text
+  adventureTextElement.appendChild(textContainer); // Append the text element to the adventure text
 
   let index = 0;
   function typeWriter() {
     // Clear the text element before starting the typewriter effect
-    textElement.innerHTML = ''; // Clear the text element
+    textContainer.innerHTML = ''; // Clear the text element
 
     function typeNextCharacter() {
       if (index < originalText.length) {
-        textElement.innerHTML += originalText.charAt(index); // Append one character at a time
+        textContainer.innerHTML += originalText.charAt(index); // Append one character at a time
         index++;
         const randomDelay = Math.floor(Math.random() * (50 - 25 + 1)) + 25;
         setTimeout(typeNextCharacter, randomDelay);
       } else {
         // Text finished typing, now add choice buttons
         const choicesElement = document.createElement('div'); // Create a container for choices
+        choicesElement.className = 'button-container'; // Add class for styling
         sceneData.choices.forEach(choice => {
           const button = document.createElement('button');
           button.textContent = choice.text;
           button.onclick = () => handleChoice(choice.action);
           choicesElement.appendChild(button);
         });
-        adventureTextElement.appendChild(choicesElement); // Append choices below the text
+        adventureTextElement.appendChild(choicesElement); // Append choices to the adventure text
       }
     }
 
