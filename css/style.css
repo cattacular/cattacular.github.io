@@ -8,29 +8,25 @@
 /* fonts color */
 
 :root {
-    --bs-blue: #4BA1A7;
-    --bs-red: #F0756C;
-    --bs-orange: #F5E9E9;
-    --bs-yellow: #EFEAEA;
-    --bs-green: #F5F8F1;
-    --bs-teal: #EFE8EF;
-    --bs-cyan: #F3F3F3;
-    --bs-black: #111111; 
-    --bs-white: #FFFFFF;
-    --bs-gray: #777777; 
+    --bs-blue: #2E4A2E; /* Forest Green */
+    --bs-red: #A52A2A; /* Stone Grey */
+    --bs-orange: #D3D3D3; /* Light Stone Grey */
+    --bs-yellow: #BEBEBE; /* Light Stone Grey */
+    --bs-green: #4B8B3B; /* Darker Forest Green */
+    --bs-teal: #A9A9A9; /* Stone Grey */
+    --bs-cyan: #C0C0C0; /* Light Stone Grey */
+    --bs-black: #333333; /* Dark Stone Grey */
+    --bs-white: #FFFFFF; /* Keep white for contrast */
+    --bs-gray: #7D7D7D; /* Medium Stone Grey */
     
-    --bs-link-color: #111111;
-    --bs-link-color-rgb: 17, 17, 17;
-    --bs-link-hover-color: #F0756C;
-    --bs-link-hover-color-rgb: 240, 117, 108;
+    --bs-link-color: #2E4A2E; /* Forest Green */
+    --bs-link-hover-color: #A52A2A; /* Stone Grey */
     
-    --bs-primary: #F0756C;
-    --bs-primary-rgb: 240, 117, 108;
-    --bs-body-color: #111111;   
-    --bs-info: #C3C3C3; 
-    --bs-light-text-emphasis: #c3c3c3;
+    --bs-primary: #4B8B3B; /* Darker Forest Green */
+    --bs-info: #C3C3C3; /* Light Stone Grey */
+    --bs-light-text-emphasis: #A9A9A9; /* Stone Grey */
     
-    --swiper-pagination-color: #F0756C;
+    --swiper-pagination-color: #4B8B3B; /* Darker Forest Green */
 }
 
 body , body  [data-bs-theme=light] {
@@ -129,14 +125,13 @@ h2,h3,h4,h5,h6 {
 }
 
 /* navbar */
-.navbar svg {
-    color: #111111;
+.navbar {
+    background-color: var(--bs-white); /* Keep navbar white for contrast */
 }
 
 /* banner color */
-
 .banner {
-    color: var(--bs-black);
+    color: var(--bs-black); /* Dark Stone Grey */
 }
 
 /* line height */
@@ -179,8 +174,8 @@ p.a {
 /* testimonial */
 
 .testimonial-card {
-  background: var(--bs-black);
-  color: var(--bs-white);
+    background: var(--bs-black); /* Dark Stone Grey */
+    color: var(--bs-white); /* Keep text white for contrast */
 }
 
 .testimonial-card .postd {
@@ -246,4 +241,20 @@ a:hover {
     color: var(--bs-pagination-active-color);
     background-color: var(--bs-pagination-active-bg);
     border-color: var(--bs-pagination-active-border-color);
+}
+
+/* button styles */
+.btn {
+    background-color: var(--bs-green); /* Darker Forest Green */
+    color: var(--bs-white); /* Keep text white for contrast */
+}
+
+.btn:hover {
+    background-color: var(--bs-blue); /* Forest Green */
+}
+
+/* footer styles */
+#footer {
+    background-color: var(--bs-black); /* Dark Stone Grey */
+    color: var(--bs-white); /* Keep text white for contrast */
 }
