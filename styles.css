@@ -102,11 +102,6 @@ main {
     position: relative; /* Position relative */
 }
 
-/* Remove the sliding animation for adventure text */
-.text-container {
-    /* No animation applied here */
-}
-
 /* Container for choice buttons */
 .button-container {
     display: flex;
@@ -186,4 +181,27 @@ main::after {
 .power-button:hover {
     background-color: #c0392b; /* Darker red on hover */
     box-shadow: 0 0 20px rgba(231, 76, 60, 0.7); /* Glow effect */
+}
+
+/* Centering the Projects button */
+.projects-button {
+    position: absolute; /* Position it absolutely */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for the button's size */
+    padding: 15px 30px; /* Add padding */
+    font-size: 20px; /* Increase font size */
+    font-weight: bold; /* Make it bold */
+    background-color: #16a085; /* Button color */
+    color: #ecf0f1; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+/* Hover effect for Projects button */
+.projects-button:hover {
+    background-color: #1abc9c; /* Change color on hover */
+    box-shadow: 0 0 20px #33ff33; /* Glow effect */
 }
