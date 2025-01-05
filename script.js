@@ -23,22 +23,22 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const glowingBackground = new Image();
   glowingBackground.src = 'Images/TVglowing.png';
 
-  function startAdventure() {
-    console.log('startAdventure function called');
-    startButton.style.display = 'none';
-    adventureText.style.display = 'block';
-    projectsContainer.style.display = 'none'; // Hide projects container
-    console.log('About to call Chapter1.StartChapter1()');
-    Chapter1.StartChapter1(); // Start with the first scene in Chapter1
-    console.log('Chapter1.StartChapter1() called');
-  }
-
   // Power button functionality
   powerButton.addEventListener('click', () => {
     document.body.style.backgroundImage = `url('${glowingBackground.src}')`; // Change background
     startButton.style.display = 'block'; // Reveal the start button
-    projectsButton.style.display = 'block'; // Reveal the projects button
     powerButton.style.display = 'none'; // Hide the power button after clicking
+  });
+
+  // Start button functionality
+  startButton.addEventListener('click', () => {
+    console.log('startAdventure function called');
+    startButton.style.display = 'none'; // Hide the start button
+    adventureText.style.display = 'block'; // Show the adventure text
+    projectsContainer.style.display = 'none'; // Hide projects container
+    console.log('About to call Chapter1.StartChapter1()');
+    Chapter1.StartChapter1(); // Start with the first scene in Chapter1
+    console.log('Chapter1.StartChapter1() called');
   });
 
   // Projects button functionality
@@ -53,9 +53,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
   window.Chapter2 = Chapter2; // Ensure Chapter2 is exposed
   window.handleChoice = handleChoice;
 
-  console.log('Adding click event listener to start button');
-  startButton.addEventListener('click', startAdventure);
-  console.log('Click event listener added to start button');
+  console.log('End of script.js file');
 });
-
-console.log('End of script.js file');
