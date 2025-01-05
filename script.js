@@ -10,10 +10,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const adventureText = document.getElementById('adventureText');
   const startButton = document.getElementById('startButton');
   const powerButton = document.getElementById('powerButton');
+  const projectsButton = document.getElementById('projectsButton');
+  const projectsContainer = document.getElementById('projectsContainer');
 
   console.log('adventureText element:', adventureText);
   console.log('startButton element:', startButton);
   console.log('powerButton element:', powerButton);
+  console.log('projectsButton element:', projectsButton);
+  console.log('projectsContainer element:', projectsContainer);
 
   // Preload the glowing background image
   const glowingBackground = new Image();
@@ -23,6 +27,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     console.log('startAdventure function called');
     startButton.style.display = 'none';
     adventureText.style.display = 'block';
+    projectsContainer.style.display = 'none'; // Hide projects container
     console.log('About to call Chapter1.StartChapter1()');
     Chapter1.StartChapter1(); // Start with the first scene in Chapter1
     console.log('Chapter1.StartChapter1() called');
@@ -32,7 +37,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
   powerButton.addEventListener('click', () => {
     document.body.style.backgroundImage = `url('${glowingBackground.src}')`; // Change background
     startButton.style.display = 'block'; // Reveal the start button
+    projectsButton.style.display = 'block'; // Reveal the projects button
     powerButton.style.display = 'none'; // Hide the power button after clicking
+  });
+
+  // Projects button functionality
+  projectsButton.addEventListener('click', () => {
+    adventureText.style.display = 'none'; // Hide adventure text
+    projectsContainer.style.display = 'block'; // Show projects container
+    document.body.style.backgroundImage = "url('Images/ProjectsBackground.png')"; // Change background for projects
   });
 
   // Expose chapter functions to global scope for button onclick
