@@ -1,29 +1,13 @@
 ---
 layout: page
-title: About
+title: About me
 permalink: /about/
 ---
 
-[Reverie](https://github.com/amitmerchant1990/reverie) is a Jekyll theme which is simple and opinionated. It's actually a fork of [jekyll-now](https://github.com/barryclark/jekyll-now) with some additional features and personal touches which I've implemented to suit my needs for [my blog](https://www.amitmerchant.com).
+I'm Jaevyn Hoyt, a creator and innovator working at the intersection of technology, art, and the natural world. Currently, I combine my expertise in Emerging Media Arts with my passion for natrural science at the UNL Beelab, where I use cutting-edge technology to advance bee outreach and education.
 
-This is a plug-and-play Jekyll theme which you can use on GitHub Pages without even setting up a local environment.
+My mission is to create immersive interactive experiences that teach people about the natural world through play and wonder. Whether I'm 3D printing giant mites, developing educational experiences, or advocating for pro-bee legislation, I'm always looking for innovative ways to bridge the gap between technology and nature.
 
-## Features
+My creative toolkit spans both artistic and utilitarian realms - from 3D modeling and game design to welding and home renovation. This versatility comes from my unique background: training in traditional fine arts at Lincoln's Arts & Humanities program, studying Emerging Media Arts at the Johnny Carson Center, and natrual science at the UNL Bee Lab. As well as all the odd jobs I've worked to pay the bills in persuit of it all.
 
-- Command-line free fork-first workflow, using GitHub.com to create, customize and post to your blog
-- Fully responsive and mobile optimized base theme
-- Sass/Coffeescript support using Jekyll 2.0
-- Free hosting on your GitHub Pages user site
-- All the SEO goodies comes in-built
-- Markdown blogging
-- Syntax highlighting using Pygments
-    - [Dracula syntax theme](https://draculatheme.com/) included
-- Disqus commenting
-- Google Analytics integration
-- Fuzzy search across blog posts
-- Pagination of posts works out-of-the-box.
-- Categorize posts out-of-the box
-- RSS Feed
-- In-built sitemap
-
-Learn more about it [here](https://github.com/amitmerchant1990/reverie) on how to get started.
+When I'm not at the Beelab or working on creative projects, you can find me listening to music, gaming with friends, or making art. I believe in the power of interdisciplinary approaches to create alternative perspectives that can solve complex problems and create meaningful experiences.
