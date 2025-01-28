@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Portfolio Launch
-categories: Portfolio, Launch, Webdesign, Github
+categories: Portfolio Launch Webdesign Github
 ---
 
 This post will mark the official launch of newest portfolio. I've tried a few platforms in the past like artstation or website building sites, but between losing accounts and lack of control I was motivated to continue exploring options. Eventually I learned about Github pages. I've always loved open source technology, and the whole philosophy behind it. Being interesting in continuing to develope my coding skills & understanding, this seemed like the perfect platform for a long term portfolio. Especially since many of my other projects are hosted through github, although most of them are unpolished projects from my journey through school.
