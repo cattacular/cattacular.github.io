@@ -14,4 +14,4 @@ I joined as the Level Designer & builder. Offering some of my 3D modeling skills
 We worked on the project for the whole year culminating in a live showcase of 1 level of our game. Displayed in arcade cabinets we put together ourselves. The final showing was by far my favorite part of the expeience, we got in costume and everything. Caleb had prepared the rest of the set to be like a retro living room. 
 
 Rumor has it that developement may be continuing in the future...
-![Image Description](Terminus_Me.jpg)
+![Image Description](/assets/images/Terminus_Me.jpg)
