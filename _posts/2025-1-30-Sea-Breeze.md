@@ -12,4 +12,3 @@ Seabreeze is a space in Wilmington, North Carolina given to black citizens durin
 
 
 ![Image Description](/assets/images/Terminus_Me.jpg)
-This Innovation Studio Course tasked students to create works utilizing new forms of story telling to help preserve and document Seabreeze, a Space in North Carolina given to black citizens during the Jim Crow era as a safe haven. Due to Natural disasters and land ownership this land has dwindled to a mere fragment of what it was. A portion of students and I worked to recreate a virtual Seabreeze for what it was and is now as a way to educate and connect others. My job was to research the history and design a number of environments. Recreating the life and atmosphere of Junk Joints during this era
