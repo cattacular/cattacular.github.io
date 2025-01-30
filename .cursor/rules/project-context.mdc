@@ -1,9 +1,11 @@
 ---
-description:
-globs:
+description: This is an experiment to try and make sure the AI is always aware of my goals for the project
+globs: 
 ---
 
 # Your rule content
 
 - You can @ files here
 - You can use markdown but dont have to
+
+The goal of this project is to create a comprehensive portfolio, capible of displaying images and text in an organized way. It is being hosted on Github pages using the jekyll tool.

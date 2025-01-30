@@ -4,7 +4,9 @@ title: Portfolio Launch
 categories: Portfolio Launch Webdesign Github
 ---
 
-This post will mark the official launch of my newest portfolio. I've tried a few platforms in the past, like artstation or website building sites, but between losing accounts and lack of control I was motivated to continue exploring options. Eventually I learned about Github pages. I've always loved open source technology, and the whole philosophy behind it. Being interested in continuing to develope my coding skills & understanding, this seemed like the perfect platform for a long term portfolio. Especially since many of my other projects are hosted through github, although most of them are unfinished projects.
+This post will mark the official launch of my newest portfolio. 
+
+I've tried a few platforms in the past, like artstation or website building sites, but between losing accounts and lack of control I was motivated to continue exploring options. Eventually I learned about Github pages. I've always loved open source technology, and the whole philosophy behind it. Being interested in continuing to develope my coding skills & understanding, this seemed like the perfect platform for a long term portfolio. Especially since many of my other projects are hosted through github, although most of them are unfinished projects.
 
 At first I tried to truley start from scratch, starting with nothing but a brand new index.html. What came to be was a simple text adventure. I had grand ideas about an interactive portfolio that gives you an personal perspective on my projects. After getting a couple small chapters in I realized the scale of the project. While its something I'd like to reapproach, I decided to take a more humble approach for the core of my portfolio. After all, I cant show it to anyone if its never finished.
 
