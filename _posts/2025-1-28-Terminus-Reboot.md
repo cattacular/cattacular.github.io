@@ -12,6 +12,8 @@ I was actually the last person to join the Terminus team. My capstone was origin
 
 I joined as the Level Designer & builder. Offering some of my 3D modeling skills as well.
 We worked on the project for the whole year culminating in a live showcase of 1 level of our game. Displayed in arcade cabinets we put together ourselves. The final showing was by far my favorite part of the expeience, we got in costume and everything. Caleb had prepared the rest of the set to be like a retro living room. 
+We took a vertical slice approach, opposed the also very common, minimum viable product approach. A "Vertical Slice" is when a developement team takes a small section of a game. Usuallly just one level or scene, and polishes it to completion.
+Whereas a minimum viable product would be looking at the scope of the whole game, and trying to make it playable begining to end. Then going back and adding artistic details.
 
 Rumor has it that developement may be continuing in the future...
 ![Image Description](/assets/images/Terminus_Me.jpg)

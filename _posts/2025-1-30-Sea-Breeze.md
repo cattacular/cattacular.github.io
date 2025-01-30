@@ -1,0 +1,15 @@
+---
+layout: post
+title: Sea Breeze - North Carolina
+categories: Portfolio Game Design JCCEMA
+---
+Sea Breeze was the first project I had to fly out of the state for. The course was Innovation Studio with Prof. Ash Smith
+We ended up getting split into 2 teams, I was lucky enough to be selected for the field team. 
+We were tasked with flying out and interviewing many of residents in Wilmington connected to the story. As well as recording as much as we could about their history and enviroment. With the ultimate goal of putting it all together to preserve the story of seabreeze.
+During my time here I had the honor of hearing generational stories from many perspectives. All about the places and people that made this community. Many of them I met and saw personally, getting to visit old juke joints and peers where the stories I heard took place. Of course the food, as always is my favorite part when learning about new cultures. Our whole class got to try some homemade clam fritters, a staple for the people in the area.
+
+Seabreeze is a space in Wilmington, North Carolina given to black citizens during the Jim Crow era as a safe haven. Due to Natural disasters and land ownership scandles this land has dwindled to a mere fragment of what it was. After getting to experience so much of the past, even through stories, it became clear how important preserving as much as we can was.
+
+
+![Image Description](/assets/images/Terminus_Me.jpg)
+This Innovation Studio Course tasked students to create works utilizing new forms of story telling to help preserve and document Seabreeze, a Space in North Carolina given to black citizens during the Jim Crow era as a safe haven. Due to Natural disasters and land ownership this land has dwindled to a mere fragment of what it was. A portion of students and I worked to recreate a virtual Seabreeze for what it was and is now as a way to educate and connect others. My job was to research the history and design a number of environments. Recreating the life and atmosphere of Junk Joints during this era
