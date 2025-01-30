@@ -16,4 +16,5 @@ We took a vertical slice approach, opposed the also very common, minimum viable 
 Whereas a minimum viable product would be looking at the scope of the whole game, and trying to make it playable begining to end. Then going back and adding artistic details.
 
 Rumor has it that developement may be continuing in the future...
+
 ![Image Description]({{ site.baseurl }}/assets/images/Terminus_Me.jpg)
