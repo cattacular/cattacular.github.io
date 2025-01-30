@@ -13,3 +13,4 @@ Seabreeze is a space in Wilmington, North Carolina given to black citizens durin
 
 ![Image Description](/assets/images/JukeJointFront.png)
 ![Image Description](/assets/images/JukeJointSide.png)
+![Image]({{"/assets/images/JukeJointSide.png",  | relative_url }})
