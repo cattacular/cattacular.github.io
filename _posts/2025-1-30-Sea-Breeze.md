@@ -11,5 +11,5 @@ During my time here I had the honor of hearing generational stories from many pe
 Seabreeze is a space in Wilmington, North Carolina given to black citizens during the Jim Crow era as a safe haven. Due to Natural disasters and land ownership scandles this land has dwindled to a mere fragment of what it was. After getting to experience so much of the past, even through stories, it became clear how important preserving as much as we can was.
 
 
-![Image Description]({{ site.baseurl }}/assets/images/JukeJointFront.png)
-![Image Description]({{ site.baseurl }}/assets/images/JukeJointSide.png)
+![Image Description](/assets/images/JukeJointFront.png)
+![Image Description](/assets/images/JukeJointSide.png)
