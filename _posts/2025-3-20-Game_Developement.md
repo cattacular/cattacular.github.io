@@ -6,4 +6,8 @@ categories: Portfolio GameDesign JCCEMA Phytoria Bitsy
 
 Testing to see if bitsy files can be privately hosted
 
-<iframe src="assets/Bitsy/finally_awake.html" style="width: 100%; height: 600px;"></iframe>
+<a href="Finally_awake.html" target="_blank">Play Finally Awake</a>
+
+
+
+
