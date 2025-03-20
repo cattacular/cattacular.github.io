@@ -22,5 +22,5 @@ Whereas a minimum viable product would be looking at the scope of the whole game
 
 Rumor has it that developement may be continuing in the future...
 
-![Image Description]({{ site.baseurl }}/assets/images/Terminus_Me.jpg)
-![Image Description]({{ site.baseurl }}/assets/images/Terminus.jpg)
+![---]({{ site.baseurl }}/assets/images/Terminus_Me.jpg)
+![---]({{ site.baseurl }}/assets/images/Terminus.png)
