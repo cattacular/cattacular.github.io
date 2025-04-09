@@ -19,7 +19,7 @@ we also will do a detailed analasis of workflow so each step from start to finis
 | Ongoing Support | $250/y |  Quarterly check ins to help maintain effeciency & meet goals.|
 | Program training | $50/h | Hands on tech support on how to use a specific tool |
 
-<style>
+<!-- <style>
   .contact-form {
     max-width: 500px;
     margin: 0 auto;
@@ -70,7 +70,7 @@ we also will do a detailed analasis of workflow so each step from start to finis
   }
 </style>
 
-<div class="contact-form">
+<!-- <div class="contact-form">
   <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
     <!-- Text Input -->
     <label for="name">Full Name:</label>
@@ -122,12 +122,12 @@ we also will do a detailed analasis of workflow so each step from start to finis
 
     <!-- Date Input -->
     <label for="preferred-date">Preferred Meeting Date:</label>
-    <input type="date" id="preferred-date" name="preferred_date">
+    <!-- <input type="date" id="preferred-date" name="preferred_date">
 
     <!-- Text Area for longer responses -->
     <label for="message">Your Message:</label>
     <textarea id="message" name="message" required></textarea>
-
+<!-- 
     <button type="submit">Send</button>
   </form>
-</div>
+</div> --> --> --> -->
