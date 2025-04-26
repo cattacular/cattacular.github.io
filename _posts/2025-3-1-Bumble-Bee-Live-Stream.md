@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bumble Bee Cam
-categories: Portfolio Game Design JCCEMA
+categories: Portfolio Education BeeLab Schramm YouTube
 ---
 I had the pleasure of completing a project the UNL Bee Lab has been thinking about for nearly a full decade. Partnering with Schramm Education Center, I created a live stream of their indoor bumble bee coloney. 
 

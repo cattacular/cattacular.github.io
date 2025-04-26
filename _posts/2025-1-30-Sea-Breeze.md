@@ -1,9 +1,10 @@
 ---
 layout: post
 title: Sea Breeze - North Carolina
-categories: Portfolio Game Design JCCEMA
+categories: Portfolio JCCEMA Travel North_Carolina Field_work Unreal_Engine
 ---
 Sea Breeze was the first project I had to fly out of the state for. 
+
 
 The course was Innovation Studio with Prof. Ash Smith
 We ended up getting split into 2 teams, I was lucky enough to be selected for the field team. 

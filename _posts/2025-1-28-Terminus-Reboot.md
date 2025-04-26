@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Terminus
-categories: Portfolio Game Design JCCEMA
+categories: Portfolio Game Design JCCEMA Unreal_Engine
 ---
 
 Terminus was the capstone of my Emerging Media Arts Bachelors degree. It's a first person stealth/puzzle shooter taking place on a giant arctic monorail. The project started during our senior year, with us having the summer before to put together the proposal.
