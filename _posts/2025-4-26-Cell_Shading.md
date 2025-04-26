@@ -7,7 +7,7 @@ Varius renders using cell shading techniques
 
 
 <div style="text-align: center;">
-  <video controls loop>
+  <video controls loop style="max-width: 100%; width: 600px; height: auto;">
     <source src="{{ site.baseurl }}/assets/Video/CellShrooms.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
