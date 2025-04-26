@@ -4,11 +4,7 @@ title: Cell_Shading
 categories: Portfolio GameDesign Blender Renders
 ---
 Varius renders using cell shading techniques
-
-    <video controls width="600">
-      <source src="{{ site.baseurl }}/assets/video/CellShrooms.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+    ![CellShrooms Video]({{ site.baseurl }}/assets/video/CellShrooms.mp4)
 
 First of all, what is cell shading?
 You know when you look at a round object that has a shadow casted on it? There is a gradiant of light to dark, from where more light hits the object, to where less hits. This is pretty everyday stuff, you likely know how shadows work.
