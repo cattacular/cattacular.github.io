@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-01-12T21:34:33-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jaevyn Atom Hoyt</title><subtitle>A Personal Portfolio &amp; Blog</subtitle><author><name>Jaevyn Atom Hoyt</name></author><entry><title type="html">This post demonstrates post content styles</title><link href="http://localhost:4000/this-post-demonstrates-post-content-styles/" rel="alternate" type="text/html" title="This post demonstrates post content styles" /><published>2019-07-27T00:00:00-05:00</published><updated>2019-07-27T00:00:00-05:00</updated><id>http://localhost:4000/this-post-demonstrates-post-content-styles</id><content type="html" xml:base="http://localhost:4000/this-post-demonstrates-post-content-styles/"><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.</p>
+
+<h2 id="some-great-heading-h2">Some great heading (h2)</h2>
+
+<p>Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu.</p>
+
+<p>Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.</p>
+
+<h2 id="another-great-heading-h2">Another great heading (h2)</h2>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit.</p>
+
+<h3 id="some-great-subheading-h3">Some great subheading (h3)</h3>
+
+<p>Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum.</p>
+
+<p>Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc.</p>
+
+<h3 id="some-great-subheading-h3-1">Some great subheading (h3)</h3>
+
+<p>Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.</p>
+
+<blockquote>
+  <p>This quote will change your life. It will reveal the secrets of the universe, and all the wonders of humanity. Don’t misuse it.</p>
+</blockquote>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt.</p>
+
+<h3 id="some-great-subheading-h3-2">Some great subheading (h3)</h3>
+
+<p>Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Hello, World!<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p>In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.</p>
+
+<h4 id="you-might-want-a-sub-subheading-h4">You might want a sub-subheading (h4)</h4>
+
+<p>In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.</p>
+
+<p>In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.</p>
+
+<h4 id="but-its-probably-overkill-h4">But it’s probably overkill (h4)</h4>
+
+<p>In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.</p>
+
+<h3 id="oh-hai-an-unordered-list">Oh hai, an unordered list!!</h3>
+
+<p>In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.</p>
+
+<ul>
+  <li>First item, yo</li>
+  <li>Second item, dawg</li>
+  <li>Third item, what what?!</li>
+  <li>Fourth item, fo sheezy my neezy</li>
+</ul>
+
+<h3 id="oh-hai-an-ordered-list">Oh hai, an ordered list!!</h3>
+
+<p>In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.</p>
+
+<ol>
+  <li>First item, yo</li>
+  <li>Second item, dawg</li>
+  <li>Third item, what what?!</li>
+  <li>Fourth item, fo sheezy my neezy</li>
+</ol>
+
+<h2 id="headings-are-cool-h2">Headings are cool! (h2)</h2>
+
+<p>Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.</p>
+
+<p>Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.</p>
+
+<p>Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc.</p>
+
+<h3 id="tables">Tables</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title 1</th>
+      <th>Title 2</th>
+      <th>Title 3</th>
+      <th>Title 4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>lorem</td>
+      <td>lorem ipsum</td>
+      <td>lorem ipsum dolor</td>
+      <td>lorem ipsum dolor sit</td>
+    </tr>
+    <tr>
+      <td>lorem ipsum dolor sit</td>
+      <td>lorem ipsum dolor sit</td>
+      <td>lorem ipsum dolor sit</td>
+      <td>lorem ipsum dolor sit</td>
+    </tr>
+    <tr>
+      <td>lorem ipsum dolor sit</td>
+      <td>lorem ipsum dolor sit</td>
+      <td>lorem ipsum dolor sit</td>
+      <td>lorem ipsum dolor sit</td>
+    </tr>
+    <tr>
+      <td>lorem ipsum dolor sit</td>
+      <td>lorem ipsum dolor sit</td>
+      <td>lorem ipsum dolor sit</td>
+      <td>lorem ipsum dolor sit</td>
+    </tr>
+  </tbody>
+</table>]]></content><author><name>Jaevyn Atom Hoyt</name></author><category term="Miscellaneous" /><summary type="html"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.]]></summary></entry></feed>
