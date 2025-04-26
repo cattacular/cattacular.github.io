@@ -3,9 +3,14 @@ layout: post
 title: Bitsy
 categories: Portfolio GameDesign JCCEMA Phytoria Bitsy
 ---
-I love the accesibility of Bitsy games. Its cool to see what you can come up with in such a constrained enviroment. Finally awake is the first game I've made in bitsy, Its themed off of my phytoria world building. 
+    Click here to try a Itsy Bitsy game I made
+    
+First play the game. Swipe to move on phone. Arrow keys and spacebar on PC.
 
 <a href="/assets/Bitsy/finally_awake.html" target="_blank">Play Finally Awake</a>
+
+    I love the accesibility of Bitsy games. Its cool to see what you can come up with in such a constrained enviroment. Finally awake is the first game I've made in bitsy, Its themed off of my phytoria world building. 
+
 
 
 
