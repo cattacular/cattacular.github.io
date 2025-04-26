@@ -7,7 +7,7 @@ Varius renders using cell shading techniques
 
 
 <video controls loop>
-     <source src="{{ site.baseurl }}/assets/video/CellShrooms.mp4" type="video/mp4">
+     <source src="{{ site.baseurl }}/assets/Video/CellShrooms.mp4" type="video/mp4">
      Your browser does not support the video tag.
 </video>
 
