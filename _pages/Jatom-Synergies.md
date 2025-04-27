@@ -8,9 +8,9 @@ permalink: /Jatom-Synergies/
 
 Jatom synergies mission is to help creative people meet their goals. We accomplish this by getting to know you and your work, then help to connect you with a curated selection of resources set you up for success. 
 
-By help individuals or buisnesses leverage the amazing and often times free technology/information avalible today. We can increase your independance and reach, allowing you to acheive more than ever before.
+By helping individuals or buisnesses leverage the amazing and often times free technology avalible today, We can increase your effectiveness. Allowing you to acheive more than ever before.
 
-we also will do a detailed analasis of workflow so each step from start to finish is crystal clear.
+We also will do a detailed analasis of workflow so each step from start to finish is crystal clear.
 
 | **Package** |  **Price**  | **Description** |
 | --- | --- | --- |
