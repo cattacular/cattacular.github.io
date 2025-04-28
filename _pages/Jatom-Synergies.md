@@ -18,3 +18,5 @@ We also will do a detailed analasis of workflow so each step from start to finis
 | Set up  | $75/h | Implementation sessions - We will schedule meetings based on need & scale of the project too implement the desired technology &/or workflows into your buisness |
 | Ongoing Support | $250/y |  Quarterly check ins to help maintain effeciency & meet goals.|
 | Program training | $50/h | Hands on tech support on how to use a specific tool |
+
+Please contact us at JatomSynergies@gmail.com to get started!
