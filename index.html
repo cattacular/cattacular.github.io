@@ -13,6 +13,11 @@ layout: default
         </div>
       </a>
       <div class="entry">
+        {% if post.teaser_image %}
+          <a href="{{ site.baseurl }}{{ post.url }}">
+            <img src="{{ site.baseurl }}/images/{{ post.teaser_image }}" alt="{{ post.title }}" class="teaser-image">
+          </a>
+        {% endif %}
         {{ post.excerpt }}
       </div>
 

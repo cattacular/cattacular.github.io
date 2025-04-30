@@ -387,6 +387,19 @@ nav {
     background-color: #ede1ff;
   }
 
+  .teaser-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    margin-bottom: 1em;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
   .you-may-like{
     margin: 1.8em .8em;
     /*border-left: 2px solid $gray;*/
