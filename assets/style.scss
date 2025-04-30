@@ -377,6 +377,32 @@ nav {
 }
 
 .post {
+  padding-bottom: 2em;
+  border-bottom: 1px solid $lightGray;
+
+  .post-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      
+      .read-more {
+        background-color: darken($blue, 10%);
+        color: white;
+      }
+    }
+  }
+
+  .read-more {
+    text-transform: uppercase;
+    font-size: 15px;
+    color: $blue;
+    transition: all 0.2s ease;
+  }
+
   blockquote {
     margin: 1.8em .8em;
     /*border-left: 2px solid $gray;*/
@@ -412,11 +438,6 @@ nav {
 
   .comments {
     margin-top: 10px;
-  }
-
-  .read-more {
-    text-transform: uppercase;
-    font-size: 15px;
   }
 }
 

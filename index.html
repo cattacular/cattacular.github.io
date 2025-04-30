@@ -5,23 +5,22 @@ layout: default
 <div class="posts">
   {% for post in paginator.posts %}
     <article class="post">
-      <a href="{{ site.baseurl }}{{ post.url }}">
+      <a href="{{ site.baseurl }}{{ post.url }}" class="post-link">
         <h1>{{ post.title }}</h1>
 
         <div>
           <p class="post_date">{{ post.date | date: "%B %e, %Y" }}</p>
         </div>
-      </a>
-      <div class="entry">
-        {% if post.teaser_image %}
-          <a href="{{ site.baseurl }}{{ post.url }}">
-            <img src="{{ site.baseurl }}/images/{{ post.teaser_image }}" alt="{{ post.title }}" class="teaser-image">
-          </a>
-        {% endif %}
-        {{ post.excerpt }}
-      </div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+        <div class="entry">
+          {% if post.teaser_image %}
+            <img src="{{ site.baseurl }}/images/{{ post.teaser_image }}" alt="{{ post.title }}" class="teaser-image">
+          {% endif %}
+          {{ post.excerpt }}
+        </div>
+
+        <span class="read-more">Read More</span>
+      </a>
     </article>
   {% endfor %}
 
