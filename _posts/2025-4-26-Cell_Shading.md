@@ -25,6 +25,6 @@ For example
 |40% - 80% | Light Grey |
 |80% - 100%| White |
 
-![Sketch_Front]({{"assets/images/Cell_Shading/Sketch_Front.png" | relative_url }})
+<!-- ![Sketch_Front]({{"assets/images/Cell_Shading/Sketch_Front.png" | relative_url }}) -->
 ![Sketch_Side]({{"assets/images/Cell_Shading/Sketch_Side.png" | relative_url }})
 ![Sketch_Dark]({{"assets/images/Cell_Shading/Sketch_Front_Dark.png" | relative_url }})
