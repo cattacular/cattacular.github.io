@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Cell_Shading
+title: Cell Shading
 categories: Portfolio GameDesign Blender Renders
 ---
 ![Sketch_Front]({{"assets/images/Cell_Shading/Sketch_Front.png" | relative_url }})
