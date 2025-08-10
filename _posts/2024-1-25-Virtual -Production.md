@@ -21,8 +21,8 @@ Demanding results was a shortfilm made by Sam Rice and myself. My role in the pr
 
 Content warning: implied Suicide 
 
-<iframe width="560" height="315" src="https://youtu.be/embed/onWTAzuEf8s" title=""Demanding Results"" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/onWTAzuEf8s" title="Demanding Results" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 behind the scenes
 
-<iframe width="560" height="315" src="https://youtu.be/embed/lulnwHecZPo" title="Demanding Results Proccess" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lulnwHecZPo" title="Demanding Results Process" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

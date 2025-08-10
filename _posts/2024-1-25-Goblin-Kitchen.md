@@ -10,7 +10,7 @@ In the game you play as a goblin tasked with cooking meals for your taverns cust
 I was the creative director & 3D modeler for this project. 
 
 
-<iframe width="560" height="315" src="ttps://youtu.be/embed/d1HAApUUcRQ?si=OZ-IbqwVn3Hjzo2O" title="Ouiji Machine" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/d1HAApUUcRQ" title="Goblin Kitchen" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
 <!-- 360 panorama
