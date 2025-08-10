@@ -1,0 +1,40 @@
+{% comment %}
+  360° Panorama Viewer Include
+  Usage: {% include panorama.html image="path/to/panorama.jpg" id="unique-id" %}
+  
+  Parameters:
+  - image: Path to your 360° panorama image (equirectangular format)
+  - id: Unique identifier for the panorama container
+  - height: Height of the viewer (default: 400px)
+  - width: Width of the viewer (default: 100%)
+{% endcomment %}
+
+{% assign panorama_id = include.id | default: "panorama" %}
+{% assign panorama_height = include.height | default: "400px" %}
+{% assign panorama_width = include.width | default: "100%" %}
+
+<div id="{{ panorama_id }}" style="width: {{ panorama_width }}; height: {{ panorama_height }};"></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    pannellum.viewer('{{ panorama_id }}', {
+        type: 'equirectangular',
+        panorama: '{{ include.image }}',
+        autoLoad: true,
+        autoRotate: -2,
+        compass: true,
+        showZoomCtrl: true,
+        showFullscreenCtrl: true,
+        showControls: true,
+        mouseZoom: true,
+        draggable: true,
+        friction: 0.15,
+        minZoom: 1,
+        maxZoom: 3,
+        defaultZoom: 1,
+        defaultLong: 0,
+        defaultLat: 0,
+        hotSpots: []
+    });
+});
+</script> 
