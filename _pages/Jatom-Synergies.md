@@ -12,9 +12,13 @@ By helping individuals or buisnesses leverage the amazing and often times free t
 
 We also will do a detailed analasis of workflow so each step from start to finish is crystal clear.
 
-| **Package** |  **Price**  | **Description** |
+<!-- | **Package** |  **Price**  | **Description** |
 | --- | --- | --- |
 | Basic consultation | $30/h | We will go over your current technology use and help figure out what's working/not and where the best opportunities for growth are. Helping you leverage technlogy to meet your goals |
-| Set up  | $75/h | Implementation sessions - We will schedule meetings based on need & scale of the project too implement the desired technology &/or workflows into your buisness |
+| Set up  | $50/h | Implementation sessions - We will schedule meetings based on need & scale of the project too implement the desired technology &/or workflows into your buisness |
 | Ongoing Support | $250/y |  Quarterly check ins to help maintain effeciency & meet goals.|
-| Program training | $50/h | Hands on tech support on how to use a specific tool |
+| Program training | $25/h | Hands on tech support on how to use a specific tool | -->
+
+We also take commisions for projects.
+
+contact us a JatomsSynergies@gmail.com to get started

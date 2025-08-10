@@ -15,9 +15,10 @@ Varius renders using cell shading techniques
 </div>
 
 First of all, what is cell shading?
-You know when you look at a round object that has a shadow casted on it? There is a gradiant of light to dark, from where more light hits the object, to where less hits. This is pretty everyday stuff, you likely know how shadows work.
+You know when you look at a round object that has a shadow casted on it? There is a gradient of light to dark, from where more light hits the object, to where less hits. This is pretty everyday stuff, you likely know how shadows work.
 Cell shading is what would happen if instead of a natrual smooth gradiant, we broke it into chunks and assigned a specific color to each chunk.
 For example
+
 
 |Amount of light| Assigned Color|
 |0%  - 10% | Jet black |
