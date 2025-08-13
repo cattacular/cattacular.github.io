@@ -301,7 +301,8 @@ p > img {
 }
 
 .site-info {
-  float: left;
+  float: none;
+  text-align: center;
 
   @include mobile {
     float: none;
@@ -318,7 +319,7 @@ p > img {
   font-weight: 300;
   font-size: 28px;
   letter-spacing: 1px;
-  text-align: left;
+  text-align: center;
 
   @include mobile {
     text-align: center;
@@ -336,10 +337,11 @@ p > img {
 }
 
 nav {
-  float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
+  float: none;
+  margin-top: 23px;
   font-family: $helveticaNeue;
   font-size: 18px;
+  text-align: center;
 
   @include mobile {
     float: none;
@@ -349,9 +351,9 @@ nav {
   }
 
   a {
-    margin-left: 20px;
+    margin: 0 10px;
     color: $darkGray;
-    text-align: right;
+    text-align: center;
     font-weight: 300;
     letter-spacing: 1px;
 
