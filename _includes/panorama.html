@@ -13,28 +13,45 @@
 {% assign panorama_height = include.height | default: "400px" %}
 {% assign panorama_width = include.width | default: "100%" %}
 
-<div id="{{ panorama_id }}" style="width: {{ panorama_width }}; height: {{ panorama_height }};"></div>
+<div id="{{ panorama_id }}" style="width: {{ panorama_width }}; height: {{ panorama_height }}; border: 1px solid #ccc; background: #f0f0f0; display: flex; align-items: center; justify-content: center;">
+  <p>Loading 360° panorama...</p>
+</div>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    pannellum.viewer('{{ panorama_id }}', {
-        type: 'equirectangular',
-        panorama: '{{ include.image }}',
-        autoLoad: true,
-        autoRotate: -2,
-        compass: true,
-        showZoomCtrl: true,
-        showFullscreenCtrl: true,
-        showControls: true,
-        mouseZoom: true,
-        draggable: true,
-        friction: 0.15,
-        minZoom: 1,
-        maxZoom: 3,
-        defaultZoom: 1,
-        defaultLong: 0,
-        defaultLat: 0,
-        hotSpots: []
-    });
+    console.log('Initializing panorama viewer for: {{ panorama_id }}');
+    console.log('Image path: {{ include.image }}');
+    
+    if (typeof pannellum === 'undefined') {
+        console.error('Pannellum library not loaded!');
+        document.getElementById('{{ panorama_id }}').innerHTML = '<p style="color: red;">Error: Pannellum library not loaded. Please check the console for details.</p>';
+        return;
+    }
+    
+    try {
+        pannellum.viewer('{{ panorama_id }}', {
+            type: 'equirectangular',
+            panorama: '{{ include.image }}',
+            autoLoad: true,
+            autoRotate: -2,
+            compass: true,
+            showZoomCtrl: true,
+            showFullscreenCtrl: true,
+            showControls: true,
+            mouseZoom: true,
+            draggable: true,
+            friction: 0.15,
+            minZoom: 1,
+            maxZoom: 3,
+            defaultZoom: 1,
+            defaultLong: 0,
+            defaultLat: 0,
+            hotSpots: []
+        });
+        console.log('Panorama viewer initialized successfully');
+    } catch (error) {
+        console.error('Error initializing panorama viewer:', error);
+        document.getElementById('{{ panorama_id }}').innerHTML = '<p style="color: red;">Error loading panorama: ' + error.message + '</p>';
+    }
 });
 </script> 

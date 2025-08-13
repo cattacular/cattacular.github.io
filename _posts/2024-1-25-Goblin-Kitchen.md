@@ -15,4 +15,4 @@ I was the creative director & 3D modeler for this project.
 
 <!-- 360 panorama
 assets\images\GoblinKitchen\Goblin_Panorama.jpg -->
-{% include panorama.html image="assets/images/GoblinKitchen/Goblin_Panorama.jpg" id="Goblin_Panorama" height="500px" %}
+{% include panorama.html image="/assets/images/GoblinKitchen/Goblin_Panorama.jpg" id="Goblin_Panorama" height="500px" %}
