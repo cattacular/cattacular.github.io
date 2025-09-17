@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RPG Game – Jaevyn Atom Hoyt – A Personal Portfolio & Blog</title>
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="RPG Game" />
+<meta name="author" content="Jaevyn Atom Hoyt" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A Personal Portfolio &amp; Blog" />
+<meta property="og:description" content="A Personal Portfolio &amp; Blog" />
+<link rel="canonical" href="https://cattacular.github.io/assets/Unpublished_posts/2025-1-20-RPG_Game/" />
+<meta property="og:url" content="https://cattacular.github.io/assets/Unpublished_posts/2025-1-20-RPG_Game/" />
+<meta property="og:site_name" content="Jaevyn Atom Hoyt" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="RPG Game" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Jaevyn Atom Hoyt"},"description":"A Personal Portfolio &amp; Blog","headline":"RPG Game","url":"https://cattacular.github.io/assets/Unpublished_posts/2025-1-20-RPG_Game/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+
+<meta property="og:description" content="" />
+
+<meta name="author" content="Jaevyn Atom Hoyt" />
+
+
+<meta property="og:title" content="RPG Game" />
+<meta property="twitter:title" content="RPG Game" />
+
+
+
+<meta property="og:image" content="https://cattacular.github.io/assets/images/JLogo.png"/>
+<meta property="twitter:image" content="https://cattacular.github.io/assets/images/JLogo.png"/>
+
+
+
+    <link rel="stylesheet" type="text/css" href="/assets/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="Jaevyn Atom Hoyt - A Personal Portfolio & Blog" href="/feed.xml" />
+    <link rel="canonical" href="https://cattacular.github.io/assets/Unpublished_posts/2025-1-20-RPG_Game/" />
+
+    <!-- Pannellum 360° Panorama Viewer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css" />
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+
+    <meta name="theme-color" content="#000000">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    
+
+  </head>
+
+  <body>
+    <div id="bar"></div>
+    <div class="wrapper-container">
+      <div class="wrapper-masthead">
+        <div class="container">
+          <header class="masthead clearfix">
+            <a href="/" class="site-avatar"><img src="/assets/images/JLogo.png" alt="" /></a>
+
+            <div class="site-info">
+              <h1 class="site-name"><a href="/">Jaevyn Atom Hoyt</a></h1>
+              <p class="site-description">A Personal Portfolio & Blog</p> 
+            </div>
+
+            <nav>
+              <a href="/">Home</a>
+              <a href="/about">About</a>
+              <a href="/Jatom-Synergies">Jatom Synergies</a>
+              <a href="/exquisite-corpse">Exquisite Corpse</a>
+              <a href="/search">Search</a>
+              <a href="/archive">Archive</a>
+            </nav>
+          </header>
+        </div>
+      </div>
+
+      <div class="wrapper-main">
+        <div id="main" role="main" class="container">
+          <article class="post detailed">
+  <h1>RPG Game</h1>
+
+  <div>
+    <p class="author_title">Jaevyn Atom Hoyt  ·  </p>
+    
+    <div class="post-tags">
+      
+      
+        <a href="/categories/#Games JavaScript">Games JavaScript</a>
+        
+      
+    </div>
+  </div>
+    
+  <div class="entry">
+    <p>A simple turn-based RPG with a top-down perspective and tile-based movement. Explore the world, encounter creatures, and battle them in turn-based combat!</p>
+
+<h2 id="how-to-play">How to Play</h2>
+
+<ul>
+  <li>Use <strong>WASD</strong> or <strong>Arrow Keys</strong> to move your character</li>
+  <li>Walk into creatures to start battles</li>
+  <li>In battles, choose your actions from the menu</li>
+  <li>Defeat creatures to gain experience and level up</li>
+</ul>
+
+<div id="game-container" style="width: 100%; max-width: 800px; margin: 0 auto; text-align: center;">
+  <canvas id="gameCanvas" width="800" height="600" style="border: 2px solid #333; background: #87CEEB;"></canvas>
+  <canvas id="battleCanvas" width="800" height="600" style="border: 2px solid #333; background: #2c1810; display: none;"></canvas>
+  <div id="ui-container" style="margin-top: 10px;">
+    <div id="stats" style="display: inline-block; margin: 0 20px; padding: 10px; background: #f0f0f0; border-radius: 5px;">
+      <strong>Player Stats:</strong><br />
+      HP: <span id="player-hp">100</span>/<span id="player-max-hp">100</span><br />
+      Level: <span id="player-level">1</span><br />
+      XP: <span id="player-xp">0</span><br />
+      <strong>Current Level:</strong> <span id="current-level">Tutorial Forest</span>
+    </div>
+    <div id="battle-ui" style="display: none; margin-top: 10px; padding: 10px; background: #ffebee; border-radius: 5px;">
+      <div id="battle-text" style="margin-bottom: 10px;"></div>
+      <button id="attack-btn" onclick="attack()">Attack</button>
+      <button id="heal-btn" onclick="heal()">Heal</button>
+      <button id="run-btn" onclick="run()">Run</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// Sprite system
+const sprites = {
+  player: null,
+  goblin: null,
+  spider: null,
+  troll: null,
+  grass: null,
+  water: null,
+  mountain: null
+};
+
+// Load all sprites
+function loadSprites() {
+  return new Promise((resolve) => {
+    let loadedCount = 0;
+    const totalSprites = 7;
+    
+    function onSpriteLoad() {
+      loadedCount++;
+      console.log(`Loaded sprite ${loadedCount}/${totalSprites}`);
+      if (loadedCount === totalSprites) {
+        console.log('All sprites loaded successfully!');
+        resolve();
+      }
+    }
+    
+    function onSpriteError(spriteName) {
+      console.error(`Failed to load sprite: ${spriteName}`);
+      loadedCount++;
+      if (loadedCount === totalSprites) {
+        console.log('All sprites processed (some failed to load)');
+        resolve();
+      }
+    }
+    
+    // Create sprite images
+    sprites.player = new Image();
+    sprites.player.onload = onSpriteLoad;
+    sprites.player.onerror = () => onSpriteError('player');
+    sprites.player.src = '/assets/images/game-assets/Player.png';
+    
+    sprites.goblin = new Image();
+    sprites.goblin.onload = onSpriteLoad;
+    sprites.goblin.onerror = () => onSpriteError('goblin');
+    sprites.goblin.src = '/assets/images/game-assets/Goblin1.png';
+    
+    sprites.spider = new Image();
+    sprites.spider.onload = onSpriteLoad;
+    sprites.spider.onerror = () => onSpriteError('orc');
+    sprites.spider.src = '/assets/images/game-assets/Spider.png';
+    
+    sprites.troll = new Image();
+    sprites.troll.onload = onSpriteLoad;
+    sprites.troll.onerror = () => onSpriteError('troll');
+    sprites.troll.src = 'data:image/svg+xml;base64,' + btoa(`
+      <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="15" cy="15" r="12" fill="#556B2F" stroke="#333" stroke-width="2"/>
+        <circle cx="12" cy="12" r="2" fill="#FFD700"/>
+        <circle cx="18" cy="12" r="2" fill="#FFD700"/>
+        <path d="M 12 18 Q 15 20 18 18" stroke="#FFD700" stroke-width="2" fill="none"/>
+        <rect x="13" y="22" width="4" height="6" fill="#8B7355"/>
+        <polygon points="15,6 12,10 18,10" fill="#4B0082"/>
+      </svg>
+    `);
+    
+    sprites.grass = new Image();
+    sprites.grass.onload = onSpriteLoad;
+    sprites.grass.onerror = () => onSpriteError('grass');
+    sprites.grass.src = 'data:image/svg+xml;base64,' + btoa(`
+      <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg">
+        <rect width="30" height="30" fill="#90EE90"/>
+        <circle cx="8" cy="8" r="1" fill="#228B22"/>
+        <circle cx="22" cy="12" r="1" fill="#228B22"/>
+        <circle cx="15" cy="20" r="1" fill="#228B22"/>
+        <circle cx="5" cy="18" r="1" fill="#228B22"/>
+        <circle cx="25" cy="6" r="1" fill="#228B22"/>
+      </svg>
+    `);
+    
+    sprites.water = new Image();
+    sprites.water.onload = onSpriteLoad;
+    sprites.water.onerror = () => onSpriteError('water');
+    sprites.water.src = 'data:image/svg+xml;base64,' + btoa(`
+      <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg">
+        <rect width="30" height="30" fill="#4682B4"/>
+        <path d="M 0 10 Q 7.5 5 15 10 Q 22.5 15 30 10" stroke="#87CEEB" stroke-width="2" fill="none"/>
+        <path d="M 0 20 Q 7.5 15 15 20 Q 22.5 25 30 20" stroke="#87CEEB" stroke-width="2" fill="none"/>
+      </svg>
+    `);
+    
+    sprites.mountain = new Image();
+    sprites.mountain.onload = onSpriteLoad;
+    sprites.mountain.onerror = () => onSpriteError('mountain');
+    sprites.mountain.src = 'data:image/svg+xml;base64,' + btoa(`
+      <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg">
+        <rect width="30" height="30" fill="#8B4513"/>
+        <polygon points="0,30 15,10 30,30" fill="#A0522D"/>
+        <polygon points="5,30 15,15 25,30" fill="#CD853F"/>
+      </svg>
+    `);
+  });
+}
+
+// Game state
+const gameState = {
+  player: {
+    x: 5,
+    y: 5,
+    hp: 100,
+    maxHp: 100,
+    level: 1,
+    xp: 0,
+    attack: 15,
+    defense: 10
+  },
+  creatures: [
+    { x: 8, y: 8, hp: 50, maxHp: 50, attack: 10, defense: 5, name: "Goblin", xpReward: 20, type: "goblin" },
+    { x: 12, y: 12, hp: 80, maxHp: 80, attack: 15, defense: 8, name: "Spider", xpReward: 35, type: "spider" },
+    { x: 15, y: 6, hp: 60, maxHp: 60, attack: 12, defense: 6, name: "Troll", xpReward: 25, type: "troll" }
+  ],
+  inBattle: false,
+  currentEnemy: null,
+  map: [],
+  currentLevel: 0
+};
+
+// Level system
+const LEVELS = [
+  {
+    name: "Tutorial Forest",
+    playerStart: { x: 2, y: 2 },
+    map: [
+      "WWWWWWWWWWWWWWWWWWWW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WWWWWWWWWWWWWWWWWWWW"
+    ],
+    creatures: [
+      { x: 5, y: 5, hp: 30, maxHp: 30, attack: 8, defense: 3, name: "Baby Goblin", xpReward: 15, type: "goblin" },
+      { x: 8, y: 8, hp: 40, maxHp: 40, attack: 10, defense: 4, name: "Young Spider", xpReward: 20, type: "spider" }
+    ],
+    objectives: ["Defeat all enemies", "Reach level 2"],
+    completed: false
+  },
+  {
+    name: "Spider Cave",
+    playerStart: { x: 1, y: 10 },
+    map: [
+      "WWWWWWWWWWWWWWWWWWWW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WWWWWWWWWWWWWWWWWWWW"
+    ],
+    creatures: [
+      { x: 5, y: 5, hp: 60, maxHp: 60, attack: 12, defense: 6, name: "Cave Spider", xpReward: 30, type: "spider" },
+      { x: 10, y: 10, hp: 70, maxHp: 70, attack: 14, defense: 7, name: "Poison Spider", xpReward: 35, type: "spider" },
+      { x: 15, y: 15, hp: 80, maxHp: 80, attack: 16, defense: 8, name: "Spider Queen", xpReward: 50, type: "spider" }
+    ],
+    objectives: ["Defeat the Spider Queen", "Survive with at least 50% HP"],
+    completed: false
+  },
+  {
+    name: "Troll Mountain",
+    playerStart: { x: 1, y: 1 },
+    map: [
+      "WWWWWWWWWWWWWWWWWWWW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WWWWWWWWWWWWWWWWWWWW"
+    ],
+    creatures: [
+      { x: 8, y: 8, hp: 100, maxHp: 100, attack: 18, defense: 10, name: "Mountain Troll", xpReward: 60, type: "troll" },
+      { x: 12, y: 12, hp: 120, maxHp: 120, attack: 20, defense: 12, name: "Troll Chief", xpReward: 80, type: "troll" }
+    ],
+    objectives: ["Defeat the Troll Chief", "Reach level 5"],
+    completed: false
+  },
+  {
+    name: "Water Maze",
+    playerStart: { x: 1, y: 10 },
+    map: [
+      "WWWWWWWWWWWWWWWWWWWW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WWWWWWWWWWWWWWWWWWWW"
+    ],
+    creatures: [
+      { x: 5, y: 5, hp: 80, maxHp: 80, attack: 15, defense: 8, name: "Water Serpent", xpReward: 45, type: "spider" },
+      { x: 15, y: 15, hp: 90, maxHp: 90, attack: 17, defense: 9, name: "Deep Sea Monster", xpReward: 55, type: "troll" }
+    ],
+    objectives: ["Navigate the maze", "Defeat all water creatures"],
+    completed: false
+  },
+  {
+    name: "Goblin Fortress",
+    playerStart: { x: 2, y: 18 },
+    map: [
+      "WWWWWWWWWWWWWWWWWWWW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WGGGGGGGGGGGGGGGGGGW",
+      "WWWWWWWWWWWWWWWWWWWW"
+    ],
+    creatures: [
+      { x: 10, y: 5, hp: 70, maxHp: 70, attack: 14, defense: 7, name: "Goblin Guard", xpReward: 30, type: "goblin" },
+      { x: 8, y: 8, hp: 75, maxHp: 75, attack: 15, defense: 8, name: "Goblin Archer", xpReward: 35, type: "goblin" },
+      { x: 12, y: 12, hp: 100, maxHp: 100, attack: 18, defense: 10, name: "Goblin Chief", xpReward: 60, type: "goblin" }
+    ],
+    objectives: ["Defeat the Goblin Chief", "Clear the fortress"],
+    completed: false
+  }
+];
+
+// Tile types
+const TILES = {
+  GRASS: 0,
+  WATER: 1,
+  MOUNTAIN: 2
+};
+
+// Colors for tiles
+const TILE_COLORS = {
+  [TILES.GRASS]: '#90EE90',
+  [TILES.WATER]: '#4682B4',
+  [TILES.MOUNTAIN]: '#8B4513'
+};
+
+// Level management functions
+function loadLevel(levelIndex) {
+  if (levelIndex >= LEVELS.length) {
+    console.log('All levels completed!');
+    return false;
+  }
+  
+  const level = LEVELS[levelIndex];
+  gameState.currentLevel = levelIndex;
+  
+  // Set player position
+  gameState.player.x = level.playerStart.x;
+  gameState.player.y = level.playerStart.y;
+  
+  // Load map from level data
+  gameState.map = [];
+  for (let y = 0; y < level.map.length; y++) {
+    gameState.map[y] = [];
+    for (let x = 0; x < level.map[y].length; x++) {
+      const tile = level.map[y][x];
+      switch(tile) {
+        case 'G':
+          gameState.map[y][x] = TILES.GRASS;
+          break;
+        case 'W':
+          gameState.map[y][x] = TILES.WATER;
+          break;
+        case 'M':
+          gameState.map[y][x] = TILES.MOUNTAIN;
+          break;
+        default:
+          gameState.map[y][x] = TILES.GRASS;
+      }
+    }
+  }
+  
+  // Load creatures from level data
+  gameState.creatures = level.creatures.map(creature => ({...creature}));
+  
+  console.log(`Loaded level: ${level.name}`);
+  return true;
+}
+
+function checkLevelCompletion() {
+  const level = LEVELS[gameState.currentLevel];
+  if (!level) return;
+  
+  // Check if all creatures are defeated
+  const allCreaturesDefeated = gameState.creatures.every(creature => creature.hp <= 0);
+  
+  if (allCreaturesDefeated && !level.completed) {
+    level.completed = true;
+    console.log(`Level ${level.name} completed!`);
+    
+    // Show level completion message
+    setTimeout(() => {
+      alert(`Level ${level.name} completed!\nObjectives:\n${level.objectives.join('\n')}`);
+      
+      // Load next level
+      if (loadLevel(gameState.currentLevel + 1)) {
+        updateStats();
+      }
+    }, 1000);
+  }
+}
+
+// Initialize map (now uses level system)
+function initMap() {
+  loadLevel(0); // Start with first level
+}
+
+// Canvas setup
+const canvas = document.getElementById('gameCanvas');
+const ctx = canvas.getContext('2d');
+const battleCanvas = document.getElementById('battleCanvas');
+const battleCtx = battleCanvas.getContext('2d');
+const TILE_SIZE = 30;
+
+// Draw functions
+function drawMap() {
+  for (let y = 0; y < gameState.map.length; y++) {
+    for (let x = 0; x < gameState.map[y].length; x++) {
+      const tile = gameState.map[y][x];
+      let sprite;
+      
+      switch(tile) {
+        case TILES.GRASS:
+          sprite = sprites.grass;
+          break;
+        case TILES.WATER:
+          sprite = sprites.water;
+          break;
+        case TILES.MOUNTAIN:
+          sprite = sprites.mountain;
+          break;
+        default:
+          sprite = sprites.grass;
+      }
+      
+      if (sprite && sprite.complete) {
+        ctx.drawImage(sprite, x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE, TILE_SIZE);
+      } else {
+        // Fallback: draw colored tiles
+        ctx.fillStyle = TILE_COLORS[tile];
+        ctx.fillRect(x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE, TILE_SIZE);
+        
+        // Add some texture
+        ctx.strokeStyle = '#666';
+        ctx.lineWidth = 1;
+        ctx.strokeRect(x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE, TILE_SIZE);
+      }
+    }
+  }
+}
+
+function drawPlayer() {
+  if (sprites.player && sprites.player.complete) {
+    ctx.drawImage(
+      sprites.player,
+      gameState.player.x * TILE_SIZE,
+      gameState.player.y * TILE_SIZE,
+      TILE_SIZE,
+      TILE_SIZE
+    );
+  } else {
+    // Fallback: draw simple player
+    ctx.fillStyle = '#FF6B6B';
+    ctx.fillRect(
+      gameState.player.x * TILE_SIZE + 5,
+      gameState.player.y * TILE_SIZE + 5,
+      TILE_SIZE - 10,
+      TILE_SIZE - 10
+    );
+    
+    // Player eyes
+    ctx.fillStyle = '#000';
+    ctx.fillRect(
+      gameState.player.x * TILE_SIZE + 8,
+      gameState.player.y * TILE_SIZE + 8,
+      3,
+      3
+    );
+    ctx.fillRect(
+      gameState.player.x * TILE_SIZE + 19,
+      gameState.player.y * TILE_SIZE + 8,
+      3,
+      3
+    );
+  }
+}
+
+function drawCreatures() {
+  gameState.creatures.forEach(creature => {
+    if (creature.hp > 0) {
+      if (sprites[creature.type] && sprites[creature.type].complete) {
+        ctx.drawImage(
+          sprites[creature.type],
+          creature.x * TILE_SIZE,
+          creature.y * TILE_SIZE,
+          TILE_SIZE,
+          TILE_SIZE
+        );
+      } else {
+        // Fallback: draw simple creature
+        ctx.fillStyle = '#8B0000';
+        ctx.fillRect(
+          creature.x * TILE_SIZE + 5,
+          creature.y * TILE_SIZE + 5,
+          TILE_SIZE - 10,
+          TILE_SIZE - 10
+        );
+        
+        // Creature eyes
+        ctx.fillStyle = '#FFD700';
+        ctx.fillRect(
+          creature.x * TILE_SIZE + 8,
+          creature.y * TILE_SIZE + 8,
+          3,
+          3
+        );
+        ctx.fillRect(
+          creature.x * TILE_SIZE + 19,
+          creature.y * TILE_SIZE + 8,
+          3,
+          3
+        );
+      }
+    }
+  });
+}
+
+function drawBattleScreen() {
+  // Clear battle canvas
+  battleCtx.fillStyle = '#2c1810';
+  battleCtx.fillRect(0, 0, battleCanvas.width, battleCanvas.height);
+  
+  // Draw enemy sprite blown up
+  if (gameState.currentEnemy && sprites[gameState.currentEnemy.type] && sprites[gameState.currentEnemy.type].complete) {
+    const enemySprite = sprites[gameState.currentEnemy.type];
+    const scale = 8; // Make enemy 8x bigger
+    const enemyWidth = TILE_SIZE * scale;
+    const enemyHeight = TILE_SIZE * scale;
+    const x = (battleCanvas.width - enemyWidth) / 2;
+    const y = (battleCanvas.height - enemyHeight) / 2 - 50; // Slightly above center
+    
+    // Draw enemy
+    battleCtx.drawImage(enemySprite, x, y, enemyWidth, enemyHeight);
+    
+    // Add some battle effects
+    battleCtx.fillStyle = 'rgba(255, 0, 0, 0.1)';
+    battleCtx.fillRect(0, 0, battleCanvas.width, battleCanvas.height);
+  } else {
+    // Fallback: draw simple enemy
+    const scale = 8;
+    const enemyWidth = TILE_SIZE * scale;
+    const enemyHeight = TILE_SIZE * scale;
+    const x = (battleCanvas.width - enemyWidth) / 2;
+    const y = (battleCanvas.height - enemyHeight) / 2 - 50;
+    
+    battleCtx.fillStyle = '#8B0000';
+    battleCtx.fillRect(x, y, enemyWidth, enemyHeight);
+    
+    // Enemy eyes
+    battleCtx.fillStyle = '#FFD700';
+    battleCtx.fillRect(x + enemyWidth * 0.1, y + enemyHeight * 0.1, enemyWidth * 0.1, enemyHeight * 0.1);
+    battleCtx.fillRect(x + enemyWidth * 0.8, y + enemyHeight * 0.1, enemyWidth * 0.1, enemyHeight * 0.1);
+  }
+  
+  // Draw battle UI overlay
+  battleCtx.fillStyle = 'rgba(0, 0, 0, 0.7)';
+  battleCtx.fillRect(0, battleCanvas.height - 150, battleCanvas.width, 150);
+  
+  // Draw enemy name and HP
+  battleCtx.fillStyle = '#FFFFFF';
+  battleCtx.font = '24px Arial';
+  battleCtx.textAlign = 'center';
+  battleCtx.fillText(gameState.currentEnemy ? gameState.currentEnemy.name : 'Enemy', battleCanvas.width / 2, battleCanvas.height - 120);
+  
+  // Draw enemy HP bar
+  if (gameState.currentEnemy) {
+    const hpBarWidth = 300;
+    const hpBarHeight = 20;
+    const hpBarX = (battleCanvas.width - hpBarWidth) / 2;
+    const hpBarY = battleCanvas.height - 100;
+    
+    // HP bar background
+    battleCtx.fillStyle = '#333';
+    battleCtx.fillRect(hpBarX, hpBarY, hpBarWidth, hpBarHeight);
+    
+    // HP bar fill
+    const hpPercentage = gameState.currentEnemy.hp / gameState.currentEnemy.maxHp;
+    battleCtx.fillStyle = hpPercentage > 0.5 ? '#00FF00' : hpPercentage > 0.25 ? '#FFFF00' : '#FF0000';
+    battleCtx.fillRect(hpBarX, hpBarY, hpBarWidth * hpPercentage, hpBarHeight);
+    
+    // HP text
+    battleCtx.fillStyle = '#FFFFFF';
+    battleCtx.font = '16px Arial';
+    battleCtx.fillText(`${gameState.currentEnemy.hp}/${gameState.currentEnemy.maxHp}`, battleCanvas.width / 2, battleCanvas.height - 80);
+  }
+}
+
+function drawUI() {
+  // Draw camera offset to center on player
+  const cameraX = Math.max(0, Math.min(gameState.player.x - 10, gameState.map[0].length - 20));
+  const cameraY = Math.max(0, Math.min(gameState.player.y - 8, gameState.map.length - 16));
+  
+  ctx.save();
+  ctx.translate(-cameraX * TILE_SIZE, -cameraY * TILE_SIZE);
+  
+  drawMap();
+  drawCreatures();
+  drawPlayer();
+  
+  ctx.restore();
+}
+
+// Movement
+function canMoveTo(x, y) {
+  if (x < 0 || y < 0 || x >= gameState.map[0].length || y >= gameState.map.length) {
+    return false;
+  }
+  return gameState.map[y][x] !== TILES.MOUNTAIN && gameState.map[y][x] !== TILES.WATER;
+}
+
+function movePlayer(dx, dy) {
+  if (gameState.inBattle) return;
+  
+  const newX = gameState.player.x + dx;
+  const newY = gameState.player.y + dy;
+  
+  if (canMoveTo(newX, newY)) {
+    gameState.player.x = newX;
+    gameState.player.y = newY;
+    
+    // Check for creature encounters
+    checkForEncounters();
+  }
+}
+
+function checkForEncounters() {
+  const creature = gameState.creatures.find(c => 
+    c.hp > 0 && c.x === gameState.player.x && c.y === gameState.player.y
+  );
+  
+  if (creature) {
+    startBattle(creature);
+  }
+}
+
+// Battle system
+function startBattle(enemy) {
+  gameState.inBattle = true;
+  gameState.currentEnemy = enemy;
+  
+  // Show battle canvas and hide game canvas
+  canvas.style.display = 'none';
+  battleCanvas.style.display = 'block';
+  document.getElementById('battle-ui').style.display = 'block';
+  document.getElementById('battle-text').textContent = `A wild ${enemy.name} appears!`;
+  
+  updateStats();
+}
+
+function attack() {
+  if (!gameState.inBattle || !gameState.currentEnemy) return;
+  
+  const enemy = gameState.currentEnemy;
+  const damage = Math.max(1, gameState.player.attack - enemy.defense);
+  enemy.hp = Math.max(0, enemy.hp - damage);
+  
+  document.getElementById('battle-text').textContent = `You deal ${damage} damage to ${enemy.name}!`;
+  
+  if (enemy.hp <= 0) {
+    endBattle(true);
+  } else {
+    // Enemy attacks back
+    setTimeout(() => {
+      enemyAttack();
+    }, 1000);
+  }
+}
+
+function enemyAttack() {
+  if (!gameState.inBattle || !gameState.currentEnemy) return;
+  
+  const enemy = gameState.currentEnemy;
+  const damage = Math.max(1, enemy.attack - gameState.player.defense);
+  gameState.player.hp = Math.max(0, gameState.player.hp - damage);
+  
+  document.getElementById('battle-text').textContent = `${enemy.name} deals ${damage} damage to you!`;
+  updateStats();
+  
+  if (gameState.player.hp <= 0) {
+    endBattle(false);
+  }
+}
+
+function heal() {
+  if (!gameState.inBattle) return;
+  
+  const healAmount = 30;
+  gameState.player.hp = Math.min(gameState.player.maxHp, gameState.player.hp + healAmount);
+  
+  document.getElementById('battle-text').textContent = `You heal for ${healAmount} HP!`;
+  updateStats();
+  
+  // Enemy attacks after healing
+  setTimeout(() => {
+    enemyAttack();
+  }, 1000);
+}
+
+function run() {
+  if (!gameState.inBattle) return;
+  
+  const success = Math.random() > 0.5;
+  if (success) {
+    document.getElementById('battle-text').textContent = "You successfully ran away!";
+    setTimeout(() => {
+      endBattle(false);
+    }, 1000);
+  } else {
+    document.getElementById('battle-text').textContent = "You couldn't escape!";
+    setTimeout(() => {
+      enemyAttack();
+    }, 1000);
+  }
+}
+
+function endBattle(playerWon) {
+  if (playerWon) {
+    const xpGained = gameState.currentEnemy.xpReward;
+    gameState.player.xp += xpGained;
+    
+    document.getElementById('battle-text').textContent = 
+      `You defeated ${gameState.currentEnemy.name}! Gained ${xpGained} XP!`;
+    
+    // Check for level up
+    const xpNeeded = gameState.player.level * 50;
+    if (gameState.player.xp >= xpNeeded) {
+      levelUp();
+    }
+    
+    // Check if level is completed
+    setTimeout(() => {
+      checkLevelCompletion();
+    }, 500);
+  } else {
+    document.getElementById('battle-text').textContent = "You were defeated!";
+    // Reset player to level start position
+    const level = LEVELS[gameState.currentLevel];
+    if (level) {
+      gameState.player.x = level.playerStart.x;
+      gameState.player.y = level.playerStart.y;
+    } else {
+      gameState.player.x = 5;
+      gameState.player.y = 5;
+    }
+    gameState.player.hp = gameState.player.maxHp;
+  }
+  
+  setTimeout(() => {
+    gameState.inBattle = false;
+    gameState.currentEnemy = null;
+    
+    // Hide battle canvas and show game canvas
+    battleCanvas.style.display = 'none';
+    canvas.style.display = 'block';
+    document.getElementById('battle-ui').style.display = 'none';
+    updateStats();
+  }, 2000);
+}
+
+function levelUp() {
+  gameState.player.level++;
+  gameState.player.maxHp += 20;
+  gameState.player.hp = gameState.player.maxHp;
+  gameState.player.attack += 5;
+  gameState.player.defense += 3;
+  
+  document.getElementById('battle-text').textContent += ` Level up! You are now level ${gameState.player.level}!`;
+}
+
+function updateStats() {
+  document.getElementById('player-hp').textContent = gameState.player.hp;
+  document.getElementById('player-max-hp').textContent = gameState.player.maxHp;
+  document.getElementById('player-level').textContent = gameState.player.level;
+  document.getElementById('player-xp').textContent = gameState.player.xp;
+  
+  // Update current level display
+  const level = LEVELS[gameState.currentLevel];
+  if (level) {
+    document.getElementById('current-level').textContent = level.name;
+  }
+}
+
+// Input handling
+document.addEventListener('keydown', (e) => {
+  switch(e.key.toLowerCase()) {
+    case 'w':
+    case 'arrowup':
+      movePlayer(0, -1);
+      break;
+    case 's':
+    case 'arrowdown':
+      movePlayer(0, 1);
+      break;
+    case 'a':
+    case 'arrowleft':
+      movePlayer(-1, 0);
+      break;
+    case 'd':
+    case 'arrowright':
+      movePlayer(1, 0);
+      break;
+  }
+});
+
+// Game loop
+function gameLoop() {
+  if (gameState.inBattle) {
+    drawBattleScreen();
+  } else {
+    drawUI();
+  }
+  requestAnimationFrame(gameLoop);
+}
+
+// Initialize and start
+async function initGame() {
+  await loadSprites();
+  initMap();
+  updateStats();
+  gameLoop();
+}
+
+initGame();
+</script>
+
+<h2 id="game-features">Game Features</h2>
+
+<ul>
+  <li><strong>Top-down perspective</strong> with tile-based movement</li>
+  <li><strong>Turn-based combat system</strong> with attack, heal, and run options</li>
+  <li><strong>Experience and leveling system</strong></li>
+  <li><strong>Multiple enemy types</strong> with different stats</li>
+  <li><strong>Simple but functional UI</strong> showing player stats and battle options</li>
+</ul>
+
+<h2 id="controls">Controls</h2>
+
+<ul>
+  <li><strong>WASD</strong> or <strong>Arrow Keys</strong>: Move your character</li>
+  <li><strong>Mouse</strong>: Click battle buttons during encounters</li>
+</ul>
+
+<!-- The game includes a simple map with grass, water, and mountain tiles. Walk around to find creatures and battle them to gain experience and level up!
+
+## Creating Custom Levels
+
+The game now includes a level system that allows you to create custom predetermined levels. Here's how to create your own levels:
+
+### Level Structure
+
+Each level is defined as an object with the following properties:
+
+```javascript
+{
+  name: "Level Name",
+  playerStart: { x: 2, y: 2 },
+  map: [
+    "WWWWWWWWWWWWWWWWWWWW",
+    "WGGGGGGGGGGGGGGGGGGW",
+    "WGGGGGGGGGGGGGGGGGGW",
+    // ... more rows
+    "WWWWWWWWWWWWWWWWWWWW"
+  ],
+  creatures: [
+    { x: 5, y: 5, hp: 50, maxHp: 50, attack: 10, defense: 5, name: "Enemy Name", xpReward: 20, type: "goblin" }
+  ],
+  objectives: ["Objective 1", "Objective 2"],
+  completed: false
+}
+```
+
+### Map Tiles
+
+- `G` = Grass (walkable)
+- `W` = Water (impassable)
+- `M` = Mountain (impassable)
+
+### Creature Types
+
+- `"goblin"` - Uses goblin sprite
+- `"spider"` - Uses spider sprite  
+- `"troll"` - Uses troll sprite
+
+### Example: Creating a Maze Level
+
+```javascript
+{
+  name: "Goblin Maze",
+  playerStart: { x: 1, y: 1 },
+  map: [
+    "WWWWWWWWWWWWWWWWWWWW",
+    "WGGGGGGGGGGGGGGGGGGW",
+    "WGGGGGGGGGGGGGGGGGGW",
+    "WGGGGGGGGGGGGGGGGGGW",
+    "WGGGGGGGGGGGGGGGGGGW",
+    "WGGGGGGGGGGGGGGGGGGW",
+    "WGGGGGGGGGGGGGGGGGGW",
+    "WGGGGGGGGGGGGGGGGGGW",
+    "WGGGGGGGGGGGGGGGGGGW",
+    "WGGGGGGGGGGGGGGGGGGW",
+    "WGGGGGGGGGGGGGGGGGGW",
+    "WGGGGGGGGGGGGGGGGGGW",
+    "WGGGGGGGGGGGGGGGGGGW",
+    "WGGGGGGGGGGGGGGGGGGW",
+    "WGGGGGGGGGGGGGGGGGGW",
+    "WGGGGGGGGGGGGGGGGGGW",
+    "WGGGGGGGGGGGGGGGGGGW",
+    "WGGGGGGGGGGGGGGGGGGW",
+    "WGGGGGGGGGGGGGGGGGGW",
+    "WWWWWWWWWWWWWWWWWWWW"
+  ],
+  creatures: [
+    { x: 5, y: 5, hp: 60, maxHp: 60, attack: 12, defense: 6, name: "Maze Guardian", xpReward: 30, type: "goblin" },
+    { x: 15, y: 15, hp: 80, maxHp: 80, attack: 15, defense: 8, name: "Maze Boss", xpReward: 50, type: "troll" }
+  ],
+  objectives: ["Find the exit", "Defeat the Maze Boss"],
+  completed: false
+}
+```
+
+### Adding Your Level
+
+To add a custom level, simply add it to the `LEVELS` array in the code:
+
+```javascript
+const LEVELS = [
+  // ... existing levels ...
+  {
+    // Your custom level here
+  }
+];
+```
+
+### Level Progression
+
+- Levels are completed when all enemies are defeated
+- The game automatically progresses to the next level
+- Player stats carry over between levels
+- If defeated, the player respawns at the level's start position -->
+
+<!-- ## Customizing Sprites
+
+The game now uses a sprite system that makes it easy to replace the default graphics with your own images. Here's how to customize the sprites:
+
+### Method 1: Replace with Image URLs
+
+To use your own images, replace the sprite loading code with URLs to your images:
+
+```javascript
+// Replace the sprite loading in the loadSprites() function
+sprites.player = new Image();
+sprites.player.onload = onSpriteLoad;
+sprites.player.src = 'https://your-domain.com/path/to/player-sprite.png';
+
+sprites.goblin = new Image();
+sprites.goblin.onload = onSpriteLoad;
+sprites.goblin.src = 'https://your-domain.com/path/to/goblin-sprite.png';
+```
+
+### Method 2: Use Local Images
+
+If you have images in your Jekyll assets folder:
+
+```javascript
+sprites.player.src = '/assets/images/player-sprite.png';
+sprites.goblin.src = '/assets/images/goblin-sprite.png';
+```
+
+### Method 3: Create Custom SVG Sprites
+
+You can modify the existing SVG sprites by editing the SVG code in the `loadSprites()` function. Each sprite is defined as an SVG string that gets converted to a data URL.
+
+### Sprite Requirements
+
+- **Size**: 30x30 pixels (or maintain aspect ratio)
+- **Format**: PNG, JPG, or SVG
+- **Transparency**: PNG with alpha channel works best
+- **Style**: Pixel art or cartoon style works well for this type of game
+
+### Available Sprites to Replace
+
+- `sprites.player` - The player character
+- `sprites.goblin` - Goblin enemy
+- `sprites.spider` - spider enemy  
+- `sprites.troll` - Troll enemy
+- `sprites.grass` - Grass tile texture
+- `sprites.water` - Water tile texture
+- `sprites.mountain` - Mountain tile texture
+
+The current sprites are embedded SVG graphics that provide a good starting point, but you can replace them with any images you prefer! -->
+
+  </div>
+
+ 
+  
+</article>
+
+        </div>
+      </div>
+
+      <div class="wrapper-footer">
+        <div class="container">
+          <footer class="footer">
+            
+<a href="mailto:jatomsynergies@gmail.com"><i class="svg-icon email"></i></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    
+
+  </body>
+</html>

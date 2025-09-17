@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Snake Game Demo – Jaevyn Atom Hoyt – A Personal Portfolio & Blog</title>
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Snake Game Demo" />
+<meta name="author" content="Jaevyn Atom Hoyt" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A Personal Portfolio &amp; Blog" />
+<meta property="og:description" content="A Personal Portfolio &amp; Blog" />
+<link rel="canonical" href="https://cattacular.github.io/assets/Unpublished_posts/2025-1-2-Snake-Game-Demo/" />
+<meta property="og:url" content="https://cattacular.github.io/assets/Unpublished_posts/2025-1-2-Snake-Game-Demo/" />
+<meta property="og:site_name" content="Jaevyn Atom Hoyt" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-01-02T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Snake Game Demo" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jaevyn Atom Hoyt"},"dateModified":"2025-01-02T00:00:00-06:00","datePublished":"2025-01-02T00:00:00-06:00","description":"A Personal Portfolio &amp; Blog","headline":"Snake Game Demo","mainEntityOfPage":{"@type":"WebPage","@id":"https://cattacular.github.io/assets/Unpublished_posts/2025-1-2-Snake-Game-Demo/"},"url":"https://cattacular.github.io/assets/Unpublished_posts/2025-1-2-Snake-Game-Demo/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+
+<meta property="og:description" content="" />
+
+<meta name="author" content="Jaevyn Atom Hoyt" />
+
+
+<meta property="og:title" content="Snake Game Demo" />
+<meta property="twitter:title" content="Snake Game Demo" />
+
+
+
+<meta property="og:image" content="https://cattacular.github.io/assets/images/JLogo.png"/>
+<meta property="twitter:image" content="https://cattacular.github.io/assets/images/JLogo.png"/>
+
+
+
+    <link rel="stylesheet" type="text/css" href="/assets/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="Jaevyn Atom Hoyt - A Personal Portfolio & Blog" href="/feed.xml" />
+    <link rel="canonical" href="https://cattacular.github.io/assets/Unpublished_posts/2025-1-2-Snake-Game-Demo/" />
+
+    <!-- Pannellum 360° Panorama Viewer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css" />
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+
+    <meta name="theme-color" content="#000000">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    
+
+  </head>
+
+  <body>
+    <div id="bar"></div>
+    <div class="wrapper-container">
+      <div class="wrapper-masthead">
+        <div class="container">
+          <header class="masthead clearfix">
+            <a href="/" class="site-avatar"><img src="/assets/images/JLogo.png" alt="" /></a>
+
+            <div class="site-info">
+              <h1 class="site-name"><a href="/">Jaevyn Atom Hoyt</a></h1>
+              <p class="site-description">A Personal Portfolio & Blog</p> 
+            </div>
+
+            <nav>
+              <a href="/">Home</a>
+              <a href="/about">About</a>
+              <a href="/Jatom-Synergies">Jatom Synergies</a>
+              <a href="/exquisite-corpse">Exquisite Corpse</a>
+              <a href="/search">Search</a>
+              <a href="/archive">Archive</a>
+            </nav>
+          </header>
+        </div>
+      </div>
+
+      <div class="wrapper-main">
+        <div id="main" role="main" class="container">
+          <article class="post detailed">
+  <h1>Snake Game Demo</h1>
+
+  <div>
+    <p class="author_title">Jaevyn Atom Hoyt  ·  January  2, 2025</p>
+    
+    <div class="post-tags">
+      
+      
+        <a href="/categories/#games">games</a>
+        &nbsp;
+      
+        <a href="/categories/#demo">demo</a>
+        
+      
+    </div>
+  </div>
+    
+  <div class="entry">
+    <h1 id="snake-game-demo">Snake Game Demo</h1>
+
+<p>Here’s a classic Snake game using HTML5 Canvas and external JavaScript:</p>
+
+<div style="text-align: center; margin: 20px 0;">
+  <canvas id="snakeCanvas" width="400" height="400" style="border: 2px solid #333; background: #000;"></canvas>
+  <p><strong>Controls:</strong> Use arrow keys to move. Press R to restart.</p>
+</div>
+
+<script src="/assets/js/snake-game.js"></script>
+
+<script>
+// Initialize the game when the page loads
+document.addEventListener('DOMContentLoaded', function() {
+    window.snakeGame = new SnakeGame('snakeCanvas');
+});
+</script>
+
+<h2 id="how-this-works">How This Works</h2>
+
+<p>This approach uses:</p>
+
+<ol>
+  <li><strong>External JavaScript file</strong> (<code class="language-plaintext highlighter-rouge">snake-game.js</code>) - Contains the game logic</li>
+  <li><strong>HTML Canvas</strong> - Provides the drawing surface</li>
+  <li><strong>Script tag</strong> - Loads the external file</li>
+  <li><strong>Initialization script</strong> - Starts the game when the page loads</li>
+</ol>
+
+<h3 id="benefits-of-external-files">Benefits of External Files:</h3>
+
+<ul>
+  <li><strong>Reusable</strong> - Can use the same game in multiple posts</li>
+  <li><strong>Maintainable</strong> - Easier to update game logic</li>
+  <li><strong>Cached</strong> - Browser can cache the JavaScript file</li>
+  <li><strong>Cleaner posts</strong> - Less code cluttering your markdown</li>
+</ul>
+
+<h3 id="file-structure">File Structure:</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>assets/
+  js/
+    snake-game.js    # Game logic
+  images/            # Game assets
+_posts/
+  2025-1-2-Snake-Game-Demo.md  # Post with game
+</code></pre></div></div>
+
+<p>This method is perfect for more complex games that you might want to reuse across different posts or pages.</p>
+
+  </div>
+
+ 
+  
+</article>
+
+        </div>
+      </div>
+
+      <div class="wrapper-footer">
+        <div class="container">
+          <footer class="footer">
+            
+<a href="mailto:jatomsynergies@gmail.com"><i class="svg-icon email"></i></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    
+
+  </body>
+</html>
