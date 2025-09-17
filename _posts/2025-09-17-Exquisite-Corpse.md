@@ -1,10 +1,9 @@
 ---
-layout: page
-title: Exquisite Corpse
-permalink: /exquisite-corpse/
+layout: post
+title: Exquisite Corpse Drawing Game
+date: 2025-09-17 09:00:00 -0000
+tags: [interactive, art, game]
 ---
-
-# Exquisite Corpse Drawing Game
 
 Welcome to the Exquisite Corpse drawing game! This is a collaborative art project where three people draw different parts of a body without seeing what the others have drawn.
 
@@ -64,21 +63,23 @@ Welcome to the Exquisite Corpse drawing game! This is a collaborative art projec
   </div>
 
   <div class="game-section">
-    <h2>Gallery</h2>
-    <div class="gallery">
-      <div class="gallery-category">
-        <h3>Top Drawings</h3>
-        <div id="topGallery" class="gallery-grid"></div>
+    <details class="gallery-collapsible">
+      <summary class="gallery-summary">Gallery (click to expand)</summary>
+      <div class="gallery">
+        <div class="gallery-category">
+          <h3>Top Drawings</h3>
+          <div id="topGallery" class="gallery-grid"></div>
+        </div>
+        <div class="gallery-category">
+          <h3>Middle Drawings</h3>
+          <div id="middleGallery" class="gallery-grid"></div>
+        </div>
+        <div class="gallery-category">
+          <h3>Bottom Drawings</h3>
+          <div id="bottomGallery" class="gallery-grid"></div>
+        </div>
       </div>
-      <div class="gallery-category">
-        <h3>Middle Drawings</h3>
-        <div id="middleGallery" class="gallery-grid"></div>
-      </div>
-      <div class="gallery-category">
-        <h3>Bottom Drawings</h3>
-        <div id="bottomGallery" class="gallery-grid"></div>
-      </div>
-    </div>
+    </details>
   </div>
 
   <div class="game-section">
@@ -372,6 +373,30 @@ Welcome to the Exquisite Corpse drawing game! This is a collaborative art projec
   padding-bottom: 10px;
 }
 
+.gallery-collapsible {
+  display: block;
+}
+
+.gallery-summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 18px;
+  list-style: none;
+  position: relative;
+  padding: 10px 14px;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  background: #ffffff;
+  user-select: none;
+}
+
+.gallery-summary::marker { display: none; }
+.gallery-summary::-webkit-details-marker { display: none; }
+
+.gallery-collapsible[open] > .gallery-summary {
+  background: #f1f3f5;
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
@@ -393,10 +418,7 @@ Welcome to the Exquisite Corpse drawing game! This is a collaborative art projec
 }
 
 .gallery-item .filename {
-  font-size: 12px;
-  color: #6c757d;
-  margin-top: 5px;
-  word-break: break-all;
+  display: none;
 }
 
 @media (max-width: 768px) {
@@ -786,3 +808,5 @@ document.addEventListener('DOMContentLoaded', () => {
   new ExquisiteCorpseGame();
 });
 </script>
+
+
