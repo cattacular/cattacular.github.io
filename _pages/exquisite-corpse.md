@@ -10,8 +10,12 @@ Welcome to the Exquisite Corpse drawing game! This is a collaborative art projec
 
 ## How it works:
 1. **Draw a section**: Choose to draw the top, middle, or bottom of a body
-2. **Submit your drawing**: Upload your creation to the appropriate category
+2. **Save your drawing**: Choose to save locally or share with the community
 3. **Generate combinations**: The game randomly combines drawings from each category to create unique creatures!
+
+### Save Options:
+- **Local Save**: Saves to your device only - you can use it in combinations on this computer
+- **Share**: Downloads the file and opens your email to send it to me for community sharing
 
 ## Categories:
 - **Top**: Head, neck, and shoulders
@@ -38,7 +42,8 @@ Welcome to the Exquisite Corpse drawing game! This is a collaborative art projec
           <input type="range" id="brushSize" min="1" max="20" value="3">
           <span id="brushSizeLabel">Size: 3</span>
           <button id="clearCanvas">Clear</button>
-          <button id="saveDrawing">Save Drawing</button>
+          <button id="localSave">Local Save</button>
+          <button id="shareDrawing">Share</button>
         </div>
       </div>
       
@@ -73,6 +78,20 @@ Welcome to the Exquisite Corpse drawing game! This is a collaborative art projec
         <h3>Bottom Drawings</h3>
         <div id="bottomGallery" class="gallery-grid"></div>
       </div>
+    </div>
+  </div>
+
+  <div class="game-section">
+    <h2>How to Share Your Drawings</h2>
+    <div class="sharing-instructions">
+      <p>Want to share your drawings with the community? Here's how:</p>
+      <ol>
+        <li><strong>Create your drawing</strong> using the canvas above</li>
+        <li><strong>Click "Share"</strong> - this will download your drawing and open your email</li>
+        <li><strong>Attach the downloaded file</strong> to the email (it will be in your Downloads folder)</li>
+        <li><strong>Send the email</strong> - I'll add your drawing to the shared gallery!</li>
+      </ol>
+      <p><em>Note: It may take a few days for shared drawings to appear in the gallery as I manually add them to the server.</em></p>
     </div>
   </div>
 </div>
@@ -150,15 +169,34 @@ Welcome to the Exquisite Corpse drawing game! This is a collaborative art projec
 }
 
 .canvas-controls button {
-  background: #007bff;
   color: white;
   border: none;
   cursor: pointer;
   transition: background 0.2s;
 }
 
-.canvas-controls button:hover {
+#clearCanvas {
+  background: #6c757d;
+}
+
+#clearCanvas:hover {
+  background: #545b62;
+}
+
+#localSave {
+  background: #007bff;
+}
+
+#localSave:hover {
   background: #0056b3;
+}
+
+#shareDrawing {
+  background: #28a745;
+}
+
+#shareDrawing:hover {
+  background: #1e7e34;
 }
 
 .upload-section {
@@ -198,6 +236,32 @@ Welcome to the Exquisite Corpse drawing game! This is a collaborative art projec
   background: #138496;
 }
 
+.sharing-instructions {
+  background: #e7f3ff;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #007bff;
+}
+
+.sharing-instructions p {
+  margin-bottom: 15px;
+  color: #495057;
+}
+
+.sharing-instructions ol {
+  margin-left: 20px;
+  color: #495057;
+}
+
+.sharing-instructions li {
+  margin-bottom: 8px;
+}
+
+.sharing-instructions em {
+  color: #6c757d;
+  font-size: 14px;
+}
+
 .combination-generator {
   text-align: center;
 }
@@ -235,11 +299,56 @@ Welcome to the Exquisite Corpse drawing game! This is a collaborative art projec
   gap: 10px;
 }
 
-.combination-display img {
+.creature-combination {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.creature-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.creature-section img {
   max-width: 200px;
   max-height: 150px;
-  border: 1px solid #dee2e6;
-  border-radius: 5px;
+  border: none;
+  border-radius: 0;
+  display: block;
+  object-fit: contain;
+}
+
+/* Remove border radius from middle sections to create seamless connection */
+.creature-top img {
+  border-radius: 10px 10px 0 0;
+}
+
+.creature-middle img {
+  border-radius: 0;
+}
+
+.creature-bottom img {
+  border-radius: 0 0 10px 10px;
+}
+
+/* Add subtle shadow between sections for depth */
+.creature-top {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.creature-middle {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.creature-bottom {
+  box-shadow: 0 -1px 2px rgba(0,0,0,0.05);
 }
 
 .gallery {
@@ -378,8 +487,12 @@ class ExquisiteCorpseGame {
       this.clearCanvas();
     });
 
-    document.getElementById('saveDrawing').addEventListener('click', () => {
-      this.saveDrawing();
+    document.getElementById('localSave').addEventListener('click', () => {
+      this.localSave();
+    });
+
+    document.getElementById('shareDrawing').addEventListener('click', () => {
+      this.shareDrawing();
     });
 
     document.getElementById('generateCombination').addEventListener('click', () => {
@@ -467,7 +580,7 @@ class ExquisiteCorpseGame {
     reader.readAsDataURL(file);
   }
 
-  saveDrawing() {
+  localSave() {
     const category = document.getElementById('category').value;
     const dataURL = this.canvas.toDataURL('image/png');
     
@@ -477,10 +590,60 @@ class ExquisiteCorpseGame {
     link.href = dataURL;
     link.click();
     
-    // Store in localStorage for demo purposes
+    // Store in localStorage for local use
     this.storeDrawing(category, dataURL);
     
-    alert(`Drawing saved as ${link.download}! In a real implementation, this would be uploaded to a server.`);
+    alert(`Drawing saved locally as ${link.download}! You can use it in random combinations on this device.`);
+  }
+
+  shareDrawing() {
+    const category = document.getElementById('category').value;
+    const dataURL = this.canvas.toDataURL('image/png');
+    
+    // Create a download link first
+    const link = document.createElement('a');
+    link.download = `exquisite-corpse-${category}-${Date.now()}.png`;
+    link.href = dataURL;
+    link.click();
+    
+    // Store locally as well
+    this.storeDrawing(category, dataURL);
+    
+    // Create email content
+    const subject = `Exquisite Corpse Drawing - ${category.charAt(0).toUpperCase() + category.slice(1)} Section`;
+    const body = `Hi Jaevyn!
+
+I've created a drawing for the Exquisite Corpse game and would like to share it with the community.
+
+Drawing Details:
+- Category: ${category.charAt(0).toUpperCase() + category.slice(1)} (${this.getCategoryDescription(category)})
+- Filename: ${link.download}
+- Created: ${new Date().toLocaleString()}
+
+Please add this drawing to the shared gallery so others can see it in random combinations!
+
+Thanks for creating this fun collaborative art project!
+
+Best regards,
+[Your name here]`;
+
+    // Create mailto link
+    const mailtoLink = `mailto:jatomsynergies@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
+    // Show confirmation
+    alert(`Email client opened! Please attach the downloaded file (${link.download}) to your email and send it to share your drawing with the community.`);
+  }
+
+  getCategoryDescription(category) {
+    const descriptions = {
+      top: 'Head, neck, and shoulders',
+      middle: 'Torso, arms, and waist', 
+      bottom: 'Legs, feet, and tail'
+    };
+    return descriptions[category] || category;
   }
 
   storeDrawing(category, dataURL) {
@@ -603,10 +766,9 @@ class ExquisiteCorpseGame {
     result.className = 'combination-display has-content';
     result.innerHTML = `
       <h3>Your Random Creature!</h3>
-      <div style="display: flex; flex-direction: column; gap: 10px; align-items: center;">
+      <div class="creature-combination">
         ${selectedDrawings.map((drawing, index) => `
-          <div style="text-align: center;">
-            <h4>${categories[index].charAt(0).toUpperCase() + categories[index].slice(1)}</h4>
+          <div class="creature-section creature-${categories[index]}">
             <img src="${drawing.dataURL || drawing.src}" alt="${drawing.filename}">
           </div>
         `).join('')}
