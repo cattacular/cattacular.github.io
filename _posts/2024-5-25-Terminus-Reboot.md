@@ -42,7 +42,124 @@ My favorite model that I've worked on for this project has been this suitcase. I
 
 Here's an interactive 3D model of the suitcase I created for Terminus. You can rotate, zoom, and explore the model to see the high-tech device inside!
 
-{% include three-viewer.html id="terminus-suitcase" title="Terminus Suitcase - Interactive 3D Model" model="/assets/images/Terminus/SM_BombSuitcase.fbx" %}
+<style>
+.three-viewer-container {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.three-viewer {
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    margin: 0 auto;
+    border: 2px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background: #222;
+    position: relative;
+}
+
+.three-viewer canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: grab;
+}
+
+.three-viewer canvas:active {
+    cursor: grabbing;
+}
+
+.viewer-controls {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    z-index: 10;
+}
+
+.viewer-controls h4 {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+}
+
+.viewer-controls p {
+    margin: 2px 0;
+    font-size: 11px;
+}
+
+.viewer-info {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 8px;
+    border-radius: 5px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    z-index: 10;
+}
+
+.viewer-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    z-index: 10;
+}
+
+@media (max-width: 768px) {
+    .three-viewer {
+        height: 300px;
+        margin: 15px auto;
+    }
+    
+    .viewer-controls {
+        font-size: 10px;
+        padding: 8px;
+    }
+    
+    .viewer-info {
+        font-size: 10px;
+        padding: 6px;
+    }
+}
+</style>
+
+<div class="three-viewer-container">
+    <div class="three-viewer" id="terminus-suitcase">
+        <div class="viewer-loading">Loading 3D Viewer...</div>
+        <div class="viewer-controls">
+            <h4>Terminus Suitcase - Interactive 3D Model</h4>
+            <p>🖱️ Click & drag to rotate</p>
+            <p>🔄 Scroll to zoom</p>
+            <p>🎮 Auto-rotate enabled</p>
+        </div>
+        <div class="viewer-info">
+            <p>Powered by Three.js</p>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const viewerContainer = document.getElementById('terminus-suitcase');
+    if (viewerContainer) {
+        viewerContainer.setAttribute('data-model-path', '/assets/images/Terminus/SM_BombSuitcase.fbx');
+    }
+});
+</script>
 
 To be honest though, the best moment for me working on terminus was the last couple days leading up to open studios, where we presented to the public for the first time. Working on the arcade cabinets for this project was a blast. We ended up making 5 massive cabinets with no time to spare. The stain was drying as we put up the exhibit the day of the show. We pulled it off though and were able to get people playtesting our game. Caleb also knocked it out of the part with the set design. It was very analog retro style. He ended up holding a whole furniture drive to get all the pieces together
 
