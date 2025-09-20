@@ -1,0 +1,145 @@
+<!-- Three.js 3D Viewer Include -->
+<!-- Usage: {% include three-viewer.html id="suitcase-viewer" title="Terminus Suitcase" %} -->
+
+{% assign viewer_id = include.id | default: "three-viewer" %}
+{% assign viewer_title = include.title | default: "3D Model Viewer" %}
+{% assign viewer_width = include.width | default: "100%" %}
+{% assign viewer_height = include.height | default: "500px" %}
+{% assign model_path = include.model | default: site.baseurl | append: "/assets/images/Terminus/SM_BombSuitcase.fbx" %}
+
+<div class="three-viewer-container">
+    <div class="three-viewer" id="{{ viewer_id }}">
+        <div class="viewer-loading">Loading 3D Viewer...</div>
+        <div class="viewer-controls">
+            <h4>{{ viewer_title }}</h4>
+            <p>🖱️ Click & drag to rotate</p>
+            <p>🔄 Scroll to zoom</p>
+            <p>🎮 Auto-rotate enabled</p>
+        </div>
+        <div class="viewer-info">
+            <p>Powered by Three.js</p>
+        </div>
+    </div>
+</div>
+
+<style>
+.three-viewer-container {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.three-viewer {
+    width: {{ viewer_width }};
+    max-width: 800px;
+    height: {{ viewer_height }};
+    margin: 0 auto;
+    border: 2px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background: #222;
+    position: relative;
+}
+
+.three-viewer canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: grab;
+}
+
+.three-viewer canvas:active {
+    cursor: grabbing;
+}
+
+.viewer-controls {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    z-index: 10;
+}
+
+.viewer-controls h4 {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+}
+
+.viewer-controls p {
+    margin: 2px 0;
+    font-size: 11px;
+}
+
+.viewer-info {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 8px;
+    border-radius: 5px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    z-index: 10;
+}
+
+.viewer-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    z-index: 10;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .three-viewer {
+        height: 300px;
+        margin: 15px auto;
+    }
+    
+    .viewer-controls {
+        font-size: 10px;
+        padding: 8px;
+    }
+    
+    .viewer-info {
+        font-size: 10px;
+        padding: 6px;
+    }
+}
+
+/* Dark theme compatibility */
+.post .three-viewer {
+    border-color: #555;
+}
+
+/* Animation for smooth transitions */
+.three-viewer {
+    transition: box-shadow 0.3s ease;
+}
+
+.three-viewer:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+</style>
+
+<script>
+// Initialize the viewer with custom model path when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    const viewerContainer = document.getElementById('{{ viewer_id }}');
+    if (viewerContainer) {
+        // Add model path to the container as a data attribute
+        viewerContainer.setAttribute('data-model-path', '{{ model_path }}');
+    }
+});
+</script>
+

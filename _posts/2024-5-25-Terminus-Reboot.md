@@ -38,6 +38,12 @@ My favorite model that I've worked on for this project has been this suitcase. I
 ![---]({{ site.baseurl }}/assets\images\Terminus\Suitcase_Boom02.png)
 ![---]({{ site.baseurl }}/assets\images\Terminus\Suitcase_Boom01.png)
 
+## Interactive 3D Suitcase Model
+
+Here's an interactive 3D model of the suitcase I created for Terminus. You can rotate, zoom, and explore the model to see the high-tech device inside!
+
+{% include three-viewer.html id="terminus-suitcase" title="Terminus Suitcase - Interactive 3D Model" model="/assets/images/Terminus/SM_BombSuitcase.fbx" %}
+
 To be honest though, the best moment for me working on terminus was the last couple days leading up to open studios, where we presented to the public for the first time. Working on the arcade cabinets for this project was a blast. We ended up making 5 massive cabinets with no time to spare. The stain was drying as we put up the exhibit the day of the show. We pulled it off though and were able to get people playtesting our game. Caleb also knocked it out of the part with the set design. It was very analog retro style. He ended up holding a whole furniture drive to get all the pieces together
 
 ![---]({{ site.baseurl }}/assets/images/Terminus/FurnatureDrive.png)
