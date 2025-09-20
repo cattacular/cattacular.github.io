@@ -104,14 +104,14 @@ class ThreeViewer {
             loadingElement.textContent = 'Loading 3D Model...';
         }
 
-        // Try to load the FBX model first
-        this.loadFBXModel().then(() => {
+        // Try to load the model first
+        this.loadModel().then(() => {
             // Success - hide loading indicator
             if (loadingElement) {
                 loadingElement.style.display = 'none';
             }
         }).catch((error) => {
-            console.warn('FBX model failed to load, falling back to procedural model:', error);
+            console.warn('Model failed to load, falling back to procedural model:', error);
             // Fallback to procedural model
             this.createProceduralSuitcase();
             if (loadingElement) {
@@ -120,22 +120,34 @@ class ThreeViewer {
         });
     }
 
-    async loadFBXModel() {
+    async loadModel() {
         return new Promise((resolve, reject) => {
-            // Check if FBXLoader is available
-            if (typeof THREE.FBXLoader === 'undefined') {
-                reject(new Error('FBXLoader not available'));
+            const modelPath = this.options.modelPath || '/assets/images/Terminus/Suitcase.obj';
+            
+            // Determine loader based on file extension
+            let loader;
+            if (modelPath.toLowerCase().endsWith('.fbx')) {
+                if (typeof THREE.FBXLoader === 'undefined') {
+                    reject(new Error('FBXLoader not available'));
+                    return;
+                }
+                loader = new THREE.FBXLoader();
+            } else if (modelPath.toLowerCase().endsWith('.obj')) {
+                if (typeof THREE.OBJLoader === 'undefined') {
+                    reject(new Error('OBJLoader not available'));
+                    return;
+                }
+                loader = new THREE.OBJLoader();
+            } else {
+                reject(new Error('Unsupported model format'));
                 return;
             }
-
-            const loader = new THREE.FBXLoader();
-            const modelPath = this.options.modelPath || '/assets/images/Terminus/Suitcase.obj';
             
             loader.load(
                 modelPath,
-                (fbx) => {
+                (model) => {
                     // Model loaded successfully
-                    this.model = fbx;
+                    this.model = model;
                     
                     // Center and scale the model appropriately
                     const box = new THREE.Box3().setFromObject(this.model);
