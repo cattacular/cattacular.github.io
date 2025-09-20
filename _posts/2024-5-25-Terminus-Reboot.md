@@ -156,7 +156,7 @@ Here's an interactive 3D model of the suitcase I created for Terminus. You can r
 document.addEventListener('DOMContentLoaded', function() {
     const viewerContainer = document.getElementById('terminus-suitcase');
     if (viewerContainer) {
-        viewerContainer.setAttribute('data-model-path', '/assets/images/Terminus/SM_BombSuitcase.fbx');
+        viewerContainer.setAttribute('data-model-path', '/assets/images/Terminus/Suitcase.obj');
     }
 });
 </script>

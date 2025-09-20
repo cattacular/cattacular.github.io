@@ -129,7 +129,7 @@ class ThreeViewer {
             }
 
             const loader = new THREE.FBXLoader();
-            const modelPath = this.options.modelPath || '/assets/images/Terminus/SM_BombSuitcase.fbx';
+            const modelPath = this.options.modelPath || '/assets/images/Terminus/Suitcase.obj';
             
             loader.load(
                 modelPath,
