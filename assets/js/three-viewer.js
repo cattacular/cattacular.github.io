@@ -151,6 +151,8 @@ class ThreeViewer {
                         basePath + 'materials.mtl'
                     ];
                     
+                    console.log('Attempting to load MTL files:', possibleMtlFiles);
+                    
                     // Try to load the first available MTL file
                     const tryLoadMtl = (index) => {
                         if (index >= possibleMtlFiles.length) {
@@ -162,12 +164,15 @@ class ThreeViewer {
                         mtlLoader.load(
                             possibleMtlFiles[index],
                             (materials) => {
+                                console.log('MTL file loaded successfully:', possibleMtlFiles[index]);
+                                console.log('Materials:', materials);
                                 materials.preload();
                                 loader.setMaterials(materials);
                                 this.loadObjWithLoader(loader, modelPath, resolve, reject);
                             },
                             undefined,
-                            () => {
+                            (error) => {
+                                console.log('MTL file not found or error:', possibleMtlFiles[index], error);
                                 // MTL file not found, try next one
                                 tryLoadMtl(index + 1);
                             }
@@ -213,14 +218,33 @@ class ThreeViewer {
                         child.castShadow = true;
                         child.receiveShadow = true;
                         
-                        // Apply a more appropriate material if the current one is default white
-                        if (child.material && child.material.color && child.material.color.getHex() === 0xffffff) {
+                        // Debug: Log material information
+                        console.log('Mesh material:', child.material);
+                        console.log('Material color:', child.material?.color);
+                        
+                        // Check if material is default white or has no proper color
+                        const isDefaultWhite = child.material && 
+                            child.material.color && 
+                            (child.material.color.getHex() === 0xffffff || 
+                             child.material.color.getHex() === 0x000000);
+                        
+                        // Also check if material is very bright/white
+                        const isVeryBright = child.material && 
+                            child.material.color && 
+                            child.material.color.r > 0.9 && 
+                            child.material.color.g > 0.9 && 
+                            child.material.color.b > 0.9;
+                        
+                        if (isDefaultWhite || isVeryBright || !child.material.color) {
+                            console.log('Applying fallback material to mesh');
                             // Create a more natural material for organic models
                             child.material = new THREE.MeshLambertMaterial({
                                 color: 0x4a5d23, // Dark green for plant material
                                 transparent: true,
                                 opacity: 0.9
                             });
+                        } else {
+                            console.log('Using existing material:', child.material.color);
                         }
                     }
                 });
