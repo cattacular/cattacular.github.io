@@ -138,55 +138,109 @@ class ThreeViewer {
                     return;
                 }
                 loader = new THREE.OBJLoader();
+                
+                // Try to load MTL file if it exists (for materials)
+                if (typeof THREE.MTLLoader !== 'undefined') {
+                    const mtlLoader = new THREE.MTLLoader();
+                    const basePath = modelPath.substring(0, modelPath.lastIndexOf('/') + 1);
+                    
+                    // Try to load common MTL file names
+                    const possibleMtlFiles = [
+                        modelPath.replace('.obj', '.mtl'),
+                        basePath + 'SoybeanSmall.mtl',
+                        basePath + 'materials.mtl'
+                    ];
+                    
+                    // Try to load the first available MTL file
+                    const tryLoadMtl = (index) => {
+                        if (index >= possibleMtlFiles.length) {
+                            // No MTL file found, proceed with OBJ loader
+                            this.loadObjWithLoader(loader, modelPath, resolve, reject);
+                            return;
+                        }
+                        
+                        mtlLoader.load(
+                            possibleMtlFiles[index],
+                            (materials) => {
+                                materials.preload();
+                                loader.setMaterials(materials);
+                                this.loadObjWithLoader(loader, modelPath, resolve, reject);
+                            },
+                            undefined,
+                            () => {
+                                // MTL file not found, try next one
+                                tryLoadMtl(index + 1);
+                            }
+                        );
+                    };
+                    
+                    tryLoadMtl(0);
+                    return; // Exit early since we're handling the loading
+                }
             } else {
                 reject(new Error('Unsupported model format'));
                 return;
             }
             
-            loader.load(
-                modelPath,
-                (model) => {
-                    // Model loaded successfully
-                    this.model = model;
-                    
-                    // Center and scale the model appropriately
-                    const box = new THREE.Box3().setFromObject(this.model);
-                    const center = box.getCenter(new THREE.Vector3());
-                    const size = box.getSize(new THREE.Vector3());
-                    
-                    // Scale the model to fit nicely in the viewer
-                    const maxDimension = Math.max(size.x, size.y, size.z);
-                    const targetSize = 4; // Target size for the model
-                    const scale = targetSize / maxDimension;
-                    
-                    this.model.scale.setScalar(scale);
-                    this.model.position.sub(center.multiplyScalar(scale));
-                    
-                    // Enable shadows for all meshes in the model
-                    this.model.traverse((child) => {
-                        if (child.isMesh) {
-                            child.castShadow = true;
-                            child.receiveShadow = true;
-                        }
-                    });
-                    
-                    // Add the model to the scene
-                    this.scene.add(this.model);
-                    resolve();
-                },
-                (progress) => {
-                    // Loading progress
-                    const loadingElement = this.container.querySelector('.viewer-loading');
-                    if (loadingElement) {
-                        const percent = Math.round((progress.loaded / progress.total) * 100);
-                        loadingElement.textContent = `Loading 3D Model... ${percent}%`;
-                    }
-                },
-                (error) => {
-                    reject(error);
-                }
-            );
+            // For non-OBJ files or when MTL loading is not available
+            this.loadObjWithLoader(loader, modelPath, resolve, reject);
         });
+    }
+    
+    loadObjWithLoader(loader, modelPath, resolve, reject) {
+        loader.load(
+            modelPath,
+            (model) => {
+                // Model loaded successfully
+                this.model = model;
+                
+                // Center and scale the model appropriately
+                const box = new THREE.Box3().setFromObject(this.model);
+                const center = box.getCenter(new THREE.Vector3());
+                const size = box.getSize(new THREE.Vector3());
+                
+                // Scale the model to fit nicely in the viewer
+                const maxDimension = Math.max(size.x, size.y, size.z);
+                const targetSize = 4; // Target size for the model
+                const scale = targetSize / maxDimension;
+                
+                this.model.scale.setScalar(scale);
+                this.model.position.sub(center.multiplyScalar(scale));
+                
+                // Apply better materials and enable shadows for all meshes in the model
+                this.model.traverse((child) => {
+                    if (child.isMesh) {
+                        child.castShadow = true;
+                        child.receiveShadow = true;
+                        
+                        // Apply a more appropriate material if the current one is default white
+                        if (child.material && child.material.color && child.material.color.getHex() === 0xffffff) {
+                            // Create a more natural material for organic models
+                            child.material = new THREE.MeshLambertMaterial({
+                                color: 0x4a5d23, // Dark green for plant material
+                                transparent: true,
+                                opacity: 0.9
+                            });
+                        }
+                    }
+                });
+                
+                // Add the model to the scene
+                this.scene.add(this.model);
+                resolve();
+            },
+            (progress) => {
+                // Loading progress
+                const loadingElement = this.container.querySelector('.viewer-loading');
+                if (loadingElement) {
+                    const percent = Math.round((progress.loaded / progress.total) * 100);
+                    loadingElement.textContent = `Loading 3D Model... ${percent}%`;
+                }
+            },
+            (error) => {
+                reject(error);
+            }
+        );
     }
 
     createProceduralSuitcase() {
