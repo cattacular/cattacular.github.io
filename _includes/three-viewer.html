@@ -1,11 +1,11 @@
 <!-- Three.js 3D Viewer Include -->
-<!-- Usage: {% include three-viewer.html id="suitcase-viewer" title="Terminus Suitcase" %} -->
+<!-- Usage: include three-viewer.html id="suitcase-viewer" title="Terminus Suitcase" --> -->
 
 {% assign viewer_id = include.id | default: "three-viewer" %}
 {% assign viewer_title = include.title | default: "3D Model Viewer" %}
 {% assign viewer_width = include.width | default: "100%" %}
 {% assign viewer_height = include.height | default: "500px" %}
-{% assign model_path = include.model | default: site.baseurl | append: "/assets/images/Terminus/Suitcase.obj" %}
+{% assign model_path = include.model | default: "/assets/images/Terminus/Suitcase.obj" %}
 
 <div class="three-viewer-container">
     <div class="three-viewer" id="{{ viewer_id }}">
