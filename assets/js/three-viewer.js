@@ -147,6 +147,7 @@ class ThreeViewer {
                     // Try to load common MTL file names
                     const possibleMtlFiles = [
                         modelPath.replace('.obj', '.mtl'),
+                        basePath + 'SoybeanWhole2.mtl',
                         basePath + 'SoybeanSmall.mtl',
                         basePath + 'materials.mtl'
                     ];
@@ -222,30 +223,16 @@ class ThreeViewer {
                         console.log('Mesh material:', child.material);
                         console.log('Material color:', child.material?.color);
                         
-                        // Check if material is default white or has no proper color
-                        const isDefaultWhite = child.material && 
-                            child.material.color && 
-                            (child.material.color.getHex() === 0xffffff || 
-                             child.material.color.getHex() === 0x000000);
+                        // Force apply dark green material for soybean models
+                        console.log('Forcing dark green material for soybean model');
+                        child.material = new THREE.MeshLambertMaterial({
+                            color: 0x2d5016, // Darker green for better contrast
+                            transparent: true,
+                            opacity: 0.95
+                        });
                         
-                        // Also check if material is very bright/white
-                        const isVeryBright = child.material && 
-                            child.material.color && 
-                            child.material.color.r > 0.9 && 
-                            child.material.color.g > 0.9 && 
-                            child.material.color.b > 0.9;
-                        
-                        if (isDefaultWhite || isVeryBright || !child.material.color) {
-                            console.log('Applying fallback material to mesh');
-                            // Create a more natural material for organic models
-                            child.material = new THREE.MeshLambertMaterial({
-                                color: 0x4a5d23, // Dark green for plant material
-                                transparent: true,
-                                opacity: 0.9
-                            });
-                        } else {
-                            console.log('Using existing material:', child.material.color);
-                        }
+                        // Also set emissive color for better lighting
+                        child.material.emissive = new THREE.Color(0x0a1a05); // Very dark green emissive
                     }
                 });
                 
