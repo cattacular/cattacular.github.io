@@ -730,17 +730,24 @@ Best regards,
   }
 
   getServerImages(category) {
-    // This would normally fetch from your server
-    // For demo purposes, we'll return some placeholder data
+    // Load actual images from the exquisite-corpse folders
     const serverImages = {
       top: [
-        { src: '/assets/images/JLogo.png', filename: 'sample-head-1.png' }
+        { src: '/assets/images/exquisite-corpse/top/DogHead.jpg', filename: 'DogHead.jpg' },
+        { src: '/assets/images/exquisite-corpse/top/OldManHead.jpg', filename: 'OldManHead.jpg' },
+        { src: '/assets/images/exquisite-corpse/top/OrangeHead.jpg', filename: 'OrangeHead.jpg' },
+        { src: '/assets/images/exquisite-corpse/top/PumpkinHead.jpg', filename: 'PumpkinHead.jpg' }
       ],
       middle: [
-        { src: '/assets/images/JLogo.png', filename: 'sample-torso-1.png' }
+        { src: '/assets/images/exquisite-corpse/middle/Belly.jpg', filename: 'Belly.jpg' },
+        { src: '/assets/images/exquisite-corpse/middle/CrabAbs.jpg', filename: 'CrabAbs.jpg' },
+        { src: '/assets/images/exquisite-corpse/middle/RibCage.jpg', filename: 'RibCage.jpg' }
       ],
       bottom: [
-        { src: '/assets/images/JLogo.png', filename: 'sample-legs-1.png' }
+        { src: '/assets/images/exquisite-corpse/bottom/Boots.jpg', filename: 'Boots.jpg' },
+        { src: '/assets/images/exquisite-corpse/bottom/DuckSkirt.jpg', filename: 'DuckSkirt.jpg' },
+        { src: '/assets/images/exquisite-corpse/bottom/FishTail.jpg', filename: 'FishTail.jpg' },
+        { src: '/assets/images/exquisite-corpse/bottom/WheelChair.jpg', filename: 'WheelChair.jpg' }
       ]
     };
     
