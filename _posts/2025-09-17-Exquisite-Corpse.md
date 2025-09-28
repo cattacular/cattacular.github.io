@@ -284,7 +284,7 @@ Welcome to the Exquisite Corpse drawing game! This is a collaborative art projec
 
 .combination-display {
   margin-top: 20px;
-  min-height: 200px;
+  min-height: 400px;
   border: 2px dashed #ced4da;
   border-radius: 10px;
   display: flex;
@@ -318,8 +318,8 @@ Welcome to the Exquisite Corpse drawing game! This is a collaborative art projec
 }
 
 .creature-section img {
-  max-width: 200px;
-  max-height: 150px;
+  max-width: 400px;
+  max-height: 300px;
   border: none;
   border-radius: 0;
   display: block;
@@ -399,8 +399,8 @@ Welcome to the Exquisite Corpse drawing game! This is a collaborative art projec
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
 }
 
 .gallery-item {
@@ -415,6 +415,8 @@ Welcome to the Exquisite Corpse drawing game! This is a collaborative art projec
   max-width: 100%;
   height: auto;
   border-radius: 3px;
+  min-height: 150px;
+  object-fit: cover;
 }
 
 .gallery-item .filename {
@@ -434,6 +436,19 @@ Welcome to the Exquisite Corpse drawing game! This is a collaborative art projec
   
   .gallery {
     grid-template-columns: 1fr;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  
+  .creature-section img {
+    max-width: 300px;
+    max-height: 225px;
+  }
+  
+  .combination-display {
+    min-height: 300px;
   }
 }
 </style>
