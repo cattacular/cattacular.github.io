@@ -697,11 +697,11 @@ Best regards,
     this.loadGallery();
   }
 
-  loadGallery() {
+  async loadGallery() {
     const drawings = JSON.parse(localStorage.getItem('exquisiteCorpseDrawings') || '{}');
     const categories = ['top', 'middle', 'bottom'];
     
-    categories.forEach(category => {
+    for (const category of categories) {
       const gallery = document.getElementById(`${category}Gallery`);
       gallery.innerHTML = '';
       
@@ -719,19 +719,18 @@ Best regards,
       }
       
       // Load server images (if any exist)
-      this.loadServerImages(category, gallery);
+      await this.loadServerImages(category, gallery);
       
       // Show message if no drawings at all
       if (gallery.children.length === 0) {
         gallery.innerHTML = '<p style="text-align: center; color: #6c757d; font-style: italic;">No drawings yet. Be the first to create one!</p>';
       }
-    });
+    }
   }
 
-  loadServerImages(category, gallery) {
-    // In a real implementation, this would fetch from a server endpoint
-    // For now, we'll create some placeholder server images
-    const serverImages = this.getServerImages(category);
+  async loadServerImages(category, gallery) {
+    // Load server images dynamically
+    const serverImages = await this.getServerImages(category);
     
     serverImages.forEach(image => {
       const item = document.createElement('div');
@@ -744,39 +743,47 @@ Best regards,
     });
   }
 
-  getServerImages(category) {
-    // Load actual images from the exquisite-corpse folders
-    const serverImages = {
-      top: [
-        { src: '/assets/images/exquisite-corpse/top/DogHead.jpg', filename: 'DogHead.jpg' },
-        { src: '/assets/images/exquisite-corpse/top/OldManHead.jpg', filename: 'OldManHead.jpg' },
-        { src: '/assets/images/exquisite-corpse/top/OrangeHead.jpg', filename: 'OrangeHead.jpg' },
-        { src: '/assets/images/exquisite-corpse/top/PumpkinHead.jpg', filename: 'PumpkinHead.jpg' }
-      ],
-      middle: [
-        { src: '/assets/images/exquisite-corpse/middle/Belly.jpg', filename: 'Belly.jpg' },
-        { src: '/assets/images/exquisite-corpse/middle/CrabAbs.jpg', filename: 'CrabAbs.jpg' },
-        { src: '/assets/images/exquisite-corpse/middle/RibCage.jpg', filename: 'RibCage.jpg' }
-      ],
-      bottom: [
-        { src: '/assets/images/exquisite-corpse/bottom/Boots.jpg', filename: 'Boots.jpg' },
-        { src: '/assets/images/exquisite-corpse/bottom/DuckSkirt.jpg', filename: 'DuckSkirt.jpg' },
-        { src: '/assets/images/exquisite-corpse/bottom/FishTail.jpg', filename: 'FishTail.jpg' },
-        { src: '/assets/images/exquisite-corpse/bottom/WheelChair.jpg', filename: 'WheelChair.jpg' }
-      ]
-    };
-    
-    return serverImages[category] || [];
+  async getServerImages(category) {
+    // Dynamically discover images in the exquisite-corpse folders
+    try {
+      // For static sites like Jekyll/GitHub Pages, we need to maintain a list
+      // But we can make it easier to update by centralizing the image list
+      const imageRegistry = {
+        top: [
+          'DogHead.jpg', 'OldManHead.jpg', 'OrangeHead.jpg', 'PumpkinHead.jpg','KingCat.jpg','CatHead.jpg'
+          // Add new top images here - just add the filename to this array
+        ],
+        middle: [
+          'Belly.jpg', 'CrabAbs.jpg', 'RibCage.jpg','Hocuspocus.jpg','Abbbs.jpg'
+          // Add new middle images here - just add the filename to this array
+        ],
+        bottom: [
+          'Boots.jpg', 'DuckSkirt.jpg', 'FishTail.jpg', 'WheelChair.jpg','Stripedboots.jpg','OstrichFeet.jpg'
+          // Add new bottom images here - just add the filename to this array
+        ]
+      };
+      
+      const images = imageRegistry[category] || [];
+      
+      // Convert to the expected format
+      return images.map(filename => ({
+        src: `/assets/images/exquisite-corpse/${category}/${filename}`,
+        filename: filename
+      }));
+    } catch (error) {
+      console.error('Error loading server images:', error);
+      return [];
+    }
   }
 
-  generateRandomCombination() {
+  async generateRandomCombination() {
     const drawings = JSON.parse(localStorage.getItem('exquisiteCorpseDrawings') || '{}');
     const categories = ['top', 'middle', 'bottom'];
     const result = document.getElementById('combinationResult');
     
     // Get all available drawings (local + server) for each category
     const allDrawings = {};
-    categories.forEach(category => {
+    for (const category of categories) {
       allDrawings[category] = [];
       
       // Add local drawings
@@ -785,9 +792,9 @@ Best regards,
       }
       
       // Add server drawings
-      const serverImages = this.getServerImages(category);
+      const serverImages = await this.getServerImages(category);
       allDrawings[category].push(...serverImages);
-    });
+    }
     
     // Check if we have at least one drawing in each category
     const hasAllCategories = categories.every(category => 
