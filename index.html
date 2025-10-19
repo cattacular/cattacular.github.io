@@ -12,7 +12,7 @@ layout: default
         <a href="{{ site.baseurl }}{{ post.url }}" class="featured-link">
           <div class="featured-image-container">
             {% if post.teaser_image %}
-              <img src="{{ site.baseurl }}/images/{{ post.teaser_image }}" alt="{{ post.title }}" class="featured-image">
+              <img src="{{ site.baseurl }}/assets/images/{{ post.teaser_image }}" alt="{{ post.title }}" class="featured-image">
             {% else %}
               <div class="featured-placeholder">
                 <span>{{ post.title | truncate: 20 }}</span>
@@ -50,7 +50,7 @@ layout: default
         <a href="{{ site.baseurl }}{{ post.url }}" class="project-link">
           <div class="project-image-container">
             {% if post.teaser_image %}
-              <img src="{{ site.baseurl }}/images/{{ post.teaser_image }}" alt="{{ post.title }}" class="project-image">
+              <img src="{{ site.baseurl }}/assets/images/{{ post.teaser_image }}" alt="{{ post.title }}" class="project-image">
             {% else %}
               <div class="project-placeholder">
                 <span>{{ post.title | truncate: 20 }}</span>
