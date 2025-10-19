@@ -1184,3 +1184,411 @@ Modules - reusable parts of our design
 //@import "highlights";
 @import "darcula";
 @import "svg-icons";
+
+/*********************/
+/* HOMEPAGE LAYOUT */
+/*********************/
+
+// Featured Work Section
+.featured-work {
+  margin-bottom: 3em;
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 2em;
+    color: $darkerGray;
+    font-size: 28px;
+  }
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+  margin-bottom: 3em;
+  
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+  }
+}
+
+.featured-item {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    
+    .featured-image {
+      transform: scale(1.05);
+    }
+  }
+  
+  // Ensure the entire area is clickable
+  .featured-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.featured-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.featured-image-container {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  
+  // Ensure gradient is always visible
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    z-index: 1;
+  }
+}
+
+.featured-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.featured-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.project-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #495057;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.featured-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.7) 100%);
+  color: white;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 3;
+  
+  .featured-item:hover & {
+    opacity: 1;
+  }
+  
+  h3 {
+    color: white;
+    margin-bottom: 0.5em;
+    font-size: 20px;
+    text-align: left;
+  }
+  
+  p {
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 1em;
+    line-height: 1.4;
+  }
+  
+  .featured-read-more {
+    background: rgba(255,255,255,0.2);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.3);
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background: rgba(255,255,255,0.3);
+      border-color: rgba(255,255,255,0.5);
+    }
+  }
+}
+
+// Project Gallery Section
+.project-gallery {
+  margin-bottom: 3em;
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 2em;
+    color: $darkerGray;
+    font-size: 28px;
+  }
+}
+
+.tag-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 2em;
+  padding: 0 1em;
+}
+
+.tag-filter {
+  background: #f8f9fa;
+  border: 2px solid #e9ecef;
+  color: #495057;
+  padding: 8px 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-weight: 500;
+  
+  &:hover {
+    background: #e9ecef;
+    border-color: #dee2e6;
+  }
+  
+  &.active {
+    background: $blue;
+    color: white;
+    border-color: $blue;
+  }
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5em;
+  margin-bottom: 2em;
+}
+
+.project-item {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  }
+  
+  &.hidden {
+    display: none;
+  }
+}
+
+.project-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-image-container {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.8) 100%);
+  color: white;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  
+  .project-item:hover & {
+    opacity: 1;
+  }
+  
+  h3 {
+    color: white;
+    margin-bottom: 0.5em;
+    font-size: 18px;
+    text-align: left;
+  }
+  
+  p {
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 1em;
+    line-height: 1.4;
+    font-size: 14px;
+  }
+  
+  .project-tags {
+    margin-bottom: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  
+  .project-tag {
+    background: rgba(255,255,255,0.2);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    border: 1px solid rgba(255,255,255,0.3);
+  }
+  
+  .project-read-more {
+    background: rgba(255,255,255,0.2);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.3);
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background: rgba(255,255,255,0.3);
+      border-color: rgba(255,255,255,0.5);
+    }
+  }
+}
+
+// Pagination Section
+.pagination-section {
+  margin-top: 3em;
+  padding-top: 2em;
+  border-top: 1px solid #e9ecef;
+  
+  h3 {
+    text-align: center;
+    margin-bottom: 1.5em;
+    color: $darkerGray;
+    font-size: 24px;
+  }
+}
+
+.recent-posts {
+  margin-bottom: 2em;
+}
+
+.recent-post {
+  margin-bottom: 1em;
+  padding: 1em;
+  background: #f8f9fa;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  
+  &:hover {
+    background: #e9ecef;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5em;
+    }
+  }
+  
+  .recent-date {
+    color: $gray;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  
+  .recent-title {
+    color: $darkerGray;
+    font-weight: 500;
+    
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+}
+
+// Mobile Responsiveness
+@include mobile {
+  .featured-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+  }
+  
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 1em;
+  }
+  
+  .tag-filters {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    
+    .tag-filter {
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+  }
+  
+  .featured-overlay,
+  .project-overlay {
+    padding: 1em;
+  }
+  
+  .featured-overlay h3,
+  .project-overlay h3 {
+    font-size: 18px;
+  }
+}

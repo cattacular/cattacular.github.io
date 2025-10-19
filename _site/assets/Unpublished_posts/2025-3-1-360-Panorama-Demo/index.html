@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>360° Panorama Demo – Jaevyn Atom Hoyt – A Personal Portfolio & Blog</title>
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="360° Panorama Demo" />
+<meta name="author" content="Jaevyn Atom Hoyt" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A Personal Portfolio &amp; Blog" />
+<meta property="og:description" content="A Personal Portfolio &amp; Blog" />
+<link rel="canonical" href="http://localhost:4000/assets/Unpublished_posts/2025-3-1-360-Panorama-Demo/" />
+<meta property="og:url" content="http://localhost:4000/assets/Unpublished_posts/2025-3-1-360-Panorama-Demo/" />
+<meta property="og:site_name" content="Jaevyn Atom Hoyt" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="360° Panorama Demo" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Jaevyn Atom Hoyt"},"description":"A Personal Portfolio &amp; Blog","headline":"360° Panorama Demo","url":"http://localhost:4000/assets/Unpublished_posts/2025-3-1-360-Panorama-Demo/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+
+<meta property="og:description" content="" />
+
+<meta name="author" content="Jaevyn Atom Hoyt" />
+
+
+<meta property="og:title" content="360° Panorama Demo" />
+<meta property="twitter:title" content="360° Panorama Demo" />
+
+
+
+<meta property="og:image" content="http://localhost:4000/assets/images/JLogo.png"/>
+<meta property="twitter:image" content="http://localhost:4000/assets/images/JLogo.png"/>
+
+
+
+    <link rel="stylesheet" type="text/css" href="/assets/style.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/three-viewer.css" />
+    <link rel="alternate" type="application/rss+xml" title="Jaevyn Atom Hoyt - A Personal Portfolio & Blog" href="/feed.xml" />
+    <link rel="canonical" href="http://localhost:4000/assets/Unpublished_posts/2025-3-1-360-Panorama-Demo/" />
+
+    <!-- Pannellum 360° Panorama Viewer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css" />
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+
+    <meta name="theme-color" content="#000000">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    
+
+  </head>
+
+  <body>
+    <div id="bar"></div>
+    <div class="wrapper-container">
+      <div class="wrapper-masthead">
+        <div class="container">
+          <header class="masthead clearfix">
+            <a href="/" class="site-avatar"><img src="/assets/images/JLogo.png" alt="" /></a>
+
+            <div class="site-info">
+              <h1 class="site-name"><a href="/">Jaevyn Atom Hoyt</a></h1>
+              <p class="site-description">A Personal Portfolio & Blog</p> 
+            </div>
+
+            <nav>
+              <a href="/">Home</a>
+              <a href="/about">About</a>
+              <a href="/Jatom-Synergies">Jatom Synergies</a>
+              <a href="/search">Search</a>
+              <a href="/archive">Archive</a>
+            </nav>
+          </header>
+        </div>
+      </div>
+
+      <div class="wrapper-main">
+        <div id="main" role="main" class="container">
+          <article class="post detailed">
+  <h1>360° Panorama Demo</h1>
+
+  <div>
+    <p class="author_title">Jaevyn Atom Hoyt  ·  </p>
+    
+    <div class="post-tags">
+      
+      
+        <a href="/categories/#Portfolio Demo Panorama">Portfolio Demo Panorama</a>
+        
+      
+    </div>
+  </div>
+    
+  <div class="entry">
+    <h1 id="360-panorama-viewer-demo">360° Panorama Viewer Demo</h1>
+
+<p>This post demonstrates how to embed interactive 360° panoramas in your Jekyll blog posts.</p>
+
+<h2 id="how-to-use">How to Use</h2>
+
+<p>To add a 360° panorama to any post, simply use this include:</p>
+
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+
+
+
+
+
+&lt;div id="unique-id" style="width: 100%; height: 400px; border: 1px solid #ccc; background: #f0f0f0; display: flex; align-items: center; justify-content: center;"&gt;
+  &lt;p&gt;Loading 360° panorama...&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Initializing panorama viewer for: unique-id');
+    console.log('Image path: /assets/images/your-panorama.jpg');
+    
+    if (typeof pannellum === 'undefined') {
+        console.error('Pannellum library not loaded!');
+        document.getElementById('unique-id').innerHTML = '&lt;p style="color: red;"&gt;Error: Pannellum library not loaded. Please check the console for details.&lt;/p&gt;';
+        return;
+    }
+    
+    try {
+        pannellum.viewer('unique-id', {
+            type: 'equirectangular',
+            panorama: '/assets/images/your-panorama.jpg',
+            autoLoad: true,
+            autoRotate: -2,
+            compass: true,
+            showZoomCtrl: true,
+            showFullscreenCtrl: true,
+            showControls: true,
+            mouseZoom: true,
+            draggable: true,
+            friction: 0.15,
+            minZoom: 1,
+            maxZoom: 3,
+            defaultZoom: 1,
+            defaultLong: 0,
+            defaultLat: 0,
+            hotSpots: []
+        });
+        console.log('Panorama viewer initialized successfully');
+    } catch (error) {
+        console.error('Error initializing panorama viewer:', error);
+        document.getElementById('unique-id').innerHTML = '&lt;p style="color: red;"&gt;Error loading panorama: ' + error.message + '&lt;/p&gt;';
+    }
+});
+&lt;/script&gt; 
+</code></pre></div></div>
+
+<h2 id="example-panorama">Example Panorama</h2>
+
+<p>Here’s an example of how the panorama viewer looks (you’ll need to replace the image path with your actual panorama):</p>
+
+<div id="demo-panorama" style="width: 100%; height: 500px; border: 1px solid #ccc; background: #f0f0f0; display: flex; align-items: center; justify-content: center;">
+  <p>Loading 360° panorama...</p>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Initializing panorama viewer for: demo-panorama');
+    console.log('Image path: /assets/images/sample-panorama.jpg');
+    
+    if (typeof pannellum === 'undefined') {
+        console.error('Pannellum library not loaded!');
+        document.getElementById('demo-panorama').innerHTML = '<p style="color: red;">Error: Pannellum library not loaded. Please check the console for details.</p>';
+        return;
+    }
+    
+    try {
+        pannellum.viewer('demo-panorama', {
+            type: 'equirectangular',
+            panorama: '/assets/images/sample-panorama.jpg',
+            autoLoad: true,
+            autoRotate: -2,
+            compass: true,
+            showZoomCtrl: true,
+            showFullscreenCtrl: true,
+            showControls: true,
+            mouseZoom: true,
+            draggable: true,
+            friction: 0.15,
+            minZoom: 1,
+            maxZoom: 3,
+            defaultZoom: 1,
+            defaultLong: 0,
+            defaultLat: 0,
+            hotSpots: []
+        });
+        console.log('Panorama viewer initialized successfully');
+    } catch (error) {
+        console.error('Error initializing panorama viewer:', error);
+        document.getElementById('demo-panorama').innerHTML = '<p style="color: red;">Error loading panorama: ' + error.message + '</p>';
+    }
+});
+</script>
+
+<h2 id="features">Features</h2>
+
+<p>The panorama viewer includes:</p>
+<ul>
+  <li><strong>Click and drag</strong> to look around</li>
+  <li><strong>Mouse wheel</strong> to zoom in/out</li>
+  <li><strong>Auto-rotation</strong> (can be disabled)</li>
+  <li><strong>Fullscreen mode</strong></li>
+  <li><strong>Compass indicator</strong></li>
+  <li><strong>Zoom controls</strong></li>
+</ul>
+
+<h2 id="image-requirements">Image Requirements</h2>
+
+<p>For best results, your panorama should be:</p>
+<ul>
+  <li><strong>Equirectangular format</strong> (2:1 aspect ratio)</li>
+  <li><strong>High resolution</strong> (at least 2048x1024 pixels)</li>
+  <li><strong>JPEG or PNG format</strong></li>
+  <li><strong>Properly stitched</strong> (no visible seams)</li>
+</ul>
+
+<h2 id="customization-options">Customization Options</h2>
+
+<p>You can customize the viewer with these parameters:</p>
+
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+
+
+
+
+
+&lt;div id="my-panorama" style="width: 800px; height: 600px; border: 1px solid #ccc; background: #f0f0f0; display: flex; align-items: center; justify-content: center;"&gt;
+  &lt;p&gt;Loading 360° panorama...&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Initializing panorama viewer for: my-panorama');
+    console.log('Image path: /path/to/image.jpg');
+    
+    if (typeof pannellum === 'undefined') {
+        console.error('Pannellum library not loaded!');
+        document.getElementById('my-panorama').innerHTML = '&lt;p style="color: red;"&gt;Error: Pannellum library not loaded. Please check the console for details.&lt;/p&gt;';
+        return;
+    }
+    
+    try {
+        pannellum.viewer('my-panorama', {
+            type: 'equirectangular',
+            panorama: '/path/to/image.jpg',
+            autoLoad: true,
+            autoRotate: -2,
+            compass: true,
+            showZoomCtrl: true,
+            showFullscreenCtrl: true,
+            showControls: true,
+            mouseZoom: true,
+            draggable: true,
+            friction: 0.15,
+            minZoom: 1,
+            maxZoom: 3,
+            defaultZoom: 1,
+            defaultLong: 0,
+            defaultLat: 0,
+            hotSpots: []
+        });
+        console.log('Panorama viewer initialized successfully');
+    } catch (error) {
+        console.error('Error initializing panorama viewer:', error);
+        document.getElementById('my-panorama').innerHTML = '&lt;p style="color: red;"&gt;Error loading panorama: ' + error.message + '&lt;/p&gt;';
+    }
+});
+&lt;/script&gt; 
+</code></pre></div></div>
+
+<h2 id="creating-360-panoramas">Creating 360° Panoramas</h2>
+
+<p>To create your own 360° panoramas, you can use:</p>
+<ul>
+  <li><strong>Smartphone apps</strong>: Google Street View, 360 Camera</li>
+  <li><strong>DSLR cameras</strong> with fisheye lenses</li>
+  <li><strong>360° cameras</strong>: GoPro Fusion, Insta360</li>
+  <li><strong>Software</strong>: PTGui, Hugin, Adobe Photoshop</li>
+</ul>
+
+<p>The resulting image should be in equirectangular projection for best compatibility with the viewer.</p>
+
+  </div>
+
+ 
+  
+</article>
+
+        </div>
+      </div>
+
+      <div class="wrapper-footer">
+        <div class="container">
+          <footer class="footer">
+            
+<a href="mailto:jatomsynergies@gmail.com"><i class="svg-icon email"></i></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    
+
+    
+    <!-- Three.js 3D Viewer Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/FBXLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
+    <script src="/assets/js/three-viewer.js"></script>
+    
+    <!-- Homepage Interactive Features -->
+    <script src="/assets/js/homepage.js"></script>
+  </body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>YouTube Embed Guide - Avoiding Security Errors – Jaevyn Atom Hoyt – A Personal Portfolio & Blog</title>
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="YouTube Embed Guide - Avoiding Security Errors" />
+<meta name="author" content="Jaevyn Atom Hoyt" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A Personal Portfolio &amp; Blog" />
+<meta property="og:description" content="A Personal Portfolio &amp; Blog" />
+<link rel="canonical" href="http://localhost:4000/assets/Unpublished_posts/2025-1-3-YouTube-Embed-Guide/" />
+<meta property="og:url" content="http://localhost:4000/assets/Unpublished_posts/2025-1-3-YouTube-Embed-Guide/" />
+<meta property="og:site_name" content="Jaevyn Atom Hoyt" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-01-03T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="YouTube Embed Guide - Avoiding Security Errors" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jaevyn Atom Hoyt"},"dateModified":"2025-01-03T00:00:00-06:00","datePublished":"2025-01-03T00:00:00-06:00","description":"A Personal Portfolio &amp; Blog","headline":"YouTube Embed Guide - Avoiding Security Errors","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/assets/Unpublished_posts/2025-1-3-YouTube-Embed-Guide/"},"url":"http://localhost:4000/assets/Unpublished_posts/2025-1-3-YouTube-Embed-Guide/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+
+<meta property="og:description" content="" />
+
+<meta name="author" content="Jaevyn Atom Hoyt" />
+
+
+<meta property="og:title" content="YouTube Embed Guide - Avoiding Security Errors" />
+<meta property="twitter:title" content="YouTube Embed Guide - Avoiding Security Errors" />
+
+
+
+<meta property="og:image" content="http://localhost:4000/assets/images/JLogo.png"/>
+<meta property="twitter:image" content="http://localhost:4000/assets/images/JLogo.png"/>
+
+
+
+    <link rel="stylesheet" type="text/css" href="/assets/style.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/three-viewer.css" />
+    <link rel="alternate" type="application/rss+xml" title="Jaevyn Atom Hoyt - A Personal Portfolio & Blog" href="/feed.xml" />
+    <link rel="canonical" href="http://localhost:4000/assets/Unpublished_posts/2025-1-3-YouTube-Embed-Guide/" />
+
+    <!-- Pannellum 360° Panorama Viewer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css" />
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+
+    <meta name="theme-color" content="#000000">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    
+
+  </head>
+
+  <body>
+    <div id="bar"></div>
+    <div class="wrapper-container">
+      <div class="wrapper-masthead">
+        <div class="container">
+          <header class="masthead clearfix">
+            <a href="/" class="site-avatar"><img src="/assets/images/JLogo.png" alt="" /></a>
+
+            <div class="site-info">
+              <h1 class="site-name"><a href="/">Jaevyn Atom Hoyt</a></h1>
+              <p class="site-description">A Personal Portfolio & Blog</p> 
+            </div>
+
+            <nav>
+              <a href="/">Home</a>
+              <a href="/about">About</a>
+              <a href="/Jatom-Synergies">Jatom Synergies</a>
+              <a href="/search">Search</a>
+              <a href="/archive">Archive</a>
+            </nav>
+          </header>
+        </div>
+      </div>
+
+      <div class="wrapper-main">
+        <div id="main" role="main" class="container">
+          <article class="post detailed">
+  <h1>YouTube Embed Guide - Avoiding Security Errors</h1>
+
+  <div>
+    <p class="author_title">Jaevyn Atom Hoyt  ·  January  3, 2025</p>
+    
+    <div class="post-tags">
+      
+      
+        <a href="/categories/#guide">guide</a>
+        &nbsp;
+      
+        <a href="/categories/#technical">technical</a>
+        
+      
+    </div>
+  </div>
+    
+  <div class="entry">
+    <h1 id="youtube-embed-guide---avoiding-security-errors">YouTube Embed Guide - Avoiding Security Errors</h1>
+
+<p>If you’re getting the error “To protect your security, www.youtube.com will not allow Firefox to display the page if another site has embedded it,” here’s how to fix it.</p>
+
+<h2 id="the-problem">The Problem</h2>
+
+<p>The issue occurs when you use the wrong YouTube embed URL format. Firefox blocks embeds from <code class="language-plaintext highlighter-rouge">youtu.be</code> domains for security reasons.</p>
+
+<h2 id="-wrong-format-causes-security-error">❌ Wrong Format (Causes Security Error)</h2>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://youtu.be/embed/VIDEO_ID"</span> <span class="err">...</span><span class="nt">&gt;&lt;/iframe&gt;</span>
+</code></pre></div></div>
+
+<h2 id="-correct-format-works-everywhere">✅ Correct Format (Works Everywhere)</h2>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://www.youtube.com/embed/VIDEO_ID"</span> <span class="err">...</span><span class="nt">&gt;&lt;/iframe&gt;</span>
+</code></pre></div></div>
+
+<h2 id="how-to-get-the-correct-embed-code">How to Get the Correct Embed Code</h2>
+
+<ol>
+  <li><strong>Go to your YouTube video</strong></li>
+  <li><strong>Click “Share”</strong></li>
+  <li><strong>Click “Embed”</strong></li>
+  <li><strong>Copy the iframe code</strong></li>
+</ol>
+
+<p>The generated code will look like this:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;iframe</span> <span class="na">width=</span><span class="s">"560"</span> <span class="na">height=</span><span class="s">"315"</span> 
+        <span class="na">src=</span><span class="s">"https://www.youtube.com/embed/VIDEO_ID"</span> 
+        <span class="na">title=</span><span class="s">"YouTube video player"</span> 
+        <span class="na">frameborder=</span><span class="s">"0"</span> 
+        <span class="na">allow=</span><span class="s">"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"</span> 
+        <span class="na">allowfullscreen</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/iframe&gt;</span>
+</code></pre></div></div>
+
+<h2 id="url-conversion-guide">URL Conversion Guide</h2>
+
+<p>If you have a YouTube URL, here’s how to convert it:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Original URL</th>
+      <th>Embed URL</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">https://www.youtube.com/watch?v=VIDEO_ID</code></td>
+      <td><code class="language-plaintext highlighter-rouge">https://www.youtube.com/embed/VIDEO_ID</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">https://youtu.be/VIDEO_ID</code></td>
+      <td><code class="language-plaintext highlighter-rouge">https://www.youtube.com/embed/VIDEO_ID</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">https://youtu.be/embed/VIDEO_ID</code></td>
+      <td><code class="language-plaintext highlighter-rouge">https://www.youtube.com/embed/VIDEO_ID</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="example">Example</h2>
+
+<p><strong>Original URL:</strong> <code class="language-plaintext highlighter-rouge">https://www.youtube.com/watch?v=dQw4w9WgXcQ</code></p>
+
+<p><strong>Correct Embed:</strong></p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;iframe</span> <span class="na">width=</span><span class="s">"560"</span> <span class="na">height=</span><span class="s">"315"</span> 
+        <span class="na">src=</span><span class="s">"https://www.youtube.com/embed/dQw4w9WgXcQ"</span> 
+        <span class="na">title=</span><span class="s">"Example Video"</span> 
+        <span class="na">frameborder=</span><span class="s">"0"</span> 
+        <span class="na">allow=</span><span class="s">"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"</span> 
+        <span class="na">allowfullscreen</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/iframe&gt;</span>
+</code></pre></div></div>
+
+<h2 id="why-this-happens">Why This Happens</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">youtu.be</code> is YouTube’s URL shortener</li>
+  <li>Firefox blocks embeds from shortener domains for security</li>
+  <li><code class="language-plaintext highlighter-rouge">www.youtube.com</code> is the official domain and is trusted</li>
+  <li>Always use <code class="language-plaintext highlighter-rouge">https://www.youtube.com/embed/VIDEO_ID</code></li>
+</ul>
+
+<h2 id="quick-fix-for-existing-posts">Quick Fix for Existing Posts</h2>
+
+<p>If you have existing posts with the wrong format, search for:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>youtu.be/embed
+</code></pre></div></div>
+
+<p>And replace with:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>www.youtube.com/embed
+</code></pre></div></div>
+
+<p>This should resolve the security error and allow your videos to display properly in all browsers.</p>
+
+  </div>
+
+ 
+  
+</article>
+
+        </div>
+      </div>
+
+      <div class="wrapper-footer">
+        <div class="container">
+          <footer class="footer">
+            
+<a href="mailto:jatomsynergies@gmail.com"><i class="svg-icon email"></i></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    
+
+    
+    <!-- Three.js 3D Viewer Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/FBXLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
+    <script src="/assets/js/three-viewer.js"></script>
+    
+    <!-- Homepage Interactive Features -->
+    <script src="/assets/js/homepage.js"></script>
+  </body>
+</html>

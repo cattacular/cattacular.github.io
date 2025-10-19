@@ -2,29 +2,91 @@
 layout: default
 ---
 
-<div class="posts">
-  {% for post in paginator.posts %}
-    <article class="post">
-      <a href="{{ site.baseurl }}{{ post.url }}" class="post-link">
-        <h1>{{ post.title }}</h1>
+<!-- Featured Work Section -->
+<section class="featured-work">
+  <h2>Featured Work</h2>
+  <div class="featured-grid">
+    {% assign featured_posts = site.posts | where: "featured", true | limit: 4 %}
+    {% for post in featured_posts %}
+      <div class="featured-item">
+        <a href="{{ site.baseurl }}{{ post.url }}" class="featured-link">
+          <div class="featured-image-container">
+            {% if post.teaser_image %}
+              <img src="{{ site.baseurl }}/images/{{ post.teaser_image }}" alt="{{ post.title }}" class="featured-image">
+            {% else %}
+              <div class="featured-placeholder">
+                <span>{{ post.title | truncate: 20 }}</span>
+              </div>
+            {% endif %}
+            <div class="featured-overlay">
+              <h3>{{ post.title }}</h3>
+              <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
+              <span class="featured-read-more">View Project</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</section>
 
-        <div>
-          <p class="post_date">{{ post.date | date: "%B %e, %Y" }}</p>
-        </div>
+<!-- Project Gallery Section -->
+<section class="project-gallery">
+  <h2>All Projects</h2>
+  
+  <!-- Tag Filter Buttons -->
+  <div class="tag-filters">
+    <button class="tag-filter active" data-tag="all">All</button>
+    {% assign all_tags = site.posts | map: 'categories' | flatten | uniq | sort %}
+    {% for tag in all_tags %}
+      <button class="tag-filter" data-tag="{{ tag | slugify }}">{{ tag }}</button>
+    {% endfor %}
+  </div>
 
-        <div class="entry">
-          {% if post.teaser_image %}
-            <img src="{{ site.baseurl }}/images/{{ post.teaser_image }}" alt="{{ post.title }}" class="teaser-image">
-          {% endif %}
-          {{ post.excerpt }}
-        </div>
+  <!-- Project Grid -->
+  <div class="project-grid">
+    {% for post in site.posts %}
+      <div class="project-item" data-tags="{% for category in post.categories %}{{ category | slugify }} {% endfor %}">
+        <a href="{{ site.baseurl }}{{ post.url }}" class="project-link">
+          <div class="project-image-container">
+            {% if post.teaser_image %}
+              <img src="{{ site.baseurl }}/images/{{ post.teaser_image }}" alt="{{ post.title }}" class="project-image">
+            {% else %}
+              <div class="project-placeholder">
+                <span>{{ post.title | truncate: 20 }}</span>
+              </div>
+            {% endif %}
+            <div class="project-overlay">
+              <h3>{{ post.title }}</h3>
+              <p>{{ post.excerpt | strip_html | truncate: 100 }}</p>
+              <div class="project-tags">
+                {% for category in post.categories limit: 3 %}
+                  <span class="project-tag">{{ category }}</span>
+                {% endfor %}
+              </div>
+              <span class="project-read-more">View Project</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</section>
 
-        <span class="read-more">Read More</span>
-      </a>
-    </article>
-  {% endfor %}
-
-  <!-- pagination -->
+<!-- Pagination for All Posts (moved to bottom) -->
+<div class="pagination-section">
+  <h3>Recent Posts</h3>
+  <div class="recent-posts">
+    {% for post in paginator.posts limit: 5 %}
+      <div class="recent-post">
+        <a href="{{ site.baseurl }}{{ post.url }}">
+          <span class="recent-date">{{ post.date | date: "%b %d, %Y" }}</span>
+          <span class="recent-title">{{ post.title }}</span>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+  
   {% if paginator.total_pages > 1 %}
   <div class="pagination">
     {% if paginator.previous_page %}
