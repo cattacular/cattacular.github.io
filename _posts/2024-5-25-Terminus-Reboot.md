@@ -1,7 +1,9 @@
 ---
 layout: post
 title: Terminus
-categories: Portfolio Game Design JCCEMA Unreal_Engine
+featured: true
+categories: Portfolio Unreal_Engine
+teaser_image: assets/images/Terminus/Terminus_Logo.png
 ---
 ![---]({{ site.baseurl }}/assets/images/Terminus/Terminus_Logo.png)
 

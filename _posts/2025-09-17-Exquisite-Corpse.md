@@ -4,7 +4,7 @@ title: Exquisite Corpse Drawing Game
 date: 2025-09-17 09:00:00 -0000
 tags: [interactive, art, game]
 categories: Interactive Art Game JavaScript
-featured: true
+featured: false
 teaser_image: exquisite-corpse/top/CatHead.jpg
 ---
 

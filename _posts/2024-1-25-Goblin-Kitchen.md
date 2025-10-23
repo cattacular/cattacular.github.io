@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Goblin Kitchen
-categories: VirtualReality Youtube Games
+categories: Unity Youtube GameDesign
+featured: true
 ---
 Goblin kitchen is a game about working in a world thats not made for you. 
 
