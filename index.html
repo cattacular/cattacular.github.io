@@ -36,10 +36,14 @@ layout: default
   
   <!-- Tag Filter Buttons -->
   <div class="tag-filters">
-    <button class="tag-filter active" data-tag="all">All</button>
+    <button class="tag-filter" data-tag="all">All</button>
     {% assign all_tags = site.posts | map: 'categories' | flatten | uniq | sort %}
     {% for tag in all_tags %}
-      <button class="tag-filter" data-tag="{{ tag | slugify }}">{{ tag }}</button>
+      {% if tag == "Portfolio" %}
+        <button class="tag-filter active" data-tag="{{ tag | slugify }}">{{ tag }}</button>
+      {% else %}
+        <button class="tag-filter" data-tag="{{ tag | slugify }}">{{ tag }}</button>
+      {% endif %}
     {% endfor %}
   </div>
 

@@ -4,6 +4,38 @@ document.addEventListener('DOMContentLoaded', function() {
   const tagFilters = document.querySelectorAll('.tag-filter');
   const projectItems = document.querySelectorAll('.project-item');
   
+  // Function to filter projects by tag
+  function filterProjects(selectedTag) {
+    projectItems.forEach(item => {
+      const itemTags = item.getAttribute('data-tags').trim().split(' ');
+      
+      if (selectedTag === 'all' || itemTags.includes(selectedTag)) {
+        item.classList.remove('hidden');
+        // Add fade-in animation
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(20px)';
+        setTimeout(() => {
+          item.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+          item.style.opacity = '1';
+          item.style.transform = 'translateY(0)';
+        }, 50);
+      } else {
+        item.classList.add('hidden');
+      }
+    });
+  }
+  
+  // Auto-filter by Portfolio on page load
+  const portfolioFilter = document.querySelector('.tag-filter[data-tag="portfolio"]');
+  if (portfolioFilter) {
+    // Update active filter button
+    tagFilters.forEach(btn => btn.classList.remove('active'));
+    portfolioFilter.classList.add('active');
+    
+    // Filter projects to show only Portfolio items
+    filterProjects('portfolio');
+  }
+  
   tagFilters.forEach(filter => {
     filter.addEventListener('click', function() {
       const selectedTag = this.getAttribute('data-tag');
@@ -12,24 +44,8 @@ document.addEventListener('DOMContentLoaded', function() {
       tagFilters.forEach(btn => btn.classList.remove('active'));
       this.classList.add('active');
       
-      // Filter projects
-      projectItems.forEach(item => {
-        const itemTags = item.getAttribute('data-tags').trim().split(' ');
-        
-        if (selectedTag === 'all' || itemTags.includes(selectedTag)) {
-          item.classList.remove('hidden');
-          // Add fade-in animation
-          item.style.opacity = '0';
-          item.style.transform = 'translateY(20px)';
-          setTimeout(() => {
-            item.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-            item.style.opacity = '1';
-            item.style.transform = 'translateY(0)';
-          }, 50);
-        } else {
-          item.classList.add('hidden');
-        }
-      });
+      // Filter projects using the shared function
+      filterProjects(selectedTag);
     });
   });
   
