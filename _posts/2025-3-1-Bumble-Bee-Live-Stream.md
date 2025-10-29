@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Bumble Bee Cam
-categories: Portfolio Education BeeLab Schramm YouTube
-featured: true
-teaser_image: BumbleCamModel.png
+categories: Portfolio YouTube
+featured: false
+teaser_image: BumbleBeeNest.jpg
 ---
 I had the pleasure of completing a project the UNL Bee Lab has been thinking about for nearly a full decade. Partnering with Schramm Education Center, I created a live stream of their indoor bumble bee colony.
 
@@ -20,6 +20,7 @@ For now we have the link to our first live stream
 
 Beeleive it or not the UNL Bee lab is responsible for maintaining the bumble bee colony at Schramm. I actually got my first bumble bee sting setting up the colony in 2024. The Beelab also hosts a number of workshops there. I highly reccomend checking the location out, even on your own time. Its a beautiful nature center with lots of educational activities for the little ones. They also have some very cool animals to see. My personal favorite is snap daddy.
 
+![---]({{ site.baseurl }}/assets/images/SnapDaddy.jpg)
 
 In addition to setting up the camera itself, I also created a custom mount for the camera and 3D printed it.
 
