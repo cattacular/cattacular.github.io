@@ -4,6 +4,7 @@ title: Virtual Production
 categories: Portfolio YouTube Film
 teaser_image: Tv_Static.gif
 ---
+
 Short film made using virtual production.
 
 "Virtual production is a filmmaking method that combines digital and physical elements to create movies, using technologies like computer-generated imagery (CGI), motion capture, and augmented reality. This approach allows filmmakers to create realistic environments and effects in real-time, enhancing creative control and efficiency during production."
