@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Virtual Production
-categories: Portfolio Youtube 
+categories: Portfolio YouTube Film
+teaser_image: Tv_Static.gif
 ---
 Short film made using virtual production.
 

@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Live lights at El Proyecto
-categories: Lighting Live El-Proyecto
----
+categories: Live
+teaser_image: assets/images/Proyecto/Show1_Proyecto.jpg
 I handled live lights for the Halloween show at El Proyecto for many lovely local musicians.
 
 

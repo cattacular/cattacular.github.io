@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Portfolio Launch
-categories: Portfolio Launch Webdesign Github
+categories: Portfolio
 ---
 This post will mark the official launch of my newest portfolio.
 

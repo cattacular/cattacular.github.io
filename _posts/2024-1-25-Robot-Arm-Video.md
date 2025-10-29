@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Filming with Robots
-categories: Portfolio Youtube 
+categories: Portfolio YouTube Film
 ---
 Turns out robots make pretty good actors!
 

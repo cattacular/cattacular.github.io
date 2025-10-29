@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Sea Breeze - North Carolina
-categories: Portfolio JCCEMA Unreal_Engine
+categories: Portfolio Unreal_Engine Travel Film
+teaser_image: JukeJointFront.png
 ---
 Sea Breeze was the first project I had to fly out of the state for.
 

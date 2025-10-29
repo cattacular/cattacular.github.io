@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Goblin Kitchen
-categories: Unity Youtube GameDesign
+categories: Unity YouTube GameDesign
 featured: true
 teaser_image: GoblinKitchen\GoblinCauldron.png
 ---

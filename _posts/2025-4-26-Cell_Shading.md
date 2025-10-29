@@ -1,11 +1,7 @@
 ---
 layout: post
 title: Cell Shading
-<<<<<<< Updated upstream
-categories: Portfolio GameDesign Blender Renders
-=======
 categories: Portfolio Blender Art
->>>>>>> Stashed changes
 featured: false
 teaser_image: Cell_Shading/Sketch_Front.png
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Terminus
 featured: true
-categories: Portfolio Unreal_Engine
+categories: Portfolio Unreal_Engine GameDesign
 teaser_image: Terminus/Terminus_Logo.png
 ---
 ![---]({{ site.baseurl }}/assets/images/Terminus/Terminus_Logo.png)
