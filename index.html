@@ -20,8 +20,7 @@ layout: default
             {% endif %}
             <div class="featured-overlay">
               <h3>{{ post.title }}</h3>
-              <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
-              <span class="featured-read-more">View Project</span>
+              <p>{{ post.excerpt | strip_html | truncate: 180 }}</p>
             </div>
           </div>
         </a>
@@ -62,13 +61,12 @@ layout: default
             {% endif %}
             <div class="project-overlay">
               <h3>{{ post.title }}</h3>
-              <p>{{ post.excerpt | strip_html | truncate: 100 }}</p>
+              <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
               <div class="project-tags">
                 {% for category in post.categories limit: 3 %}
                   <span class="project-tag">{{ category }}</span>
                 {% endfor %}
               </div>
-              <span class="project-read-more">View Project</span>
             </div>
           </div>
         </a>
