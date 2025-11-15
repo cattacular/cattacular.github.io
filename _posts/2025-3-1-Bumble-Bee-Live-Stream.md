@@ -6,6 +6,8 @@ featured: false
 teaser_image: BumbleBeeNest.jpg
 ---
 I created a live stream of Schramm indoor bumble bee colony.
+<!--more-->
+
 
 
 While normally something like this isn't all that complicated. You just have to get an IP camera talking to OBS, than get OBS talking to a youtube live stream. Alas we had an epic struggle with government level firewalls. There was a lot of back and forth with their tech guy, who had to contact someone even higher to make the changes. Just like with most games of telephone, things tend to get muddled up.

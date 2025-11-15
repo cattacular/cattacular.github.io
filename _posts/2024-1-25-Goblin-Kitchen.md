@@ -6,7 +6,7 @@ featured: true
 teaser_image: GoblinKitchen\GoblinCauldron.png
 ---
 Goblin kitchen is a game about working in a world thats not made for you. 
-
+<!--more-->
 In the game you play as a goblin tasked with cooking meals for your taverns customers.
 
 I was the creative director & 3D modeler for this project. 

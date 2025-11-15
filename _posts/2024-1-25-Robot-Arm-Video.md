@@ -6,7 +6,7 @@ teaser_image: Robot_Arm_Cropped.jpg
 ---
 
 Turns out robots make pretty good actors!
-
+<!--more-->
 
 This first film was inspired by the concept of an "Automated Ouiji Board" 
 Its a bit of a perplexing idea isn't it? We typically dont mix the spiritual world with our technology. It seems on some level the ideas oppose each other. Automating a Ouiji Board also just seems a bit dangerous, I mean, how are you supposed to say goodbye? 

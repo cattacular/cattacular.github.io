@@ -7,7 +7,8 @@ categories: Art GameDesign
 featured: false
 teaser_image: exquisite-corpse/top/CatHead.jpg
 ---
-
+Combine 3 images into a complete creature
+<!--more-->
 Welcome to the Exquisite Corpse drawing game! This is a collaborative art project where three people draw different parts of a body without seeing what the others have drawn.
 
 ## How it works:

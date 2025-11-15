@@ -5,6 +5,9 @@ categories: Portfolio Blender Art
 featured: false
 teaser_image: Cell_Shading/Sketch_Front.png
 ---
+Playing with a Cartoonlike rendering technique
+<!--more-->
+
 ![Sketch_Front]({{"assets/images/Cell_Shading/Sketch_Front.png" | relative_url }})
 Varius renders using cell shading techniques
 

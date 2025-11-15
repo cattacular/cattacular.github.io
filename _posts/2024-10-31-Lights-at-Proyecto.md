@@ -5,7 +5,7 @@ categories: Live
 teaser_image: Proyecto/Show1_Proyecto.jpg
 ---
 I handled live lights for the Halloween show at El Proyecto for many lovely local musicians.
-
+<!--more-->
 
 This was an amazing show. There isn't too much to say about my role in things. I manned the light board and controlled Color & brightness of the lights. Most of the pictures I captured are very pink but the lights were typically slowly changing outside of a couple faster ques. I did end up getting quite a few complements on the lights specifically which felt great! Its always good to know the performers are enjoying whats going on.
 

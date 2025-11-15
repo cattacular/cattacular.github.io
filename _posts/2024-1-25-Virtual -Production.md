@@ -6,7 +6,7 @@ teaser_image: Tv_Static.gif
 ---
 
 Short film made using virtual production.
-
+<!--more-->
 "Virtual production is a filmmaking method that combines digital and physical elements to create movies, using technologies like computer-generated imagery (CGI), motion capture, and augmented reality. This approach allows filmmakers to create realistic environments and effects in real-time, enhancing creative control and efficiency during production."
 
 In simpler terms virtual production is very similar to using a green screen. Except the green screen acts more like a window

@@ -5,7 +5,7 @@ categories: Portfolio Unreal_Engine Travel Film
 teaser_image: JukeJointFront.png
 ---
 Sea Breeze was the first project I had to fly out of the state for.
-
+<!--more-->
 
 We ended up getting split into 2 teams, I was lucky enough to be selected for the field team.
 We were tasked with flying out and interviewing many of residents in Wilmington connected to the story. As well as recording as much as we could about their history and environment. With the ultimate goal of putting it all together to preserve the story of seabreeze.

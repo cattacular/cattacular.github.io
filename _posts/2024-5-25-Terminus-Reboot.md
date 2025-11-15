@@ -5,6 +5,8 @@ featured: true
 categories: Portfolio Unreal_Engine GameDesign
 teaser_image: Terminus/Terminus_Logo.png
 ---
+My Capstone documentation
+<!--more-->
 ![---]({{ site.baseurl }}/assets/images/Terminus/Terminus_Logo.png)
 
 
