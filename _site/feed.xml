@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://cattacular.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://cattacular.github.io/" rel="alternate" type="text/html" /><updated>2025-10-19T14:53:46-05:00</updated><id>https://cattacular.github.io/feed.xml</id><title type="html">Jaevyn Atom Hoyt</title><subtitle>A Personal Portfolio &amp; Blog</subtitle><author><name>Jaevyn Atom Hoyt</name></author><entry><title type="html">Exquisite Corpse Drawing Game</title><link href="https://cattacular.github.io/Exquisite-Corpse/" rel="alternate" type="text/html" title="Exquisite Corpse Drawing Game" /><published>2025-09-17T04:00:00-05:00</published><updated>2025-09-17T04:00:00-05:00</updated><id>https://cattacular.github.io/Exquisite-Corpse</id><content type="html" xml:base="https://cattacular.github.io/Exquisite-Corpse/"><![CDATA[<p>Welcome to the Exquisite Corpse drawing game! This is a collaborative art project where three people draw different parts of a body without seeing what the others have drawn.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://cattacular.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://cattacular.github.io/" rel="alternate" type="text/html" /><updated>2026-05-01T14:04:17-05:00</updated><id>https://cattacular.github.io/feed.xml</id><title type="html">Jaevyn Atom Hoyt</title><subtitle>A Personal Portfolio &amp; Blog</subtitle><author><name>Jaevyn Atom Hoyt</name></author><entry><title type="html">Exquisite Corpse Drawing Game</title><link href="https://cattacular.github.io/Exquisite-Corpse/" rel="alternate" type="text/html" title="Exquisite Corpse Drawing Game" /><published>2025-09-17T04:00:00-05:00</published><updated>2025-09-17T04:00:00-05:00</updated><id>https://cattacular.github.io/Exquisite-Corpse</id><content type="html" xml:base="https://cattacular.github.io/Exquisite-Corpse/"><![CDATA[<p>Combine 3 images into a complete creature
+<!--more-->
+Welcome to the Exquisite Corpse drawing game! This is a collaborative art project where three people draw different parts of a body without seeing what the others have drawn.</p>
 
 <h2 id="how-it-works">How it works:</h2>
 <ol>
@@ -835,7 +837,8 @@ Best regards,
 document.addEventListener('DOMContentLoaded', () => {
   new ExquisiteCorpseGame();
 });
-</script>]]></content><author><name>Jaevyn Atom Hoyt</name></author><category term="Interactive" /><category term="Art" /><category term="Game" /><category term="JavaScript" /><category term="interactive" /><category term="art" /><category term="game" /><summary type="html"><![CDATA[Welcome to the Exquisite Corpse drawing game! This is a collaborative art project where three people draw different parts of a body without seeing what the others have drawn.]]></summary></entry><entry><title type="html">Modular Soybean Plant</title><link href="https://cattacular.github.io/3D-Soybean/" rel="alternate" type="text/html" title="Modular Soybean Plant" /><published>2025-09-16T00:00:00-05:00</published><updated>2025-09-16T00:00:00-05:00</updated><id>https://cattacular.github.io/3D-Soybean</id><content type="html" xml:base="https://cattacular.github.io/3D-Soybean/"><![CDATA[<p>I was assigned with designing, 3D modeling, and 3D printing a life size soybean plant with detatchable parts.</p>
+</script>]]></content><author><name>Jaevyn Atom Hoyt</name></author><category term="Art" /><category term="GameDesign" /><category term="interactive" /><category term="art" /><category term="game" /><summary type="html"><![CDATA[Combine 3 images into a complete creature Welcome to the Exquisite Corpse drawing game! This is a collaborative art project where three people draw different parts of a body without seeing what the others have drawn.]]></summary></entry><entry><title type="html">Modular Soybean Plant</title><link href="https://cattacular.github.io/3D-Soybean/" rel="alternate" type="text/html" title="Modular Soybean Plant" /><published>2025-09-16T00:00:00-05:00</published><updated>2025-09-16T00:00:00-05:00</updated><id>https://cattacular.github.io/3D-Soybean</id><content type="html" xml:base="https://cattacular.github.io/3D-Soybean/"><![CDATA[<p>I designed, 3D modeled, and 3D printed a life size, modular soybean plant.
+<!--more--></p>
 
 <p>In the field of extension, our most enduring challenge is also our greatest opportunity: to translate complex, dynamic natural systems into clear, accessible knowledge. At the heart of this mission is the need for tools that not only inform but also inspire. It is from this need that inspired the modular, and interactive 3D printed model of the soybean plant.</p>
 
@@ -847,9 +850,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <p><img src="/assets/images/Soybean/SoybeanCropped.PNG" alt="Soybean_Render" /></p>
 
-<p>Some detail has been removed from the interactive plant to keep things running smoothly
-<!-- Three.js 3D Viewer Include -->
-<!-- Usage: include three-viewer.html id="suitcase-viewer" title="Terminus Suitcase" --> –&gt;</p>
+<p>Some detail has been removed from the interactive plant to keep things running smoothly</p>
 
 <div class="three-viewer-container">
     <div class="three-viewer" id="soybean-viewer">
@@ -991,7 +992,7 @@ document.addEventListener('DOMContentLoaded', function() {
 The model’s core advantage is its modularity. Each leaf is a discrete unit that affixes securely to the stem via an internal clipping system. This design choice transforms the model from a passive display into an active learning experience, enabling educators to provide a tangible proxy for in-field observation, allowing individuals to practice identifying and locating specific structures.
 The majority of the feedback thus far has been on how it really stands out in an outreach setting and how great the interactivity elements are.</p>
 
-<p><img src="/assets/images/Soybean/Soybean3D_Printed.jpg" alt="Soybean_Real" /></p>
+<!-- ![Soybean_Real](/assets/images/Soybean/Soybean3D_Printed.jpg) -->
 
 <p><em>The Next Steps</em></p>
 
@@ -1010,7 +1011,10 @@ This evolving library will soon enable educators to visually and tactilely demon
 We invite your collaboration. What specific modules—be it for disease, nutrient deficiency, or other pests—would most profoundly impact your educational programs? Your expertise is essential as we nurture this project to its full potential.
 This model represents a seed of an idea: that through creativity and technology, we can foster a more profound connection to the science that feeds our world. We look forward to sharing its continued growth with you.</p>
 
-<p>Please don’t hesitate to reach out with feedback or comments via email at JatomSynergies@gmail.com</p>]]></content><author><name>Jaevyn Atom Hoyt</name></author><category term="3DPrint" /><category term="SoyBeanGallMidge" /><category term="Blender" /><category term="Portfolio" /><summary type="html"><![CDATA[I was assigned with designing, 3D modeling, and 3D printing a life size soybean plant with detatchable parts.]]></summary></entry><entry><title type="html">Cell Shading</title><link href="https://cattacular.github.io/Cell_Shading/" rel="alternate" type="text/html" title="Cell Shading" /><published>2025-04-26T00:00:00-05:00</published><updated>2025-04-26T00:00:00-05:00</updated><id>https://cattacular.github.io/Cell_Shading</id><content type="html" xml:base="https://cattacular.github.io/Cell_Shading/"><![CDATA[<p><img src="/assets/images/Cell_Shading/Sketch_Front.png" alt="Sketch_Front" />
+<p>Please don’t hesitate to reach out with feedback or comments via email at JatomSynergies@gmail.com</p>]]></content><author><name>Jaevyn Atom Hoyt</name></author><category term="3DPrinting" /><category term="Blender" /><category term="Portfolio" /><category term="Art" /><summary type="html"><![CDATA[I designed, 3D modeled, and 3D printed a life size, modular soybean plant.]]></summary></entry><entry><title type="html">Cell Shading</title><link href="https://cattacular.github.io/Cell_Shading/" rel="alternate" type="text/html" title="Cell Shading" /><published>2025-04-26T00:00:00-05:00</published><updated>2025-04-26T00:00:00-05:00</updated><id>https://cattacular.github.io/Cell_Shading</id><content type="html" xml:base="https://cattacular.github.io/Cell_Shading/"><![CDATA[<p>Playing with a Cartoonlike rendering technique
+<!--more--></p>
+
+<p><img src="/assets/images/Cell_Shading/Sketch_Front.png" alt="Sketch_Front" />
 Varius renders using cell shading techniques</p>
 
 <div style="text-align: center;">
@@ -1020,39 +1024,11 @@ Varius renders using cell shading techniques</p>
   </video>
 </div>
 
-<p>First of all, what is cell shading?
-You know when you look at a round object that has a shadow casted on it? There is a gradient of light to dark, from where more light hits the object, to where less hits. This is pretty everyday stuff, you likely know how shadows work.
-Cell shading is what would happen if instead of a natrual smooth gradiant, we broke it into chunks and assigned a specific color to each chunk.
-For example</p>
-
-<table>
-  <tbody>
-    <tr>
-      <td>Amount of light</td>
-      <td>Assigned Color</td>
-    </tr>
-    <tr>
-      <td>0%  - 10%</td>
-      <td>Jet black</td>
-    </tr>
-    <tr>
-      <td>10% - 40%</td>
-      <td>Dark Grey</td>
-    </tr>
-    <tr>
-      <td>40% - 80%</td>
-      <td>Light Grey</td>
-    </tr>
-    <tr>
-      <td>80% - 100%</td>
-      <td>White</td>
-    </tr>
-  </tbody>
-</table>
-
-<!-- ![Sketch_Front](/assets/images/Cell_Shading/Sketch_Front.png) -->
 <p><img src="/assets/images/Cell_Shading/Sketch_Side.png" alt="Sketch_Side" />
-<img src="/assets/images/Cell_Shading/Sketch_Front_Dark.png" alt="Sketch_Dark" /></p>]]></content><author><name>Jaevyn Atom Hoyt</name></author><category term="Portfolio" /><category term="GameDesign" /><category term="Blender" /><category term="Renders" /><summary type="html"><![CDATA[Varius renders using cell shading techniques]]></summary></entry><entry><title type="html">Bitsy</title><link href="https://cattacular.github.io/Bitsy/" rel="alternate" type="text/html" title="Bitsy" /><published>2025-03-20T00:00:00-05:00</published><updated>2025-03-20T00:00:00-05:00</updated><id>https://cattacular.github.io/Bitsy</id><content type="html" xml:base="https://cattacular.github.io/Bitsy/"><![CDATA[<p>Click here to try a Itsy Bitsy game I made</p>
+<img src="/assets/images/Cell_Shading/Sketch_Front_Dark.png" alt="Sketch_Dark" /></p>
+
+<p><img src="/assets/images/Cell_Shading/Mites2.png" alt="Sketch_Front" /></p>]]></content><author><name>Jaevyn Atom Hoyt</name></author><category term="Portfolio" /><category term="Blender" /><category term="Art" /><summary type="html"><![CDATA[Playing with a Cartoonlike rendering technique]]></summary></entry><entry><title type="html">Bitsy</title><link href="https://cattacular.github.io/Bitsy/" rel="alternate" type="text/html" title="Bitsy" /><published>2025-03-20T00:00:00-05:00</published><updated>2025-03-20T00:00:00-05:00</updated><id>https://cattacular.github.io/Bitsy</id><content type="html" xml:base="https://cattacular.github.io/Bitsy/"><![CDATA[<p>A Small world building excersize in Bitsy.
+   <!--more--></p>
 
 <p>First play the game. Swipe to move on phone. Arrow keys and spacebar on PC.</p>
 
@@ -1061,7 +1037,8 @@ For example</p>
 <p>I love the accessibility of Bitsy games. Its cool to see what you can come up with in such a constrained environment. Finally awake is the first game I’ve made in bitsy.
  Its themed off of my phytoria world building. Another project I’ve been working on for years at this point. Eventually there will be a post for it specifically. The goal of the worldbuilding was to have a narrative foundation to my work in various mediums. Like concept art of my own world.</p>
 
-<p>In “finally awake” you play as someone from the old world. You seem to be the 2nd one to have woken up. before long you come across the remains of one of your own.</p>]]></content><author><name>Jaevyn Atom Hoyt</name></author><category term="Portfolio" /><category term="GameDesign" /><category term="JCCEMA" /><category term="Phytoria" /><category term="Bitsy" /><summary type="html"><![CDATA[Click here to try a Itsy Bitsy game I made First play the game. Swipe to move on phone. Arrow keys and spacebar on PC.]]></summary></entry><entry><title type="html">Bumble Bee Cam</title><link href="https://cattacular.github.io/Bumble-Bee-Live-Stream/" rel="alternate" type="text/html" title="Bumble Bee Cam" /><published>2025-03-01T00:00:00-06:00</published><updated>2025-03-01T00:00:00-06:00</updated><id>https://cattacular.github.io/Bumble-Bee-Live-Stream</id><content type="html" xml:base="https://cattacular.github.io/Bumble-Bee-Live-Stream/"><![CDATA[<p>I had the pleasure of completing a project the UNL Bee Lab has been thinking about for nearly a full decade. Partnering with Schramm Education Center, I created a live stream of their indoor bumble bee colony.</p>
+<p>In “finally awake” you play as someone from the old world. You seem to be the 2nd one to have woken up. before long you come across the remains of one of your own. Right now the game is only a demo of what it could be, ending after the skeleton encounter.</p>]]></content><author><name>Jaevyn Atom Hoyt</name></author><category term="GameDesign" /><category term="Art" /><summary type="html"><![CDATA[A Small world building excersize in Bitsy.]]></summary></entry><entry><title type="html">Bumble Bee Cam</title><link href="https://cattacular.github.io/Bumble-Bee-Live-Stream/" rel="alternate" type="text/html" title="Bumble Bee Cam" /><published>2025-03-01T00:00:00-06:00</published><updated>2025-03-01T00:00:00-06:00</updated><id>https://cattacular.github.io/Bumble-Bee-Live-Stream</id><content type="html" xml:base="https://cattacular.github.io/Bumble-Bee-Live-Stream/"><![CDATA[<p>I created a live stream of Schramm indoor bumble bee colony.
+<!--more--></p>
 
 <p>While normally something like this isn’t all that complicated. You just have to get an IP camera talking to OBS, than get OBS talking to a youtube live stream. Alas we had an epic struggle with government level firewalls. There was a lot of back and forth with their tech guy, who had to contact someone even higher to make the changes. Just like with most games of telephone, things tend to get muddled up.</p>
 
@@ -1070,68 +1047,14 @@ For example</p>
 <p>For now we have the link to our first live stream</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ecgMt0HNtJc" title="Bumble Bee Live Stream" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
 
-<p>Beeleive it or not the UNL Bee lab is responsible for maintaining the bumble bee colony at Schramm. I actually got my first bumble bee sting setting up the colony in 2024. The Beelab also hosts a number of workshops there. I highly reccomend checking the location out, even on your own time. Its a beautiful nature center with lots of educational activities for the little ones. They also have some very cool animals to see. My personal favorite is snap daddy.</p>
+<p>Beeleive it or not the UNL Bee lab is responsible for maintaining the bumble bee colony at Schramm. I actually got my first bumble bee sting setting up the colony in 2024. The Beelab also hosts a number of workshops there. I highly reccomend checking the location out, even on your own time. Its a beautiful nature center with lots of educational activities for the little ones. They also have some very cool animals to see. My personal favorite is the giant snapping turtle.</p>
+
+<p><img src="/assets/images/SnapDaddy.jpg" alt="---" /></p>
 
 <p>In addition to setting up the camera itself, I also created a custom mount for the camera and 3D printed it.</p>
 
-<p><img src="/assets/images/BumbleCamModel.png" alt="---" /></p>]]></content><author><name>Jaevyn Atom Hoyt</name></author><category term="Portfolio" /><category term="Education" /><category term="BeeLab" /><category term="Schramm" /><category term="YouTube" /><summary type="html"><![CDATA[I had the pleasure of completing a project the UNL Bee Lab has been thinking about for nearly a full decade. Partnering with Schramm Education Center, I created a live stream of their indoor bumble bee colony.]]></summary></entry><entry><title type="html">Portfolio Launch</title><link href="https://cattacular.github.io/Portfolio-Launch/" rel="alternate" type="text/html" title="Portfolio Launch" /><published>2025-01-18T00:00:00-06:00</published><updated>2025-01-18T00:00:00-06:00</updated><id>https://cattacular.github.io/Portfolio-Launch</id><content type="html" xml:base="https://cattacular.github.io/Portfolio-Launch/"><![CDATA[<p>This post will mark the official launch of my newest portfolio.</p>
-
-<p>I’ve tried a few platforms in the past, like artstation or website building sites, but between losing accounts and lack of control I was motivated to continue exploring options. Eventually I learned about Github pages. I’ve always loved open source technology, and the whole philosophy behind it. Being interested in continuing to develope my coding skills &amp; understanding, this seemed like the perfect platform for a long term portfolio. Especially since many of my other projects are hosted through github, although most of them are unfinished projects.</p>
-
-<p>At first I tried to truly start from scratch, starting with nothing but a brand new index.html. What came to be was a simple text adventure. I had grand ideas about an interactive portfolio that gives you an personal perspective on my projects. After getting a couple small chapters in I realized the scale of the project. While its something I’d like to reapproach, I decided to take a more humble approach for the core of my portfolio. After all, I cant show it to anyone if its never finished.</p>
-
-<p>Eventually I gave Jekyll a shot instead. This was the first time I’ve used consol commands for much of anything. That was fun to learn as well.</p>
-
-<!-- ## Another great heading (h2) -->
-
-<!-- ### Some great subheading (h3) -->
-
-<!-- ### Some great subheading (h3) -->
-
-<!-- > This quote will change your life. It will reveal the secrets of the universe, and all the wonders of humanity. Don't misuse it. -->
-
-<!-- ### Some great subheading (h3)
-
-
-<!-- ```html
-<html>
-  <head>
-  </head>
-  <body>
-    <p>Hello, World!</p>
-  </body>
-</html>
-``` -->
-
-<!-- #### You might want a sub-subheading (h4) -->
-
-<!-- #### But it's probably overkill (h4) -->
-
-<!-- ### Oh hai, an unordered list!! -->
-
-<!-- - First item, yo
-- Second item, dawg
-- Third item, what what?!
-- Fourth item, fo sheezy my neezy -->
-
-<!-- ### Oh hai, an ordered list!! -->
-
-<!-- 1. First item, yo
-2. Second item, dawg
-3. Third item, what what?!
-4. Fourth item, fo sheezy my neezy -->
-
-<!-- ## Headings are cool! (h2) -->
-
-<!-- ### Tables
-
-|Title 1               | Title 2               | Title 3               | Title 4              |
-|--------------------- | --------------------- | --------------------- | ---------------------|
-|lorem                 | lorem ipsum           | lorem ipsum dolor     | lorem ipsum dolor sit|
-|lorem ipsum dolor sit | lorem ipsum dolor sit | lorem ipsum dolor sit | lorem ipsum dolor sit|
-|lorem ipsum dolor sit | lorem ipsum dolor sit | lorem ipsum dolor sit | lorem ipsum dolor sit|
-|lorem ipsum dolor sit | lorem ipsum dolor sit | lorem ipsum dolor sit | lorem ipsum dolor sit| -->
-<p>] –&gt;</p>]]></content><author><name>Jaevyn Atom Hoyt</name></author><category term="Portfolio" /><category term="Launch" /><category term="Webdesign" /><category term="Github" /><summary type="html"><![CDATA[This post will mark the official launch of my newest portfolio.]]></summary></entry><entry><title type="html">Live lights at El Proyecto</title><link href="https://cattacular.github.io/Lights-at-Proyecto/" rel="alternate" type="text/html" title="Live lights at El Proyecto" /><published>2024-10-31T00:00:00-05:00</published><updated>2024-10-31T00:00:00-05:00</updated><id>https://cattacular.github.io/Lights-at-Proyecto</id><content type="html" xml:base="https://cattacular.github.io/Lights-at-Proyecto/"><![CDATA[<p>I handled live lights for the Halloween show at El Proyecto for many lovely local musicians.</p>
+<p><img src="/assets/images/BumbleCamModel.png" alt="---" /></p>]]></content><author><name>Jaevyn Atom Hoyt</name></author><category term="Portfolio" /><category term="YouTube" /><summary type="html"><![CDATA[I created a live stream of Schramm indoor bumble bee colony.]]></summary></entry><entry><title type="html">Live lights at El Proyecto</title><link href="https://cattacular.github.io/Lights-at-Proyecto/" rel="alternate" type="text/html" title="Live lights at El Proyecto" /><published>2024-10-31T00:00:00-05:00</published><updated>2024-10-31T00:00:00-05:00</updated><id>https://cattacular.github.io/Lights-at-Proyecto</id><content type="html" xml:base="https://cattacular.github.io/Lights-at-Proyecto/"><![CDATA[<p>I handled live lights for the Halloween show at El Proyecto for many lovely local musicians.
+<!--more--></p>
 
 <p>This was an amazing show. There isn’t too much to say about my role in things. I manned the light board and controlled Color &amp; brightness of the lights. Most of the pictures I captured are very pink but the lights were typically slowly changing outside of a couple faster ques. I did end up getting quite a few complements on the lights specifically which felt great! Its always good to know the performers are enjoying whats going on.</p>
 
@@ -1140,7 +1063,9 @@ For example</p>
 <img src="/assets/images/Proyecto/Show1_Proyecto.jpg" alt="Show1" />
 <img src="/assets/images/Proyecto/Show02_Proyecto.jpg" alt="Show2" />
 <img src="/assets/images/Proyecto/Poloroid_Proyecto.jpg" alt="Poloroid" />
-<img src="/assets/images/Proyecto/Selie_Proyecto.jpg" alt="Selfie" /></p>]]></content><author><name>Jaevyn Atom Hoyt</name></author><category term="Lighting" /><category term="Live" /><category term="El-Proyecto" /><summary type="html"><![CDATA[I handled live lights for the Halloween show at El Proyecto for many lovely local musicians.]]></summary></entry><entry><title type="html">Terminus</title><link href="https://cattacular.github.io/Terminus-Reboot/" rel="alternate" type="text/html" title="Terminus" /><published>2024-05-25T00:00:00-05:00</published><updated>2024-05-25T00:00:00-05:00</updated><id>https://cattacular.github.io/Terminus-Reboot</id><content type="html" xml:base="https://cattacular.github.io/Terminus-Reboot/"><![CDATA[<p><img src="/assets/images/Terminus/Terminus_Logo.png" alt="---" /></p>
+<img src="/assets/images/Proyecto/Selie_Proyecto.jpg" alt="Selfie" /></p>]]></content><author><name>Jaevyn Atom Hoyt</name></author><category term="Live" /><summary type="html"><![CDATA[I handled live lights for the Halloween show at El Proyecto for many lovely local musicians.]]></summary></entry><entry><title type="html">Terminus</title><link href="https://cattacular.github.io/Terminus-Reboot/" rel="alternate" type="text/html" title="Terminus" /><published>2024-05-25T00:00:00-05:00</published><updated>2024-05-25T00:00:00-05:00</updated><id>https://cattacular.github.io/Terminus-Reboot</id><content type="html" xml:base="https://cattacular.github.io/Terminus-Reboot/"><![CDATA[<p>My Capstone documentation
+<!--more-->
+<img src="/assets/images/Terminus/Terminus_Logo.png" alt="---" /></p>
 
 <p>Terminus was the capstone of my Emerging Media Arts Bachelors degree. It’s a first person stealth/puzzle shooter taking place on a giant arctic monorail. The project started during our senior year, with us having the summer before to put together the proposal.
 I was the last person to join the Terminus team.</p>
@@ -1173,10 +1098,6 @@ Whereas a minimum viable product would be looking at the scope of the whole game
 <h2 id="interactive-3d-suitcase-model">Interactive 3D Suitcase Model</h2>
 
 <p>Here’s an interactive 3D model of the suitcase I created for Terminus. You can rotate, zoom, and explore the model to see the high-tech device inside!</p>
-
-<!-- Three.js 3D Viewer Include -->
-<!-- Usage: include three-viewer.html id="suitcase-viewer" title="Terminus Suitcase" -->
-<p>–&gt;</p>
 
 <div class="three-viewer-container">
     <div class="three-viewer" id="terminus-suitcase">
@@ -1320,9 +1241,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <p><img src="/assets/images/Terminus/Terminus_Megan+mom.jpg" alt="---" /></p>
 
-<p>Heres a photo of me and my family chatting with EMA’s director Megan Elliot.</p>]]></content><author><name>Jaevyn Atom Hoyt</name></author><category term="Portfolio" /><category term="Game" /><category term="Design" /><category term="JCCEMA" /><category term="Unreal_Engine" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Goblin Kitchen</title><link href="https://cattacular.github.io/Goblin-Kitchen/" rel="alternate" type="text/html" title="Goblin Kitchen" /><published>2024-01-25T00:00:00-06:00</published><updated>2024-01-25T00:00:00-06:00</updated><id>https://cattacular.github.io/Goblin-Kitchen</id><content type="html" xml:base="https://cattacular.github.io/Goblin-Kitchen/"><![CDATA[<p>Goblin kitchen is a game about working in a world thats not made for you.</p>
-
-<p>In the game you play as a goblin tasked with cooking meals for your taverns customers.</p>
+<p>Heres a photo of me and my family chatting with EMA’s director Megan Elliot.</p>]]></content><author><name>Jaevyn Atom Hoyt</name></author><category term="Portfolio" /><category term="Unreal_Engine" /><category term="GameDesign" /><summary type="html"><![CDATA[My Capstone documentation]]></summary></entry><entry><title type="html">Goblin Kitchen</title><link href="https://cattacular.github.io/Goblin-Kitchen/" rel="alternate" type="text/html" title="Goblin Kitchen" /><published>2024-01-25T00:00:00-06:00</published><updated>2024-01-25T00:00:00-06:00</updated><id>https://cattacular.github.io/Goblin-Kitchen</id><content type="html" xml:base="https://cattacular.github.io/Goblin-Kitchen/"><![CDATA[<p>Goblin kitchen is a game about working in a world thats not made for you. 
+<!--more-->
+In the game you play as a goblin tasked with cooking meals for your taverns customers.</p>
 
 <p>I was the creative director &amp; 3D modeler for this project.</p>
 
@@ -1372,9 +1293,9 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('Goblin_Panorama').innerHTML = '<p style="color: red;">Error loading panorama: ' + error.message + '</p>';
     }
 });
-</script>]]></content><author><name>Jaevyn Atom Hoyt</name></author><category term="VirtualReality" /><category term="Youtube" /><category term="Games" /><summary type="html"><![CDATA[Goblin kitchen is a game about working in a world thats not made for you.]]></summary></entry><entry><title type="html">Virtual Production</title><link href="https://cattacular.github.io/Virtual-Production/" rel="alternate" type="text/html" title="Virtual Production" /><published>2024-01-25T00:00:00-06:00</published><updated>2024-01-25T00:00:00-06:00</updated><id>https://cattacular.github.io/Virtual%20-Production</id><content type="html" xml:base="https://cattacular.github.io/Virtual-Production/"><![CDATA[<p>Short film made using virtual production.</p>
-
-<p>“Virtual production is a filmmaking method that combines digital and physical elements to create movies, using technologies like computer-generated imagery (CGI), motion capture, and augmented reality. This approach allows filmmakers to create realistic environments and effects in real-time, enhancing creative control and efficiency during production.”</p>
+</script>]]></content><author><name>Jaevyn Atom Hoyt</name></author><category term="Unity" /><category term="YouTube" /><category term="GameDesign" /><summary type="html"><![CDATA[Goblin kitchen is a game about working in a world thats not made for you. In the game you play as a goblin tasked with cooking meals for your taverns customers.]]></summary></entry><entry><title type="html">Virtual Production</title><link href="https://cattacular.github.io/Virtual-Production/" rel="alternate" type="text/html" title="Virtual Production" /><published>2024-01-25T00:00:00-06:00</published><updated>2024-01-25T00:00:00-06:00</updated><id>https://cattacular.github.io/Virtual%20-Production</id><content type="html" xml:base="https://cattacular.github.io/Virtual-Production/"><![CDATA[<p>Short film made using virtual production.
+<!--more-->
+“Virtual production is a filmmaking method that combines digital and physical elements to create movies, using technologies like computer-generated imagery (CGI), motion capture, and augmented reality. This approach allows filmmakers to create realistic environments and effects in real-time, enhancing creative control and efficiency during production.”</p>
 
 <p>In simpler terms virtual production is very similar to using a green screen. Except the green screen acts more like a window</p>
 <ul>
@@ -1398,4 +1319,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <p>behind the scenes</p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lulnwHecZPo" title="Demanding Results Process" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>]]></content><author><name>Jaevyn Atom Hoyt</name></author><category term="Portfolio" /><category term="Youtube" /><summary type="html"><![CDATA[Short film made using virtual production.]]></summary></entry></feed>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lulnwHecZPo" title="Demanding Results Process" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>]]></content><author><name>Jaevyn Atom Hoyt</name></author><category term="Portfolio" /><category term="YouTube" /><category term="Film" /><summary type="html"><![CDATA[Short film made using virtual production. “Virtual production is a filmmaking method that combines digital and physical elements to create movies, using technologies like computer-generated imagery (CGI), motion capture, and augmented reality. This approach allows filmmakers to create realistic environments and effects in real-time, enhancing creative control and efficiency during production.”]]></summary></entry><entry><title type="html">Filming with Robots</title><link href="https://cattacular.github.io/Robot-Arm-Video/" rel="alternate" type="text/html" title="Filming with Robots" /><published>2024-01-25T00:00:00-06:00</published><updated>2024-01-25T00:00:00-06:00</updated><id>https://cattacular.github.io/Robot-Arm-Video</id><content type="html" xml:base="https://cattacular.github.io/Robot-Arm-Video/"><![CDATA[<p>Turns out robots make pretty good actors!
+<!--more--></p>
+
+<p>This first film was inspired by the concept of an “Automated Ouiji Board” 
+Its a bit of a perplexing idea isn’t it? We typically dont mix the spiritual world with our technology. It seems on some level the ideas oppose each other. Automating a Ouiji Board also just seems a bit dangerous, I mean, how are you supposed to say goodbye? 
+On the other hand though, on some level Ouiji Boards have always been somewhat autonomous. Thats is the point isnt it? It give control to the ghost so they can speak through you.
+Anyways, enjoy this lighthearted video.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NfbnwMlg_BQ" title="Ouiji Machine" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+
+<p>This next clip was made exploring making films with a robot arm. A bit of a tricky proccess, since making this project programming these arms has gotten much easier. We use it here to hold the camera and to get stable movement. Godzilla was added in post of course.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dWkTrVN9qow" title="Cardboard Kaiju" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>]]></content><author><name>Jaevyn Atom Hoyt</name></author><category term="Portfolio" /><category term="YouTube" /><category term="Film" /><summary type="html"><![CDATA[Turns out robots make pretty good actors!]]></summary></entry></feed>

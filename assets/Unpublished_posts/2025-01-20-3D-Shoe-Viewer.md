@@ -3,7 +3,7 @@ layout: post
 title: 3D Shoe Customizer
 date: 2025-01-20 09:00:00 -0000
 tags: [interactive, 3D, webgl]
-categories: Portfolio 3D WebDesign
+categories: upcoming
 featured: false
 teaser_image: 
 ---

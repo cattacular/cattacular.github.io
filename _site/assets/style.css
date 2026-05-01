@@ -1798,12 +1798,12 @@ code {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+  background: linear-gradient(to bottom, transparent 0%, transparent 60%, rgba(0, 0, 0, 0.5) 85%, rgba(0, 0, 0, 0.7) 100%);
   color: white;
   padding: 2em;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 3;
@@ -1814,13 +1814,25 @@ code {
 .featured-overlay h3 {
   color: white;
   margin-bottom: 0.5em;
+  margin-top: 0;
   font-size: 20px;
   text-align: left;
+  flex-shrink: 0;
+  order: 1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 .featured-overlay p {
   color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 1em;
+  margin-bottom: 0;
+  margin-top: 0;
   line-height: 1.4;
+  order: 2;
+  flex: 1;
+  max-height: calc(100% - 60px);
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 0.5em;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 .featured-overlay .featured-read-more {
   background: rgba(255, 255, 255, 0.2);
@@ -1925,12 +1937,12 @@ code {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+  background: linear-gradient(to bottom, transparent 0%, transparent 60%, rgba(0, 0, 0, 0.5) 85%, rgba(0, 0, 0, 0.8) 100%);
   color: white;
   padding: 1.5em;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -1940,20 +1952,29 @@ code {
 .project-overlay h3 {
   color: white;
   margin-bottom: 0.5em;
+  margin-top: 0;
   font-size: 18px;
   text-align: left;
+  flex-shrink: 0;
+  order: 1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 .project-overlay p {
   color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 1em;
+  margin-bottom: 0;
+  margin-top: 0;
   line-height: 1.4;
   font-size: 14px;
+  order: 2;
+  flex: 1;
+  max-height: calc(100% - 60px);
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 0.5em;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 .project-overlay .project-tags {
-  margin-bottom: 1em;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
+  display: none;
 }
 .project-overlay .project-tag {
   background: rgba(255, 255, 255, 0.2);

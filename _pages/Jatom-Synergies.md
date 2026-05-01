@@ -23,4 +23,4 @@ We also will do a detailed analysis of workflow so each step from start to finis
 | Ongoing Support | $250/y |  Quarterly check ins to help maintain effeciency & meet goals.|
 | Program training | $25/h | Hands on tech support on how to use a specific tool | -->
 
-contact us a JatomsSynergies@gmail.com to get started
+contact us at JatomsSynergies@gmail.com to get started

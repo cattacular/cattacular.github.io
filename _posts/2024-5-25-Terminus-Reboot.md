@@ -4,6 +4,7 @@ title: Terminus
 featured: true
 categories: Portfolio Unreal_Engine GameDesign
 teaser_image: Terminus/Terminus_Logo.png
+three_viewer: true
 ---
 My Capstone documentation
 <!--more-->

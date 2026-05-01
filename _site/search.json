@@ -4,7 +4,7 @@
 
       "title"    : "Exquisite Corpse Drawing Game",
       "url"      : "/Exquisite-Corpse/",
-      "category" : "Interactive, Art, Game, JavaScript",
+      "category" : "Art, GameDesign",
       "date"     : "September 17, 2025"
     } ,
   
@@ -12,7 +12,7 @@
 
       "title"    : "Modular Soybean Plant",
       "url"      : "/3D-Soybean/",
-      "category" : "3DPrint, SoyBeanGallMidge, Blender, Portfolio",
+      "category" : "3DPrinting, Blender, Portfolio, Art",
       "date"     : "September 16, 2025"
     } ,
   
@@ -20,7 +20,7 @@
 
       "title"    : "Cell Shading",
       "url"      : "/Cell_Shading/",
-      "category" : "Portfolio, GameDesign, Blender, Renders",
+      "category" : "Portfolio, Blender, Art",
       "date"     : "April 26, 2025"
     } ,
   
@@ -28,7 +28,7 @@
 
       "title"    : "Bitsy",
       "url"      : "/Bitsy/",
-      "category" : "Portfolio, GameDesign, JCCEMA, Phytoria, Bitsy",
+      "category" : "GameDesign, Art",
       "date"     : "March 20, 2025"
     } ,
   
@@ -36,23 +36,15 @@
 
       "title"    : "Bumble Bee Cam",
       "url"      : "/Bumble-Bee-Live-Stream/",
-      "category" : "Portfolio, Education, BeeLab, Schramm, YouTube",
+      "category" : "Portfolio, YouTube",
       "date"     : "March  1, 2025"
-    } ,
-  
-    {
-
-      "title"    : "Portfolio Launch",
-      "url"      : "/Portfolio-Launch/",
-      "category" : "Portfolio, Launch, Webdesign, Github",
-      "date"     : "January 18, 2025"
     } ,
   
     {
 
       "title"    : "Live lights at El Proyecto",
       "url"      : "/Lights-at-Proyecto/",
-      "category" : "Lighting, Live, El-Proyecto",
+      "category" : "Live",
       "date"     : "October 31, 2024"
     } ,
   
@@ -60,7 +52,7 @@
 
       "title"    : "Terminus",
       "url"      : "/Terminus-Reboot/",
-      "category" : "Portfolio, Game, Design, JCCEMA, Unreal_Engine",
+      "category" : "Portfolio, Unreal_Engine, GameDesign",
       "date"     : "May 25, 2024"
     } ,
   
@@ -68,7 +60,7 @@
 
       "title"    : "Virtual Production",
       "url"      : "/Virtual-Production/",
-      "category" : "Portfolio, Youtube",
+      "category" : "Portfolio, YouTube, Film",
       "date"     : "January 25, 2024"
     } ,
   
@@ -76,7 +68,7 @@
 
       "title"    : "Filming with Robots",
       "url"      : "/Robot-Arm-Video/",
-      "category" : "Portfolio, Youtube",
+      "category" : "Portfolio, YouTube, Film",
       "date"     : "January 25, 2024"
     } ,
   
@@ -84,15 +76,31 @@
 
       "title"    : "Goblin Kitchen",
       "url"      : "/Goblin-Kitchen/",
-      "category" : "VirtualReality, Youtube, Games",
+      "category" : "Unity, YouTube, GameDesign",
       "date"     : "January 25, 2024"
+    } ,
+  
+    {
+
+      "title"    : "Trip to Los Angeles",
+      "url"      : "/LATrip/",
+      "category" : "Travel",
+      "date"     : "May 10, 2023"
+    } ,
+  
+    {
+
+      "title"    : "BLIXT ARTS LAB",
+      "url"      : "/Blixt/",
+      "category" : "Internship",
+      "date"     : "May 10, 2023"
     } ,
   
     {
 
       "title"    : "Sea Breeze - North Carolina",
       "url"      : "/Sea-Breeze/",
-      "category" : "Portfolio, JCCEMA, Travel, North_Carolina, Field_work, Unreal_Engine",
+      "category" : "Portfolio, Unreal_Engine, Travel, Film",
       "date"     : "July 30, 2022"
     } 
   

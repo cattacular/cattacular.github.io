@@ -4,6 +4,7 @@ title: Goblin Kitchen
 categories: Unity YouTube GameDesign
 featured: true
 teaser_image: GoblinKitchen\GoblinCauldron.png
+pannellum: true
 ---
 Goblin kitchen is a game about working in a world thats not made for you. 
 <!--more-->

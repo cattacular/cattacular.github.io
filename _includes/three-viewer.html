@@ -1,5 +1,7 @@
-<!-- Three.js 3D Viewer Include -->
-<!-- Usage: include three-viewer.html id="suitcase-viewer" title="Terminus Suitcase" --> -->
+{% comment %}
+  Three.js model viewer. Requires post/page front matter: three_viewer: true
+  Usage: {% include three-viewer.html id="my-id" title="Title" model="/path/model.obj" %}
+{% endcomment %}
 
 {% assign viewer_id = include.id | default: "three-viewer" %}
 {% assign viewer_title = include.title | default: "3D Model Viewer" %}

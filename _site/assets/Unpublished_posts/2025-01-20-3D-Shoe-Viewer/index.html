@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>3D Shoe Customizer – Jaevyn Atom Hoyt – A Personal Portfolio & Blog</title>
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="3D Shoe Customizer" />
+<meta name="author" content="Jaevyn Atom Hoyt" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A Personal Portfolio &amp; Blog" />
+<meta property="og:description" content="A Personal Portfolio &amp; Blog" />
+<link rel="canonical" href="https://cattacular.github.io/assets/Unpublished_posts/2025-01-20-3D-Shoe-Viewer/" />
+<meta property="og:url" content="https://cattacular.github.io/assets/Unpublished_posts/2025-01-20-3D-Shoe-Viewer/" />
+<meta property="og:site_name" content="Jaevyn Atom Hoyt" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-01-20T03:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="3D Shoe Customizer" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jaevyn Atom Hoyt"},"dateModified":"2025-01-20T03:00:00-06:00","datePublished":"2025-01-20T03:00:00-06:00","description":"A Personal Portfolio &amp; Blog","headline":"3D Shoe Customizer","mainEntityOfPage":{"@type":"WebPage","@id":"https://cattacular.github.io/assets/Unpublished_posts/2025-01-20-3D-Shoe-Viewer/"},"url":"https://cattacular.github.io/assets/Unpublished_posts/2025-01-20-3D-Shoe-Viewer/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+
+<meta property="og:description" content="" />
+
+<meta name="author" content="Jaevyn Atom Hoyt" />
+
+
+<meta property="og:title" content="3D Shoe Customizer" />
+<meta property="twitter:title" content="3D Shoe Customizer" />
+
+
+
+<meta property="og:image" content="https://cattacular.github.io/assets/images/JLogo.png"/>
+<meta property="twitter:image" content="https://cattacular.github.io/assets/images/JLogo.png"/>
+
+
+
+    <link rel="stylesheet" type="text/css" href="/assets/style.css" />
+    
+    
+    <link rel="alternate" type="application/rss+xml" title="Jaevyn Atom Hoyt - A Personal Portfolio & Blog" href="/feed.xml" />
+    <link rel="canonical" href="https://cattacular.github.io/assets/Unpublished_posts/2025-01-20-3D-Shoe-Viewer/" />
+
+    <meta name="theme-color" content="#000000">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+    
+
+  </head>
+
+  <body>
+    <div id="bar"></div>
+    <div class="wrapper-container">
+      <div class="wrapper-masthead">
+        <div class="container">
+          <header class="masthead clearfix">
+            <a href="/" class="site-avatar"><img src="/assets/images/JLogo.png" alt="" /></a>
+
+            <div class="site-info">
+              <h1 class="site-name"><a href="/">Jaevyn Atom Hoyt</a></h1>
+              <p class="site-description">A Personal Portfolio & Blog</p> 
+            </div>
+
+            <nav>
+              <a href="/">Home</a>
+              <a href="/about">About</a>
+              <a href="/Jatom-Synergies">Jatom Synergies</a>
+              <a href="/search">Search</a>
+              <a href="/archive">Archive</a>
+            </nav>
+          </header>
+        </div>
+      </div>
+
+      <div class="wrapper-main">
+        <div id="main" role="main" class="container">
+          <article class="post detailed">
+  <h1>3D Shoe Customizer</h1>
+
+  <div>
+    <p class="author_title">Jaevyn Atom Hoyt  ·  January 20, 2025</p>
+    
+    <div class="post-tags">
+      
+      
+        <a href="/categories/#upcoming">upcoming</a>
+        
+      
+    </div>
+  </div>
+    
+  <div class="entry">
+    <p>Explore and customize 3D shoe models with interactive material options. Rotate the shoes on the turntable and experiment with different materials to see how they look.</p>
+
+<div id="shoe-viewer-container">
+  <div class="shoe-controls-panel">
+    <h3>Shoe Customizer</h3>
+    
+    <div class="control-group">
+      <label for="shoe-select">Select Shoe:</label>
+      <select id="shoe-select">
+        <option value="default">Default Shoe</option>
+        <!-- Add more shoe options here when you have multiple models -->
+      </select>
+    </div>
+
+    <div class="control-group">
+      <label for="material-select">Material:</label>
+      <select id="material-select">
+        <option value="leather-black">Black Leather</option>
+        <option value="leather-brown">Brown Leather</option>
+        <option value="canvas-white">White Canvas</option>
+        <option value="canvas-black">Black Canvas</option>
+        <option value="suede-tan">Tan Suede</option>
+        <option value="suede-gray">Gray Suede</option>
+        <option value="rubber-black">Black Rubber</option>
+        <option value="metallic-silver">Silver Metallic</option>
+        <option value="metallic-gold">Gold Metallic</option>
+        <option value="fabric-red">Red Fabric</option>
+        <option value="fabric-blue">Blue Fabric</option>
+      </select>
+    </div>
+
+    <div class="control-group">
+      <label for="rotation-speed">Rotation Speed:</label>
+      <input type="range" id="rotation-speed" min="0" max="5" value="2" step="0.1" />
+      <span id="speed-value">2.0</span>
+    </div>
+
+    <div class="control-group">
+      <button id="reset-camera">Reset View</button>
+      <button id="toggle-rotation">Pause Rotation</button>
+    </div>
+
+    <div class="info-text">
+      <p>🖱️ Click &amp; drag to rotate</p>
+      <p>🔄 Scroll to zoom</p>
+      <p>📱 Optimized for mobile</p>
+    </div>
+  </div>
+
+  <div class="shoe-viewer-wrapper">
+    <div id="shoe-viewer">
+      <div class="viewer-loading">Loading 3D Viewer...</div>
+    </div>
+  </div>
+</div>
+
+<link rel="stylesheet" href="/assets/css/shoe-viewer.css" />
+
+<script src="/assets/js/shoe-viewer.js"></script>
+
+
+  </div>
+
+ 
+  
+</article>
+
+        </div>
+      </div>
+
+      <div class="wrapper-footer">
+        <div class="container">
+          <footer class="footer">
+            
+<a href="mailto:jatomsynergies@gmail.com"><i class="svg-icon email"></i></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    
+
+    
+    
+    
+  </body>
+</html>

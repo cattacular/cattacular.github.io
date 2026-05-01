@@ -63,16 +63,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
-  // Add loading animation for images
+  // Fade in images when ready. Cached images often fire `load` before we attach
+  // the listener, so they would stay at opacity 0 without a `complete` check.
   const images = document.querySelectorAll('.featured-image, .project-image');
   images.forEach(img => {
-    img.addEventListener('load', function() {
-      this.style.opacity = '1';
-    });
-    
-    // Set initial opacity for smooth loading
+    function reveal() {
+      img.style.opacity = '1';
+    }
     img.style.opacity = '0';
     img.style.transition = 'opacity 0.3s ease';
+    img.addEventListener('load', reveal);
+    img.addEventListener('error', reveal);
+    if (img.complete && img.naturalWidth > 0) {
+      reveal();
+    }
   });
   
   // Intersection Observer for fade-in animations
