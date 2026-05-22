@@ -19,7 +19,7 @@ The goal of this project was to
 - Make digital worlds/rigs for practical use
 - and to have fun coolaborating
 
-Demanding results was a shortfilm made by Sam Rice and myself. My role in the project was to make sure the virtual production technology was working well, as well as creating all the digital backgrounds. The film is about working in a late stage capitalistic world. 
+Demanding results was a shortfilm made by Sam Rice (camera & editor), Mekhi Mitchell (actor), and myself. My role in the project was to make sure the virtual production technology was working well, as well as framing the shot in all the digital backgrounds. The film is about working in a late stage capitalistic world. 
 
 Content warning: implied Suicide 
 
